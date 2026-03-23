@@ -1,0 +1,62 @@
+# =============================================================================
+# requirements.txt
+# Projet : Gestion du desequilibre de classes — Analyse de sentiments
+#          en dialecte algerien (Darija) sur le corpus TWIFL
+# Etudiant : Abdelaziz Merzoug
+# Encadrante : Dr. Soraya Cheriguene
+# Universite : USDB Blida 1 — Master 1 DS & NLP — Semestre 2
+# Periode : 08 mars – 26 avril 2026
+# =============================================================================
+#
+# INSTALLATION (environnement local) :
+#   pip install -r requirements.txt
+#
+# INSTALLATION (Google Colab / Kaggle) :
+#   !pip install -r requirements.txt
+#
+# NOTE GPU :
+#   PyTorch est installe ici en version CPU.
+#   Sur Colab T4 / Kaggle P100 / Lightning AI A10G, remplacer par :
+#   pip install torch>=2.1.0 --index-url https://download.pytorch.org/whl/cu118
+#   (ou cu121 selon la version CUDA disponible sur la plateforme)
+#
+# =============================================================================
+
+
+# --- Deep Learning & Transformers ----------------------------------------
+torch>=2.1.0
+transformers>=4.36.0
+accelerate>=0.24.0
+huggingface_hub>=0.20.0
+sentencepiece>=0.1.99
+sacremoses>=0.0.53
+tokenizers>=0.15.0
+
+# --- Datasets HuggingFace ------------------------------------------------
+datasets>=2.16.0
+
+# --- Calcul scientifique -------------------------------------------------
+numpy>=1.24.0
+scipy>=1.11.0
+
+# --- Apprentissage automatique -------------------------------------------
+scikit-learn>=1.3.0
+imbalanced-learn>=0.11.0
+
+# --- Manipulation des donnees --------------------------------------------
+pandas>=2.1.0
+
+# --- Visualisation -------------------------------------------------------
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# --- NLP & Traitement du texte arabe -------------------------------------
+arabic-reshaper>=3.0.0
+python-bidi>=0.4.2
+wordcloud>=1.9.0
+emoji>=2.8.0
+regex>=2023.10.3
+
+# --- Utilitaires ---------------------------------------------------------
+tqdm>=4.66.0
+joblib>=1.3.0

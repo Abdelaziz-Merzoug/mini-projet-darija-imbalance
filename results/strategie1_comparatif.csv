@@ -1,0 +1,6 @@
+Configuration,F1-macro,F1 Positive,F1 Negative,F1 Neutral,AUC-PR,G-mean,Accuracy
+Baseline,0.6805,0.7806,0.7014,0.5596,0.7534,0.7558,0.7249
+Class Weighting,0.6386,0.7141,0.6882,0.5134,0.7571,0.7510,0.6694
+Focal Loss (gamma=1),0.6784,0.7614,0.7213,0.5525,0.7687,0.7540,0.7209
+Focal Loss (gamma=2),0.6794,0.7605,0.7233,0.5543,0.7647,0.7564,0.7209
+CW + Focal Loss,0.6683,0.7533,0.7068,0.5446,0.7460,0.7576,0.7060

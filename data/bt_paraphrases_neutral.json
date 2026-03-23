@@ -1,0 +1,1286 @@
+[
+  {
+    "original": "current weather in Constantine: clear sky, 4°C 69% humidity, wind 1kmh, pressure 1022mb",
+    "paraphrase": "Current weatther in an kan ky: clear ky, 4° س. 69, 9, rmodity, wind 1 khmhh, pressure 1022مب",
+    "french_intermediate": "current weather in Constantine: clear sky, 4°C 69% humidity, wind 1khmh, pressure 1022mb",
+    "cosine_similarity": 0.6650113463401794
+  },
+  {
+    "original": "【M3.4】ARGELIA SEPTENTRIONAL 10km 17/01/2018 10:05:00 UTC Sismo Terremoto (G) (EMSC)",
+    "paraphrase": "M3-4ARGLIALIA Stepentrational 10 كم 10 كم 10 17/01 17 01/01/20/18 10:00:00:00:00:00 CATTC Sissmo Termonto (G) (EMSC)",
+    "french_intermediate": "M3.4ARGELIA SEPTENTRIONAL 10km 17/01/2018 10:05:00 UTC Sismo Terremoto (G) (EMSC)",
+    "cosine_similarity": 0.8155352473258972
+  },
+  {
+    "original": "6ed9dec942634cef206257e0bbd6f7ecf3af07c9bec1cd5dbc2fa7d10bcd505cf0bbd30667a12e929533e0aaeb0611eddf0c9bcfc25151cd2c2…",
+    "paraphrase": "6ed9dc942634ff206257ebbd6f7ef3f07c9bec1cd5dbbc2fad5dbd5dbbc2fad10bcdd505fbbbd3066616a12e929533e0beb0611edff0c9bfc251551cd2c2",
+    "french_intermediate": "6ed9dec942634cef206257e0bbd6f7ecf3af07c9bec1cd5dbc2fa7d10bcd505cf0bbd30667a12e929533e0aeb0611eddf0c9bcfc251551cd2c2....",
+    "cosine_similarity": 0.6896560192108154
+  },
+  {
+    "original": "clear sky -&gt; few clouds temperature up 14°C -&gt; 16°C humidity down 50% -&gt; 41% wind 2kmh -&gt; 7kmh",
+    "paraphrase": "Clear ky-&gt; few mosmads tomperurative pp 14o درجة مئوية - & gtt; 16o درجة مئوية rmmidity down 50/50 - & gtt; 41 في المائة Wind 2 كيلومتراً في الساعة -- & gtt; 7 كيلومترات في الساعة",
+    "french_intermediate": "clear sky -&gt; few clouds temperature up 14°C -&gt; 16°C humidity down 50% -&gt; 41% wind 2kmh -&gt; 7kmh",
+    "cosine_similarity": 0.5416300296783447
+  },
+  {
+    "original": "scattered clouds -&gt; fog temperature down 10°C -&gt; 8°C humidity up 93% -&gt; 100%",
+    "paraphrase": "scattered ammads - ggt; fog temperatorative عند درجة 10 درجة مئوية - & gtt; 8 درجة مئوية rmmidity up 93.3 - & ggt; 100%",
+    "french_intermediate": "scattered clouds -&gt; fog temperature down 10°C -&gt; 8°C humidity up 93% -&gt; 100%",
+    "cosine_similarity": 0.5430948734283447
+  },
+  {
+    "original": "mist -&gt; fog temperature down 10°C -&gt; 9°C humidity up 93% -&gt; 100%",
+    "paraphrase": "- t - ggt; fog Temperative don ao 10o س - & gt; 9o مئوية rmmidity up 93.3 - & gtt; 100%",
+    "french_intermediate": "mist -&gt; fog temperature down 10°C -&gt; 9°C humidity up 93% -&gt; 100%",
+    "cosine_similarity": 0.5784875154495239
+  },
+  {
+    "original": "temperature down 8°C -&gt; 6°C",
+    "paraphrase": "8 درجة مئوية - -&gtt; 6 درجة مئوية",
+    "french_intermediate": "temperature down 8°C -&gt; 6°C",
+    "cosine_similarity": 0.5106786489486694
+  },
+  {
+    "original": "scattered clouds -&gt; broken clouds temperature down 8°C -&gt; 6°C humidity up 87% -&gt; 93%",
+    "paraphrase": "scattered ammads - &gt; prokensamads temperative taw 8° مئوية - & gtt; 6 درجات مئوية rmmmidity up 87.7 - pp 87.7 - & ggt; 93.3",
+    "french_intermediate": "scattered clouds -&gt; broken clouds temperature down 8°C -&gt; 6°C humidity up 87% -&gt; 93%",
+    "cosine_similarity": 0.5706698298454285
+  },
+  {
+    "original": "fog -&gt; mist temperature down 9°C -&gt; 7°C humidity down 100% -&gt; 93%",
+    "paraphrase": "فوغ - ggt; met temperative Down 9o س - & gtt; 7o درجة مئوية rmmidity down 100.1% - &gt; 93.3",
+    "french_intermediate": "fog -&gt; mist temperature down 9°C -&gt; 7°C humidity down 100% -&gt; 93%",
+    "cosine_similarity": 0.5820051431655884
+  },
+  {
+    "original": "558992a00p4B177",
+    "paraphrase": "558992(أ) 558992(أ)",
+    "french_intermediate": "558992a00p4B177",
+    "cosine_similarity": 0.6982316970825195
+  },
+  {
+    "original": "صورة تعبر عن جمال ولاية جيجل.",
+    "paraphrase": "صورة لجمال ولاية جيجل",
+    "french_intermediate": "Une photo de la beauté de l'État de Giggle.",
+    "cosine_similarity": 0.7683576345443726
+  },
+  {
+    "original": "انا_الجزائر | تصريحات studio_microphone قال الأمين العام للأرندي اويحيى إن فلسطين هي قضية الجميع بعيدا عن المزايدات الحزبية والحسا…",
+    "paraphrase": "لقد قال الأمين العام للأرجنتين إن فلسطين هي قضية الجميع، بعيدا عن المزايدة الحزبية.",
+    "french_intermediate": "Je suis l'Algérie, les déclarations de Studio_ microphone. Le Secrétaire général de l'Argentine a dit que la Palestine était la cause de tous, loin des enchères partisanes.",
+    "cosine_similarity": 0.7506077289581299
+  },
+  {
+    "original": "grinning_face_with_smiling_eyes grinning_face_with_smiling_eyes grinning_face_with_smiling_eyes البوشوشيين و اللي متابعين امل كامل راح يفهموا عليك face_with_tears_of_joy ولكن و يا فرحة ماتمت persevering_face",
+    "paraphrase": "grannng_fise_with_smilling_eyrennng_ smyling_grinnnng_fewit_with_smyling_eees بوشوشيانسيس، التي أدركت، بأمل كامل، أنك كنت وجهاً لوجه_with_tears_of_joy، لكن فرحتي قد ماتت، perservering_ واجهة",
+    "french_intermediate": "Grinning_face_with_smiling_eyes grinning_face_with_smiling_eyes grinning_face_with_smiling_eyes Bushochians, qui, avec un espoir total, ont compris que vous étiez face_with_tears_of_joy, mais, ma joie est morte, persevering_face",
+    "cosine_similarity": 0.7121092081069946
+  },
+  {
+    "original": "إن كان الخبر صحيحا ، فإن أردوغان ملم بأوضاع العالم والإقليم، لذلك أعد العدة ، اتقاء لغد مجهول معلوم !! هؤلاء من الص…",
+    "paraphrase": "إن كان هذا صحيحاً، فإن (ردوغان) يعرف الوضع في العالم والمنطقة، فاستعدوا ليوم غد غير معروف.",
+    "french_intermediate": "Si c'est vrai, Erdoğan connaît la situation du monde et de la région, alors préparez-vous pour un lendemain inconnu.",
+    "cosine_similarity": 0.6820156574249268
+  },
+  {
+    "original": "WilliamLevy growing_heart",
+    "paraphrase": "ويليام وليام ليفي rowing_ Hart",
+    "french_intermediate": "William Levy growing_heart",
+    "cosine_similarity": 0.5880759358406067
+  },
+  {
+    "original": "Coup de cœur pour \"The Talos Principle \", fond et forme, un \"Portal\" avec du sens (un peu plus)",
+    "paraphrase": "نبضة قلب لـ \"Talos Principel\" في الخلفية والشكل، \"Portal\" مع معنى (مضرب واحد زائد واحد)",
+    "french_intermediate": "Coup de cœur pour \"The Talos Principle,\" fond et forme, un \"Portal\" avec du sens (un put plus)",
+    "cosine_similarity": 0.6817387342453003
+  },
+  {
+    "original": "كل ما نسمعه نتعلق بيه اكثر ملكة_سبأ QueenOfSheba السعودية KenzaMorsli …",
+    "paraphrase": "كل ما نسمعه هو ملكة الملكة الملكة السعودية، كنزا مورسلي...",
+    "french_intermediate": "Tout ce qu'on entend, c'est la reine du QueenofSheba d'Arabie saoudite, KenzaMorsli...",
+    "cosine_similarity": 0.6630471348762512
+  },
+  {
+    "original": "المساعدة هي من أعظم أبواب الخير ولها مكانة عالية جدا في الإسلام والمساعدة ليست بشرط أيكون إنسان فمن الممكن…",
+    "paraphrase": "والمعونة هي واحدة من أكبر البوابات للخير، وهي مرتفعة جدا في الإسلام، والمساعدة ليست شرط أن تكون إنسانا.",
+    "french_intermediate": "L'aide est l'une des plus grandes portes du bien, et elle est très élevée dans l'islam, et l'aide n'est pas à la condition d'être un être humain.",
+    "cosine_similarity": 0.7392160296440125
+  },
+  {
+    "original": "يا زبالة جاية تعلقي في منشني وتقلي ادب تفو عليكي يا منحطة يا قذرة يا نكرة تمام اوصلو لميت مليو…",
+    "paraphrase": "أيّتها السافلة الحقيرة، تمسكي بي واعملي ما يحلو لكِ أيتها العاهرة!",
+    "french_intermediate": "Espèce de sale garce, accroche-toi à moi, et fais-toi plaisir, salope !",
+    "cosine_similarity": 0.5243389010429382
+  },
+  {
+    "original": "Support my pictures acc red_heart iHeartAwards BestFanArmy BTSARMY DIMPLE",
+    "paraphrase": "\"المزيد من الدعم\" cc cc red_ hart i Heart hawards Bestfanan Army BTSARMy BTSARMY DemPLE\"",
+    "french_intermediate": "Support my pictures acc red_heart iHeartAwards BestFanArmy BTSARMY DIMPLE",
+    "cosine_similarity": 0.7103430032730103
+  },
+  {
+    "original": "الله لا يرده يجب فضحه و محاسبته و مصادرة املاكه",
+    "paraphrase": "الله لا يريد ذلك، يجب أن نبلغ عنه، ونحمّله المسؤولية، ونصادر ممتلكاته.",
+    "french_intermediate": "Dieu ne le veut pas. Il faut le dénoncer, le tenir responsable et confisquer ses biens.",
+    "cosine_similarity": 0.5337150692939758
+  },
+  {
+    "original": "temperature up 28°C -&gt; 32°C humidity down 37% -&gt; 33% wind 2kmh -&gt; 5kmh",
+    "paraphrase": "22 درجة مئوية - &gt; 32 درجة مئوية - ampmidity down 37 في المائة - / ggt; 33 في المائة Wind 2 كم/ساعة -- &gt; 5 كيلومترات/ساعة",
+    "french_intermediate": "temperature up 28°C -&gt; 32°C humidity down 37% -&gt; 33% wind 2kmh -&gt; 5kmh",
+    "cosine_similarity": 0.5558673143386841
+  },
+  {
+    "original": "temperature down 30°C -&gt; 27°C humidity up 58% -&gt; 74% wind 5kmh -&gt; 6kmh",
+    "paraphrase": "30 درجة مئوية - & ggt; 27 درجة مئوية - رُمُمْمُدْدُity up 58 في المائة - - ggt; 74.4 Wind 5 كيلومترات في الساعة - &gt; 6 كيلومترات في الساعة",
+    "french_intermediate": "temperature down 30°C -&gt; 27°C humidity up 58% -&gt; 74% wind 5kmh -&gt; 6kmh",
+    "cosine_similarity": 0.5556960701942444
+  },
+  {
+    "original": "8b0a31d9d3bbf70020850c7b607ed4ac4d33e233b6e322b464257eca13c72a66aa799f58339e1c4492614ca2f7b5c137fd98088368df8ea58ad…",
+    "paraphrase": "8b0a31d9d9d9d3bbbbf70020850c7b607ed4ac4c4b7b6b607ed4c4b7b7b7b7b7b6e6re322b4642571ca13c7c72a799f58339e1c4492614ca2f7b5b5c137fd98088883df8f8e58ad",
+    "french_intermediate": "8b0a31d9d3bbf70020850c7b607ed4ac4d33e233b6e322b464257eca13c72a66a799f58339e1c4492614ca2f7b5c137fd98088368df8ea58ad...",
+    "cosine_similarity": 0.6896560192108154
+  },
+  {
+    "original": "BirUmutYeter كيف المسلسل لي شافه لايف؟",
+    "paraphrase": "كيف تسير الأمور بالنسبة لي؟",
+    "french_intermediate": "BirUmutYeter, comment ça se passe pour moi ?",
+    "cosine_similarity": 0.5006190538406372
+  },
+  {
+    "original": "”إنك لن ترى حكمة الله دائمًا ولن تُدرك كيّف يدبّر أمرك، هي الأيام ستُخبرك بالخير الّذي خبّأه الله لك، والشرّ الّذي…",
+    "paraphrase": "لن ترى دائما حكمة الله ولن تفهم كيف تعتني بنفسك اليوم الذي يخبرك ما أخفاه الله عنك والشر الذي..",
+    "french_intermediate": "Tu ne verras pas toujours la sagesse de Dieu, et tu ne comprendras pas comment te prendre en charge, ce sont les jours qui te diront ce que Dieu t'a caché, et le mal qui...",
+    "cosine_similarity": 0.8035004138946533
+  },
+  {
+    "original": "ليلة_الجمعة",
+    "paraphrase": "\"الليلة الجمعة \".",
+    "french_intermediate": "Vendredi soir.",
+    "cosine_similarity": 0.6617586016654968
+  },
+  {
+    "original": "Turkmenistan État d'Asie centrale, le Turkménistan est bordé par la mer Caspienne à l'ouest et li…",
+    "paraphrase": "إن تركمانستان محاطة ببحر قزوين غرباً، وبحر قزوين غرباً، وبحر قزوين.",
+    "french_intermediate": "Turkmenistan State d'Asie central, le Turkménistan est bordé par la mer Caspienne à l'ouest et li...",
+    "cosine_similarity": 0.5004349946975708
+  },
+  {
+    "original": "المعرض الدولي لتربية المواشي و العتاد الفلاحي goat ewe cow_face cow horse_face camel من 08 الى 11 اكتوبر 2018 tractor tractor tractor tractor tractor tractor بقصر المعارض - الصنوبر البحر…",
+    "paraphrase": "المعرض الدولي المعني بالتربية الحيوانية والماشية؛ والمعدات الزراعية في الفترة من 8 إلى 11 تشرين الأول/أكتوبر 2018 في قصر المعارض - الصنوبر البحري.",
+    "french_intermediate": "Exposition internationale sur l &apos; élevage et l &apos; équipement agricole goat ewe cow_face cow horse_face camel du 08 au 11 octobre 2018 tractor tractor tractor tractor tractor tractor tractor au Palais des Expositions - pins marins...",
+    "cosine_similarity": 0.6889428496360779
+  },
+  {
+    "original": "at 7:00am: clear sky -&gt; scattered clouds temperature up 9°C -&gt; 10°C",
+    "paraphrase": "7:00am: clear ky-&gt; scattered minsereds temperative up 9oس-&gt; 10oس",
+    "french_intermediate": "at 7:00am: clear sky -&gt; scattered clouds temperature up 9°C -&gt; 10°C",
+    "cosine_similarity": 0.5035195350646973
+  },
+  {
+    "original": "scattered clouds -&gt; few clouds temperature up 10°C -&gt; 12°C humidity down 87% -&gt; 81% wind 2kmh -&gt; 1kmh",
+    "paraphrase": "scattered ammads - ggt; few amsuds temperative up 10o درجة مئوية - & gtt; 12o درجة مئوية rmmidity down 87.7 - & gtt; 81.1 wind 2 كيلومتراً في الساعة -- & gtt; 1 كيلومتر في الساعة",
+    "french_intermediate": "scattered clouds -&gt; few clouds temperature up 10°C -&gt; 12°C humidity down 87% -&gt; 81% wind 2kmh -&gt; 1kmh",
+    "cosine_similarity": 0.5024070143699646
+  },
+  {
+    "original": "يتمّ قراءة السورة من بداية يوم الجمعة أو حتى ليلتها، والتي تبدأ منذ غروب شمس يوم الخميس، وتنتهي عندما تغرب الشمس في…",
+    "paraphrase": "ويُقرأ اللوح من بداية الجمعة إلى الليل، الذي يبدأ من غروب شمس الخميس، وينتهي عند غروب الشمس في...",
+    "french_intermediate": "La tablette est lue du début du vendredi jusqu'à la nuit, qui commence du coucher du soleil du jeudi, et se termine quand le soleil se couche dans...",
+    "cosine_similarity": 0.7898110151290894
+  },
+  {
+    "original": "لن يكون عمرك كله ربيعاً .. ستتناوب عليك الفصول الأربعة .. تلفحك الحرارة .. تتجمد في صقيع الوحدة .. تتساقط أحلامك…",
+    "paraphrase": "لن تحصلي على كل حياتك في الربيع، ستتناوبين في الفصول الأربعة، الحرارة ستتجمد في ثلج الوحدة، أحلامك ستسقط.",
+    "french_intermediate": "Tu n'auras pas toute ta vie au printemps, tu seras à tour de rôle dans les quatre saisons, la chaleur te gèlera dans le glaçage de la solitude, tes rêves tomberont.",
+    "cosine_similarity": 0.794687807559967
+  },
+  {
+    "original": "اتحاد_العاصمة العاصمة",
+    "paraphrase": "اتحاد العاصمة",
+    "french_intermediate": "Union de la capitale",
+    "cosine_similarity": 0.8109756708145142
+  },
+  {
+    "original": "latin_cross latin_cross star_of_David dotted_six-pointed_star",
+    "paraphrase": "لاتيني _ كروس لاتيني_ كروس نجم نجمة نجمة لاتينية_ كروس لاتينية_ كروس لاتينية_ كروس نجم نجمة_of_o_of_ David_ Davidd dotototid__ 6-6 - بوابتود_ باستار",
+    "french_intermediate": "latin_cross latin_cross star_of_David dotted_six-pointed_star",
+    "cosine_similarity": 0.6409012675285339
+  },
+  {
+    "original": "رحمة الله عليه",
+    "paraphrase": "رحمه الله الرحمة.",
+    "french_intermediate": "Dieu ait pitié de lui.",
+    "cosine_similarity": 0.7593364119529724
+  },
+  {
+    "original": "صدقتي",
+    "paraphrase": "هذا حقيقي.",
+    "french_intermediate": "C'est vrai.",
+    "cosine_similarity": 0.6909891963005066
+  },
+  {
+    "original": "تعال عندي",
+    "paraphrase": "تعال معي معي. تعال معي. تعال معي.",
+    "french_intermediate": "Viens avec moi.",
+    "cosine_similarity": 0.5669009685516357
+  },
+  {
+    "original": "Dézédie ! Petit rappel aux zélés studieux : contrairement aux pompes, le brossage de dents, ce n’est que 3 fois pa…",
+    "paraphrase": "(ديزيديا)، تذكّر قليلاً بالثيران اللامعة: على عكس المضخات، تنظيف الأسنان،",
+    "french_intermediate": "Dézidie ! Petit rappel aux zélés studieux: contrairement aux pompes, le brossage de dents, ce n'est que 3 fois pa...",
+    "cosine_similarity": 0.5002611875534058
+  },
+  {
+    "original": "ممكن الأخت فيسبوك تاعك؟",
+    "paraphrase": "-في موقع في الفيس فيسبوك؟",
+    "french_intermediate": "Sœur Facebook ?",
+    "cosine_similarity": 0.6006322503089905
+  },
+  {
+    "original": "في اي بلدية من بلديات الواد تلقى سوق",
+    "paraphrase": "في أي بلدية تابعة لـ (وايد) كان لديه صفقة",
+    "french_intermediate": "Dans n'importe quelle municipalité de Wade, il a eu un marché.",
+    "cosine_similarity": 0.6191719174385071
+  },
+  {
+    "original": "Masked Photo: Algiers20xx // International Ideas Competition Link in bio backhand_index_pointing_up DisruptiveUrbanism…",
+    "paraphrase": "الصورة الفوتوغرافية: الجزائر 20xx///الدولة الدولية للتنافس على الديون في بكتيريا بيولوجيا بكخاند_index_bointing_up up لمكافحة التصحر في التحضّر...",
+    "french_intermediate": "Masked Photo: Algers 20xx //International Ideas Competition Link in bio backhand_index_pointing_up Disruptive Urbanism...",
+    "cosine_similarity": 0.5691972374916077
+  },
+  {
+    "original": "Draped Photo: Algiers20xx // International Ideas Competition Link in bio backhand_index_pointing_up DisruptiveUrbanism…",
+    "paraphrase": "الصورة المصورة: Alriers 20xx// International International Ideas comparitition Link in بيولوجياً بكخاند_index_bointing_up up decabilabilabilative حضري...",
+    "french_intermediate": "Draped Photo: Algiers 20xx // International Ideas Competition Link in bio backhand_index_pointing_up Disruptive Urbanism...",
+    "cosine_similarity": 0.7203017473220825
+  },
+  {
+    "original": "Sunny sun Photo: Algiers20xx // International Ideas Competition Link in bio backhand_index_pointing_up . Alger…",
+    "paraphrase": "صورة مصوّرة: الجزائر العاصمة 20xx//الدولة الدولية للتنافس على الديون في بكتيريا بيولوجيّة بكخاند_index_bointing_up. الجزائر العاصمة...",
+    "french_intermediate": "Sunny sun Photo: Algers 20xx //International Ideas Competition Link in bio backhand_index_pointing_up. Alger...",
+    "cosine_similarity": 0.5880808234214783
+  },
+  {
+    "original": "d893bf552a88691f2050ffb4c01d0e898bbc022606aa575bd9de096ddcabd75020b6d27800bf34bfb0beb255e7e4c7f1cf21b930f7db1e1d9d…",
+    "paraphrase": "D893bbbf552a88691f2050ffb4c1010d108898bc0226061a575bd9d9d096dbdbdbd7520b6d27278bf34bbbbb0b255e7e7ec7c7f1fff1ff21b9930f7db1d9d9d",
+    "french_intermediate": "d893bf552a88691f2050ffb4c01d0e898bbc022606aa575bd9de096dcabd7520b6d27800bf34bbb0b255e7e4c7f1cf21b930f7db1e1d9d...",
+    "cosine_similarity": 0.6896560192108154
+  },
+  {
+    "original": "Wahran: 6:49pm: sunset",
+    "paraphrase": "وهرّان : ٦ : ٩ : ٩ بم : سونسوست",
+    "french_intermediate": "Wahran: 6:49pm: sonset",
+    "cosine_similarity": 0.5022757649421692
+  },
+  {
+    "original": "With history .. With the hero yacef saadi yacef_saadi the_battle_of_Algiers ALGIERS victory_hand raised_fist",
+    "paraphrase": "Witth with ristry with with Hero yafif sadi sadee thy jef saadi thy thy thy o y asef e sadi el_قاتل_o_o_o_algiers ALGIRERS vitory_ handd resed_ fist",
+    "french_intermediate": "With history With the hero yacef saadi yacef_saadi the_battle_of_Algiers ALGIERS victory_hand raised_fist",
+    "cosine_similarity": 0.7308155298233032
+  },
+  {
+    "original": "Kasbah, Alger, Algeria.",
+    "paraphrase": "صصه، الجزائر العاصمة، الجزائر العاصمة.",
+    "french_intermediate": "Kasbah, Alger, Algeria.",
+    "cosine_similarity": 0.636800229549408
+  },
+  {
+    "original": "مقابلة ملودية الجزائر تلعب الان في ملعب 5جويلية على ابوظبي الرياضية وكانها اروبا الاذاعة الوطنية متؤخرة 100سنة",
+    "paraphrase": "وتلعب مقابلة أمينة المظالم في الجزائر في الملعب الرياضي في أبو زبي، كما لو كانت أوروبا في الإذاعة الوطنية، بعد 100 عام.",
+    "french_intermediate": "L'interview de la Médiatrice d'Algérie est en train de jouer sur le terrain de sport d'Abuzabi, comme si c'était l'Europe de la Radio Nationale, 100 ans plus tard.",
+    "cosine_similarity": 0.720923662185669
+  },
+  {
+    "original": "فعلا من احترم اوحترما",
+    "paraphrase": "هذا ما كنت أحترمه",
+    "french_intermediate": "C'est ce que je respectais.",
+    "cosine_similarity": 0.6689886450767517
+  },
+  {
+    "original": "clear sky -&gt; few clouds temperature down 24°C -&gt; 22°C humidity up 57% -&gt; 68% wind 3kmh -&gt; 5kmh",
+    "paraphrase": "Clear ky-&gt; few amsmads mpererative en 24o درجة مئوية - & gtt; 22o C ummidity up 57% - & gtt; 68.8 wind 3 كيلومترات في الساعة -- & gtt; 5 كيلومترات في الساعة",
+    "french_intermediate": "clear sky -&gt; few clouds temperature down 24°C -&gt; 22°C humidity up 57% -&gt; 68% wind 3kmh -&gt; 5kmh",
+    "cosine_similarity": 0.5907503366470337
+  },
+  {
+    "original": "face_with_tongue",
+    "paraphrase": "ا_وِيْثِ_ وِيُثِ_ نُقِيّة",
+    "french_intermediate": "Face_with_tongue",
+    "cosine_similarity": 0.5127781629562378
+  },
+  {
+    "original": "العقل تأنيس بالوصل، وتأسيس بالفصل.",
+    "paraphrase": "الروح خلقت عن طريق الوصول والانفصال.",
+    "french_intermediate": "L'esprit a été créé par l'arrivée et la séparation.",
+    "cosine_similarity": 0.6708002090454102
+  },
+  {
+    "original": "و الله",
+    "paraphrase": "والله. والله.",
+    "french_intermediate": "Et Dieu.",
+    "cosine_similarity": 0.677287757396698
+  },
+  {
+    "original": "En1960,les kabyles ont explosé un navire américain a bejaia.",
+    "paraphrase": "وفي سنة ١٩٦٠ ، انفجرت سفينة أمريكية في بيجايا .",
+    "french_intermediate": "En 1960, les kabyles ont explosé un navire américain a bijaia.",
+    "cosine_similarity": 0.5993732810020447
+  },
+  {
+    "original": "أيهما أسبق في تاريخ الإنسانية، الشعر أو الفلسفة؟!",
+    "paraphrase": "أيهما أقدم في تاريخ البشرية أم الشعر أم الفلسفة؟",
+    "french_intermediate": "Laquelle est la plus ancienne dans l'histoire de l'humanité, la poésie ou la philosophie ?",
+    "cosine_similarity": 0.8032258152961731
+  },
+  {
+    "original": "واقع",
+    "paraphrase": "حقيقة واقعية.",
+    "french_intermediate": "Une réalité.",
+    "cosine_similarity": 0.594356894493103
+  },
+  {
+    "original": "التاريخ..في صورة",
+    "paraphrase": "القصّة... في صورة صورة.",
+    "french_intermediate": "L'histoire... sur une photo.",
+    "cosine_similarity": 0.8398197293281555
+  },
+  {
+    "original": "how ?",
+    "paraphrase": "âTow â",
+    "french_intermediate": "♪ how ♪",
+    "cosine_similarity": 0.719683051109314
+  },
+  {
+    "original": "أخي",
+    "paraphrase": "أخي أخ أخي أخ أخي.",
+    "french_intermediate": "Mon frère.",
+    "cosine_similarity": 0.6799815893173218
+  },
+  {
+    "original": "FahriyeEvcen",
+    "paraphrase": "فريحي إففكن",
+    "french_intermediate": "Fahriye Evcen",
+    "cosine_similarity": 0.5778110027313232
+  },
+  {
+    "original": "temperature down 19°C -&gt; 17°C humidity up 82% -&gt; 88%",
+    "paraphrase": "درجة الحرارة 19 درجة مئوية - & ggt; 17 درجة مئوية rmbidity up 82.2 - chgt; 88.8 في المائة",
+    "french_intermediate": "temperature down 19°C -&gt; 17°C humidity up 82% -&gt; 88%",
+    "cosine_similarity": 0.5393492579460144
+  },
+  {
+    "original": "temperature up 11°C -&gt; 13°C humidity down 93% -&gt; 82%",
+    "paraphrase": "درجة حرارة 11 درجة مئوية - & ggt؛ 13 درجة مئوية من الرميميديديدي داون 93 في المائة - &gt; 82 في المائة",
+    "french_intermediate": "temperature up 11°C -&gt; 13°C humidity down 93% -&gt; 82%",
+    "cosine_similarity": 0.5393768548965454
+  },
+  {
+    "original": "صباح الخير سيدي الكريم لم نجبني!",
+    "paraphrase": "صباح الخير يا سيدي لم يرد أحد على سؤالي",
+    "french_intermediate": "Bonjour, monsieur. On ne m'a pas répondu !",
+    "cosine_similarity": 0.7153377532958984
+  },
+  {
+    "original": "الله أعلم ممكن",
+    "paraphrase": "الله يعلم أن هذا ممكن.",
+    "french_intermediate": "Dieu sait que c'est possible.",
+    "cosine_similarity": 0.6398501396179199
+  },
+  {
+    "original": "PES2019 نزلت نسخة بي سي أم لا ؟؟",
+    "paraphrase": "هل نزلت (بي إس 2019) أم لا؟",
+    "french_intermediate": "PES2019 est-elle descendue ou pas ?",
+    "cosine_similarity": 0.8207321763038635
+  },
+  {
+    "original": "Foutaise ! L'Europe compte plus de 1 210 00 lieux de cultes chrétiens et la France à elle-seule,…",
+    "paraphrase": "فيتسا! أوروبا لديها أكثر من 1. 210.000 لتر من الثقافات المسيحية، وفرنسا وحدها،",
+    "french_intermediate": "Futaise! L'Europe compte plus de 1 210 00 litres de cultures chrétiennes et la France à elle-même,",
+    "cosine_similarity": 0.5199632048606873
+  },
+  {
+    "original": "Live SoPportunity MEPI HDN Cilas Workshop BusinessModel AbderrezakLoubar Algeria Algiers",
+    "paraphrase": "منظمة العمل من أجل الحياة من أجل السلام في بورتونيتي MEPI HDN Cilas Workshorshushushuffure Business Mمودل عبد الرزاق لبوبر الجزائر العاصمة",
+    "french_intermediate": "Live SoPportunity MEPI HDN Cilas Workshop BusinessModel AbderrezakLoubar Algeria Algiers",
+    "cosine_similarity": 0.6783357262611389
+  },
+  {
+    "original": "Allez au Musée Juif .. Et racontez votre histo…",
+    "paraphrase": "\"إليز\" في المتحف اليهودي وصوتوا بشكل مستقيم...",
+    "french_intermediate": "Alez au Musée Juif Et racontez vote hétéro...",
+    "cosine_similarity": 0.5007166862487793
+  },
+  {
+    "original": "Algérie الجزائر Algeria",
+    "paraphrase": "الجزائر الجزائر",
+    "french_intermediate": "Algérie Algérie",
+    "cosine_similarity": 0.7840200662612915
+  },
+  {
+    "original": "Who loves Ronaldo smiling_face_with_heart-eyes smiling_face_with_heart-eyes Who hates Ronaldo enraged_face enraged_face enraged_face enraged_face",
+    "paraphrase": "whooovees Rondondo smilling_ واجهة_witth_heart-eees smalling_ واجهة_with_heyth_ hyarges Who hatis nondo tragrad_ ragrad_ liffation_ straged_ elative_ savigd_ sourged_ sourf",
+    "french_intermediate": "Who loves Ronaldo smiling_face_with_heart-eyes smalling_face_with_heart-eyes Who hates Ronaldo enraged_face enraged_face enraged_face enraged_face enraged_face",
+    "cosine_similarity": 0.7412152290344238
+  },
+  {
+    "original": "Aujourd'hui , si le compte est bon mon compte enregistre depuis Octobre 2017 à ce jour : Visite du profil : 69 81…",
+    "paraphrase": "اليوم، إذا كان الحساب جيدًا، يسجل منذ أوكتوب 2017 حتى الآن:",
+    "french_intermediate": "Aujourd'hui, si le compte est bon compte enregistre depuis Octobe 2017 à ce jour: Visite du profil: 69 81...",
+    "cosine_similarity": 0.5264970660209656
+  },
+  {
+    "original": "SackMourinho MUFC WHUMUN",
+    "paraphrase": "Sak Sak Mak Mororinho MUFC WHUN WHUN",
+    "french_intermediate": "SackMourinho MUFC WHUMUN",
+    "cosine_similarity": 0.6587404012680054
+  },
+  {
+    "original": "ثقف نفسك عبد العزيز بوتفليقة : ولد 2 مارس 1937 ، شهد في حياته الحرب العالمية الثانية بداية من 1…",
+    "paraphrase": "لقد تربّيت، (عبد العزيز بوتفليقة)، المولود في 2 آذار/مارس 1937، والذي شهد في حياته الحرب العالمية الثانية منذ أول...",
+    "french_intermediate": "Tu t'es éduqué, Abdul Aziz Bouteflika, né le 2 mars 1937, qui, dans sa vie, a été témoin de la Seconde Guerre mondiale à partir du 1er...",
+    "cosine_similarity": 0.795302152633667
+  },
+  {
+    "original": "في بعض مجموعات الفيسبوك لمسابقة دكتوراه و كل مايتعلق بالدكتوراه في الجزائر .. البعض يقول عن نفسه سيصير دكتور بعد بع…",
+    "paraphrase": "في بعض مجموعات الفيسبوك لمسابقة دكتوراه، وكل ما يتعلق بالدكتوراه في الجزائر، يقول البعض أنه سيصبح طبيباً بعد البيع.",
+    "french_intermediate": "Dans certains groupes Facebook pour un concours de doctorat, et tout ce qui concerne le doctorat en Algérie, certains disent qu'il va devenir docteur après la vente.",
+    "cosine_similarity": 0.8302332162857056
+  },
+  {
+    "original": "مورينيو افلس..مترجم..منتهي جوزي_مورينيو",
+    "paraphrase": "مورينو فيلز، مترجم شفوي لجوسي.",
+    "french_intermediate": "Maureeno Felz, interprète de Josie.",
+    "cosine_similarity": 0.6879706978797913
+  },
+  {
+    "original": "Le 3 ème pour la Juve Juv 3 VS_button Nap 1 JUVNAP",
+    "paraphrase": "الثالث لجوف جوف جوف 3 VS-botton Nap 1 JupvNAP",
+    "french_intermediate": "Le 3ème pour la Juve Juv 3 VS_button Nap 1 JUVNAP",
+    "cosine_similarity": 0.8072421550750732
+  },
+  {
+    "original": "current weather in Wahran: few clouds, 23°C 64% humidity, wind 4kmh, pressure 1015mb",
+    "paraphrase": "Current wether in Wahran: few amsords, 23°C 64 % rmodity, wind 4 كم/ساعة, presse 1015مب",
+    "french_intermediate": "current weather in Wahran: few clouds, 23°C 64% humidity, wind 4kmh, pressure 1015mb",
+    "cosine_similarity": 0.8016122579574585
+  },
+  {
+    "original": "اقرا ماكتبت. انت",
+    "paraphrase": "اقرأ ما كتبته.",
+    "french_intermediate": "Lis ce que j'ai écrit.",
+    "cosine_similarity": 0.7608723640441895
+  },
+  {
+    "original": "انا لاادري من قال اانت ام من كانو من قبلك",
+    "paraphrase": "لا أعرف من قال أنك كنت أو كنت من قبل",
+    "french_intermediate": "Je ne sais pas qui a dit que tu étais ou que tu étais avant.",
+    "cosine_similarity": 0.7879143953323364
+  },
+  {
+    "original": "أنتظروا ألبوم عمرو_دياب الجديد \"كل_حياتي\" إنتاج Nay غداً حصرياً علي Vodafone Egypt اطلب 440* وخليك اول واحد يسمع…",
+    "paraphrase": "انتظروا ألبوماً جديداً لـ(أمر دياب)، \"كل ما لدي،\" إنتاج (ناي) غداً، حصرياً على (فودافون إيغيبت)",
+    "french_intermediate": "Attendez le nouvel album d'Amr-Dyab, \"Tout ce que j'ai,\" produit Nay demain, exclusivement sur Vodafone Egypt, demandez 440 et le premier...",
+    "cosine_similarity": 0.6068659424781799
+  },
+  {
+    "original": "قـال الكِندي -رحمه الله- : &lt;&lt;الصَّديــقُ إنْـسَــآنٌ هـو أنـتَ، إلّٱ أنــهُ غَيــرُگ ..&gt;&gt; [أدبُ الدنيـا والديـن…",
+    "paraphrase": "قال الكندي: &lt; &lt;; إذا c & apos; هو أنت; c & apos;",
+    "french_intermediate": "Le Canadien a dit: &lt; &lt; Si c &apos; est toi, c &apos; est toi, mais il n &apos; est pas... &gt; &gt; .",
+    "cosine_similarity": 0.5252626538276672
+  },
+  {
+    "original": "مختصر الحياة panda victory_hand",
+    "paraphrase": "اختصار حياة باندا vitory_hand",
+    "french_intermediate": "L'abréviation de la vie de Panda victory_hand",
+    "cosine_similarity": 0.7939713001251221
+  },
+  {
+    "original": "همم عالية: سئل ابن رشد (الفيلسوف)عن عدد الكتب التي قرأها! قال: إني لم أنقطع في حياتي عن القراءة إلا ليلتين، ليلة زواجي، وليلة وفاة والدي.",
+    "paraphrase": "سألني كم عدد الكتب التي قرأها وقال أنني لم أقرأ إلا ليلتين ليلة زفافي وليلة وفاة أبي",
+    "french_intermediate": "Il m'a demandé combien de livres il avait lus. Il a dit que je n'avais cessé de lire que deux nuits, la nuit de mon mariage et la nuit de la mort de mon père.",
+    "cosine_similarity": 0.7571097016334534
+  },
+  {
+    "original": "ربما هناك من يفرح بما انت له غير مهتم",
+    "paraphrase": "ربما شخص ما يشعر بالفرح لأنك لست مهتماً",
+    "french_intermediate": "Peut-être que quelqu'un se réjouit de ce que tu n'es pas intéressé.",
+    "cosine_similarity": 0.7715000510215759
+  },
+  {
+    "original": "سليمان عليه السلام",
+    "paraphrase": "(سليمان) في سلام.",
+    "french_intermediate": "Suleiman est en paix.",
+    "cosine_similarity": 0.5448446869850159
+  },
+  {
+    "original": "جواب اسد السنة الشيخ محمد سعيد رسلان حفظه الله :",
+    "paraphrase": "- الأسد الصن، الشيخ محمد سعيد رسلان، الذي حفظه الله:",
+    "french_intermediate": "Réponse d &apos; Assad Al-San, le cheikh Mohammad Said Raslan, que Dieu a mémorisé:",
+    "cosine_similarity": 0.8364601135253906
+  },
+  {
+    "original": "مــساء. الخــير شكون يــعرف هــاذا مكان backhand_index_pointing_down backhand_index_pointing_down backhand_index_pointing_down",
+    "paraphrase": "مرحباً، يعرف (تشاكون) مكان الـ chackand_index_ pamenting_ down_ backand_index_ pamenting_ down_ down_ kand_index_ pamenting_ down",
+    "french_intermediate": "Bonsoir, Chuckon sait où se trouve le backhand_index_pointing_down backhand_index_pointing_down backhand_index_pointing_down",
+    "cosine_similarity": 0.8049166202545166
+  },
+  {
+    "original": "so please research just one thing and the most important one you need to know is that the leaders of all…",
+    "paraphrase": ".... o op resease research just one one thhing and the most host hose one one y u new need to know is at at at at the قيادـة الـ...",
+    "french_intermediate": "so please research just one thing and the most important one you need to know is that the leaders of all...",
+    "cosine_similarity": 0.5268481969833374
+  },
+  {
+    "original": "- ابتلعت كثيرا",
+    "paraphrase": "-لقد تناولت الكثير منه",
+    "french_intermediate": "- J'ai trop avalé.",
+    "cosine_similarity": 0.6120413541793823
+  },
+  {
+    "original": "ارضاء الناس غاية لا تدرك اخي مساء النور",
+    "paraphrase": "إرضاء الناس نهاية لا يفهمها أخي",
+    "french_intermediate": "Satisfaire les gens est une fin que mon frère ne comprend pas.",
+    "cosine_similarity": 0.7927428483963013
+  },
+  {
+    "original": "انا الدي امتعها",
+    "paraphrase": "لديّ أغراضه.",
+    "french_intermediate": "J'ai ses affaires.",
+    "cosine_similarity": 0.6185373067855835
+  },
+  {
+    "original": "L’émission ONPC",
+    "paraphrase": "ONPC",
+    "french_intermediate": "Lettre ONPC",
+    "cosine_similarity": 0.6856153607368469
+  },
+  {
+    "original": "woman_detective_medium-light_skin_tone man_facepalming_medium_skin_tone man_facepalming_medium_skin_tone",
+    "paraphrase": "2 - وُمان - الإستعراف - الإستعراف - المياديودون - لايت_skin_tonemean_facalpalming_medium_skin_tone_tone",
+    "french_intermediate": "woman_detective_medium-light_skin_tone man_facepalming_medium_skin_tone man_facepalming_medium_skin_tone",
+    "cosine_similarity": 0.8297879695892334
+  },
+  {
+    "original": "للانه اعظم لغة وهي في الحقيقة اللغة الجنة واللغة الله ختم بيها قوله سبحانه وتعالى",
+    "paraphrase": "لأن هذه هي أكبر لغة، بل هي لغة الفردوس ولسان الله.",
+    "french_intermediate": "Car c'est la plus grande langue, en fait la langue du paradis et la langue de Dieu.",
+    "cosine_similarity": 0.7929123044013977
+  },
+  {
+    "original": "few clouds -&gt; clear sky temperature down 23°C -&gt; 16°C humidity up 64% -&gt; 93% wind 4kmh -&gt; 1kmh",
+    "paraphrase": "Few amsmads - ggt; clearar ky timperative taon 23o درجة مئوية - & gtt; 16o C ummidity up 64% - & gtt; 93.3 Wind 4 كيلومترات في الساعة - & gtt; 1 كم/ساعة",
+    "french_intermediate": "few clouds -&gt; clear sky temperature down 23°C -&gt; 16°C humidity up 64% -&gt; 93% wind 4kmh -&gt; 1kmh",
+    "cosine_similarity": 0.5000643134117126
+  },
+  {
+    "original": "\"Maintenant. Ou jamais\" était le slogan principal de la campagne électorale de Sebastian Kurz , Chancelier d’Autric…",
+    "paraphrase": "\"الآن، أو أبداً\" كان المستشار الرئيسي في الحملة الانتخابية لسباستيان كورز، مستشار أوتريك...",
+    "french_intermediate": "\"Maintenant. Ou jamais\" était le principal conseiller de la campagne électorale de Sebastian Kurz, Chancelleer d'Autric...",
+    "cosine_similarity": 0.5749708414077759
+  },
+  {
+    "original": "و كل ايام عمرك",
+    "paraphrase": "وكل يوم في حياتك.",
+    "french_intermediate": "Et tous les jours de votre vie.",
+    "cosine_similarity": 0.701869010925293
+  },
+  {
+    "original": "دعاء الصباح",
+    "paraphrase": "سأصلي في الصباح.",
+    "french_intermediate": "Je prierai demain matin.",
+    "cosine_similarity": 0.6260777711868286
+  },
+  {
+    "original": "هل هذا صحيح .?بدات الجزائر تخطو خطوات الدول المحترمة ان لم يكن هذا مجرد كلام كالعادة",
+    "paraphrase": "هل صحيح أن الجزائر لا تحترمها إن لم تكن مجرد كلمات كالمعتاد؟",
+    "french_intermediate": "Est-ce vrai que l'Algérie fait des pas de respect si ce n'est pas juste des mots comme d'habitude ?",
+    "cosine_similarity": 0.7026169896125793
+  },
+  {
+    "original": "Kaldığım yerden 200 km mesafede olan Setif e gidiyorum. Beni almaya gelen araçta çıkan müzik \"Kurtlar Vadisi Elif\"…",
+    "paraphrase": "\"Kortlar Vadisi Elif\"",
+    "french_intermediate": "CaldÖğйm yerden 200 km mesafede olan Setif e gidiyorum. Beni almaya gelen arachta çükan müzik \"Kurtlar Vadisi Elif\" ...",
+    "cosine_similarity": 0.5384306907653809
+  },
+  {
+    "original": "عربي، english, français",
+    "paraphrase": "العربية، الإنكليزية، الفرنسية، العربية، الانكليزية، الفرنسية",
+    "french_intermediate": "Arabe, english, français",
+    "cosine_similarity": 0.7009192705154419
+  },
+  {
+    "original": "La raison est sage ,mais le coeur peut aussi nous mener à la vérité.. face_savoring_food",
+    "paraphrase": "البحث بسيط، ولكن يمكن للقصر أن يقودنا أيضاً إلى الحرية... وجهاً لوجه_savuring_food",
+    "french_intermediate": "La recherche est simple, mais le court peut aussi nous conduire à la liberté ... face_savoring_food",
+    "cosine_similarity": 0.664516806602478
+  },
+  {
+    "original": "Quand la raison décide, le coeur obéit..",
+    "paraphrase": "عندما كان السبب، كان الجارح...",
+    "french_intermediate": "Quand la raison, le coureur était...",
+    "cosine_similarity": 0.5431618094444275
+  },
+  {
+    "original": "شكرا لكم جميعا .. واخرون .. اليوم_العالمي_للترجمة",
+    "paraphrase": "شكراً لكم جميعاً على حضوركم اليوم لترجمة",
+    "french_intermediate": "Merci à tous d'être venus aujourd'hui pour traduire",
+    "cosine_similarity": 0.6517883539199829
+  },
+  {
+    "original": "Tous les retraités sont régulièrement payés à la date fixée chaque mois ..Et sans interruption auc…",
+    "paraphrase": "كما تعلم، التتبعات صحيحة، البلدان في التاريخ المحدد كل شهر... و بدون انقطاع على أقصى تقدير...",
+    "french_intermediate": "Tu sais, les retraces sont réglo, les pays à la date fixe chaque mois ...et sans interruption au plus...",
+    "cosine_similarity": 0.5722994208335876
+  },
+  {
+    "original": "أليانس للتأمينات تتمنى بداية أسبوع موفقة للجميع Alliance Assurances vous souhaite un bon début de semaine à tous.",
+    "paraphrase": "ويتمنى لجميع المشاركين في التحالف بداية جيدة من أسبوع تحت قيادة صباح أسبوعي سعيد للجميع.",
+    "french_intermediate": "Allanes Assurances souhaite le bon début d'une semaine à tous les assurés d'Alliance, sous la direction d'un bon matin de semaine à tous.",
+    "cosine_similarity": 0.6485322713851929
+  },
+  {
+    "original": "temperature up 11°C -&gt; 23°C humidity down 87% -&gt; 40%",
+    "paraphrase": "- 11 درجة مئوية - & ggt; 23 درجة مئوية rmmmidity down 87.7 - & ggt; 40 في المائة",
+    "french_intermediate": "temperature up 11°C -&gt; 23°C humidity down 87% -&gt; 40%",
+    "cosine_similarity": 0.5132682919502258
+  },
+  {
+    "original": "هاي مرحبا كيفك",
+    "paraphrase": "مرحباً، كيف حالك؟",
+    "french_intermediate": "Salut, comment vas-tu ?",
+    "cosine_similarity": 0.6388317942619324
+  },
+  {
+    "original": "اوكي مرحبا",
+    "paraphrase": "حسناً - مرحباً -",
+    "french_intermediate": "- D'accord. - Salut.",
+    "cosine_similarity": 0.7476202249526978
+  },
+  {
+    "original": "عرض_ترويجي Promo Pixx 100 على قائمة 600* check_mark مكالمات telephone_receiver envelope_with_arrow SMS غير محدودة نحو موبيليس party_popper smiling_face_with_heart-eyes ribbon check_mark 13 جيغا mobile_phone_with_arrow حجم إنترنت party_popper confetti_ball ribbon …",
+    "paraphrase": "[Promo Pixx 100 في القائمة 600* check_mark] التليفون_recuver envelope_with_with_arw Smarw، دون حدود إلى Mupeles pay_poper smeling_fase_with_heart-ees ribon chec_mark 13 Giga ja fair_ mone_with_with_orawary ouper comportiti_pall ribon...",
+    "french_intermediate": "[Promo Pixx 100 sur la liste 600* check_mark] Telephone_receiver envelope_with_arrow SMS, sans limite à Mopiles party_poper smiling_face_with_heart-eyes ribbon check_mark 13 Giga mobile_phone_with_arrow volume Internet party_popper confetti_ball ribbon ...",
+    "cosine_similarity": 0.8379277586936951
+  },
+  {
+    "original": "Moi je suis en Algerie et je l'écoute en live mais sur internet bien sûr!",
+    "paraphrase": "أنا في الجزائر، وأنا أحبه على قيد الحياة، ولكن على الإنترنت بالطبع!",
+    "french_intermediate": "Moi je suis en Algérie et je l'aime en vie mais sur internet bien sûr!",
+    "cosine_similarity": 0.5964856147766113
+  },
+  {
+    "original": "تاغيت",
+    "paraphrase": "تاغيت.",
+    "french_intermediate": "Taggett.",
+    "cosine_similarity": 0.800774872303009
+  },
+  {
+    "original": "لا أحد يصبح غنياً بالعمل من 8 صباحاً حتى 4 مساءاً \" بابلو_اسكوبار تاجر مخدرات",
+    "paraphrase": "لا أحد يصبح غنياً بعمل من الثامنة حتى الرابعة بابلو إسكوبار تاجر مخدرات",
+    "french_intermediate": "Personne ne devient riche avec un boulot de 8 h à 16 h. Pablo-Escobar est un dealer de drogue.",
+    "cosine_similarity": 0.7638906836509705
+  },
+  {
+    "original": "Are you photographing me!! summertime seaandsand algerienne Algeria shootall portrait à Chenoua Plage, Tipaza, Alger…",
+    "paraphrase": "صورة فوتوغرافية مصورة في سينوا ببليج، تيبازا، الجزائر.",
+    "french_intermediate": "Are you photographing me! summertime seaand algerienne Algeria shootall portrait à Chenoua Plage, Tipaza, Alger...",
+    "cosine_similarity": 0.554639995098114
+  },
+  {
+    "original": "Venez les DZ on fait une pétition pour avoir spotify en Algérie face_with_tears_of_joy face_with_tears_of_joy onveutspotifydz algerie",
+    "paraphrase": "(فنـزويلا دي زي) نحن في فترة من الزمن لنكون في الجزائر في وجه_with_teres_tears_of_juy في مواجهة_with_tewith_tears_of_joy unveutspoptevyedz algerie",
+    "french_intermediate": "Venezuela les DZ on fait une période pour avoir spotify en Algérie face_with_tears_of_joy face_with_tears_of_joy onveutspotifydz algerie",
+    "cosine_similarity": 0.7309442162513733
+  },
+  {
+    "original": "Aguero Chelsea ??",
+    "paraphrase": "* رحلة تشيلسي *",
+    "french_intermediate": "♪ Aguero Chelsea ♪",
+    "cosine_similarity": 0.5248557329177856
+  },
+  {
+    "original": "لا هي عازبة الان ..هه",
+    "paraphrase": "لا، إنها عازبة الآن",
+    "french_intermediate": "Non, elle est célibataire maintenant.",
+    "cosine_similarity": 0.8180668354034424
+  },
+  {
+    "original": "هه تتكلم على حسني مبارك ماذا فعل هو في شعبه وماذا فعل في السني صدام حسين الله يرحمه…",
+    "paraphrase": "أنت تتحدث إلى حسني مبارك عن ما فعله بشعبه، وما فعله في ساني صدام حسين، رحمه الله.",
+    "french_intermediate": "Vous parlez à Hosni Moubarak de ce qu'il a fait dans son peuple, et ce qu'il a fait dans le Sanny Saddam Hussein, Dieu ait pitié de lui.",
+    "cosine_similarity": 0.7577487230300903
+  },
+  {
+    "original": "samsungphotography withgalaxy galaxynote8 iphonephotooftheday androidphoto androidphotography…",
+    "paraphrase": "Samsungphophophographyy ingalaxy graxynoti8 exaphotynoti8 iephotofthiesday, Proandidphoto, Proadphophophography...",
+    "french_intermediate": "Samsungphotography withgalaxy galaxynote8 iphonephotooftheday androidphoto androidphotography...",
+    "cosine_similarity": 0.7489671111106873
+  },
+  {
+    "original": "سعدية",
+    "paraphrase": "سعود؛ أديه",
+    "french_intermediate": "Sa &apos; adieh",
+    "cosine_similarity": 0.7277016043663025
+  },
+  {
+    "original": "Et avec cela..La Chine a aquis plusieurs marchés en milliards de dollars..Dans les pays musulmans.…",
+    "paraphrase": "الصين تحتاج إلى سوق أكبر ببلايين الدولارات في الدول الإسلامية",
+    "french_intermediate": "Et avec ce qu'elle... La Chine a besoin d'un plus grand marché en milliards de dollars... dans les pays musulmans...",
+    "cosine_similarity": 0.5434043407440186
+  },
+  {
+    "original": "نادين نجيم في اضخم حفل الملكة الساحرة ناديين",
+    "paraphrase": "(نادين ناجيم) في أعظم حفلة للملكة الساحرة (نادين)",
+    "french_intermediate": "Nadine Najim à la plus grande fête de la reine sorcière, Nadine.",
+    "cosine_similarity": 0.8193572163581848
+  },
+  {
+    "original": "pushpin فالمؤمن يجب أن يكون ناصحاً يعني : leaf_fluttering_in_wind خالصاً من النفاق leaf_fluttering_in_wind وخالصاً من الغش leaf_fluttering_in_wind وخالصاً من الخديعة diamond_suit يكون ظاهره…",
+    "paraphrase": "يجب أن يكون المؤمِّن مستشاراً، أي: لا يوجد نفاق، لا نفاق، لا نفاق، لا نفاق، لا نفاق.",
+    "french_intermediate": "L'assureur doit être conseiller, c'est-à-dire: leaf_fluttering_in_wind libre de toute hypocrisie, leaf_fluttering_in_wind, et lef_fluttering_in_wind, et le pur diamond_suit est visible...",
+    "cosine_similarity": 0.5171878337860107
+  },
+  {
+    "original": "صور | 180930 شينبي في برنامج King Of Masked Singer اليوم :",
+    "paraphrase": "صور من 180930 شينبي اليوم:",
+    "french_intermediate": "Photos de 180930 Shinby dans King Of Masked Singer aujourd'hui:",
+    "cosine_similarity": 0.753156840801239
+  },
+  {
+    "original": "نعم اصدق.",
+    "paraphrase": "نعم، أعتقد ذلك.",
+    "french_intermediate": "Oui, je le crois.",
+    "cosine_similarity": 0.696286678314209
+  },
+  {
+    "original": "Queens there is another number one after 12th October",
+    "paraphrase": "4 - Quenss there its is anather enember one affter 12th October",
+    "french_intermediate": "Queens there is another number one after 12th October",
+    "cosine_similarity": 0.8345120549201965
+  },
+  {
+    "original": "إنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلى النَّبِيِّ يَا أَيُّهَاالَّذِينَ آَمَنُوا صَلُّوا عَلَيْهِ وسَلِّمُوا…",
+    "paraphrase": "يصلّي الله وملائكته للنبي الذين آمنوا به وعادوا اليه . . .",
+    "french_intermediate": "Dieu et ses anges prient pour le prophète, ceux qui ont cru en lui et lui ont rendu...",
+    "cosine_similarity": 0.6695312261581421
+  },
+  {
+    "original": "الببغاء وقبل بناء لسرة والتكاثر يقوم بتفقد محيطه ان كان يتوفر على ماء وغذاء لمدة طويلة وهل يوجد حيوانات مفترسة تهدد…",
+    "paraphrase": "الببغاء، قبل أن يبني سرّاً ويتكاثر، تحقق من بيئته، إن كان لديه ماء وطعام لفترة طويلة، وإذا كان هناك مفترس يهدد...",
+    "french_intermediate": "Le perroquet, avant de construire un secret et de se reproduire, vérifie son environnement, s'il a de l'eau et de la nourriture pendant longtemps, et s'il y a des prédateurs qui menacent...",
+    "cosine_similarity": 0.6593911647796631
+  },
+  {
+    "original": "writing_hand قال الإمام القرطبي رحمه الله تعالىٰ: قال الأستاذ أبو إسحاق الاسفرايني : صحب ذو النون الحوت أيامًا قلائل فإلىٰ يوم…",
+    "paraphrase": "قال الإمام الغربي: \"البروفيسور أبو إسحاق الصفراجيني قال: \"قبل أيام قليلة، حتى يوم واحد...",
+    "french_intermediate": "L'imam corbeau a dit: \"Le professeur Abu Isaac Al-Safrajini a dit: \"Il y a peu de jours, jusqu'à un jour...",
+    "cosine_similarity": 0.6024936437606812
+  },
+  {
+    "original": "اللي بشبه ل 3 مقلوبة هو i لان الاسم المكتوب بحروف التفناغ هو ديهيا dihya بالنسبة لاسمك كتبتهولك",
+    "paraphrase": "الذي يشبه 3 هو i لأن الاسم المكتوب بحروف محرقة هو ديهيا ديهيا ديهيا لاسمك",
+    "french_intermediate": "Celui qui ressemble à 3 est i parce que le nom écrit en caractères d'incinérateur est Dihya dihya pour votre nom.",
+    "cosine_similarity": 0.7612335085868835
+  },
+  {
+    "original": "La justice française doit se conformer à la loi..française. ..",
+    "paraphrase": "ويجب أن تمتثل العدالة الفرنسية للقانون.",
+    "french_intermediate": "La justice française doit se conformer à la loi.",
+    "cosine_similarity": 0.580439031124115
+  },
+  {
+    "original": "في انتظار",
+    "paraphrase": "أنا أنتظر.",
+    "french_intermediate": "J'attends.",
+    "cosine_similarity": 0.6890354752540588
+  },
+  {
+    "original": "TheSong IDOL PCAs",
+    "paraphrase": "جيم- سونغ IDOLPASS",
+    "french_intermediate": "The Song IDOL PCAs",
+    "cosine_similarity": 0.6391282677650452
+  },
+  {
+    "original": "لو تكرمت اعد قراءة ماكتبت.",
+    "paraphrase": "لو سمحتم بقراءة ما كتبته",
+    "french_intermediate": "Si vous voulez bien lire ce que j'ai écrit.",
+    "cosine_similarity": 0.7068164944648743
+  },
+  {
+    "original": "اضطراب جوي نشيط سيخص المناطق الشمالية الوسطى و الشرقية و بأقل حدة الغربية ابتداءا من يوم الإثنين 18:00 إلى غاية الخ…",
+    "paraphrase": "ومن المقرر أن يشمل النشاط الجوي النشط المناطق الشمالية الشرقية، والوسطى الشرقية والغربية، من الاثنين إلى الساعة 00/18، وما إلى ذلك.",
+    "french_intermediate": "Une agitation aérienne active concernera les régions du nord-est, du centre-est et de l'ouest, du lundi à 18 heures, etc.",
+    "cosine_similarity": 0.7476364970207214
+  },
+  {
+    "original": "KimJongUn",
+    "paraphrase": "جيم - جوخون",
+    "french_intermediate": "KimJongUn",
+    "cosine_similarity": 0.5550429224967957
+  },
+  {
+    "original": "قلب المحب كبندول ساعة حائطية متارجح بين فرحة وصل و. لقاء و شوق و انتظار",
+    "paraphrase": "قلب الحب كساعة حائطية يختلط بين البهجة القادمة، اللقاء، الرغبة والتوقّع.",
+    "french_intermediate": "Le cœur de l'amour en tant qu'horloge murale se balance entre une joie qui arrive, une rencontre, un désir et une attente.",
+    "cosine_similarity": 0.6382902264595032
+  },
+  {
+    "original": "بدء التشغيل التجريبي لـ «مترو الرياض» نهاية 2018",
+    "paraphrase": "بدء تجربة إمبراطور الرياض في أواخر عام 2018.",
+    "french_intermediate": "Démarrage de l'essai de l'Empereur de Riyad à la fin de 2018.",
+    "cosine_similarity": 0.7387018799781799
+  },
+  {
+    "original": "الله يبارك",
+    "paraphrase": "فليبارك الله الله.",
+    "french_intermediate": "Dieu bénisse.",
+    "cosine_similarity": 0.6210744380950928
+  },
+  {
+    "original": "ㅤ عندما يتحدث إليك محبّك بـ إسلوب طفل فـ أعلم إنه في أصدق حالاتهہ ..",
+    "paraphrase": "عندما يتحدث إليك حبيبك كطفل أعلم أنه في أفضل الحالات",
+    "french_intermediate": "Quand ton amoureux te parle comme un bébé, je sais qu'il est dans le meilleur des cas.",
+    "cosine_similarity": 0.7398642897605896
+  },
+  {
+    "original": "Vrai..",
+    "paraphrase": "...منطقي...",
+    "french_intermediate": "Vrai...",
+    "cosine_similarity": 0.8318670988082886
+  },
+  {
+    "original": "نعم انها الحقيقه",
+    "paraphrase": "نعم، هذا صحيح.",
+    "french_intermediate": "Oui, c'est vrai.",
+    "cosine_similarity": 0.5711042881011963
+  },
+  {
+    "original": "Couscous est né dans la région de Tiaret ou région antique Rostomides, dynastie ibadite du IX° s…",
+    "paraphrase": "(كوكسوس) ولد في منطقة (تياريت) أو منطقة مناهضة للروستوميدس، سلالة باديت",
+    "french_intermediate": "Couscous est né dans la région de Tiaret ou région anti-Rostomides, dynastie badite du IX° s...",
+    "cosine_similarity": 0.5340583324432373
+  },
+  {
+    "original": "In Algeria",
+    "paraphrase": "الجزائر العاصمة",
+    "french_intermediate": "In Algeria",
+    "cosine_similarity": 0.6957120895385742
+  },
+  {
+    "original": "عن يحيى بن أبي كثير قال : . لا يستطاع العلم براحة الجسد. . books جامع بيان العلم 1/385.",
+    "paraphrase": "قال: \"لا يمكن معرفة راحة الجسد\"",
+    "french_intermediate": "Il a dit: \"Il n'est pas possible de connaître le confort du corps.\"",
+    "cosine_similarity": 0.5387624502182007
+  },
+  {
+    "original": "L'artiste Libanaise Elissa Lebanon Sur Le Twitter backhand_index_pointing_right Octobre est un mois de prévention, de santé et, surtout, d’espoir. L…",
+    "paraphrase": "الفنانة اللبنانية إليسا ليبانون على تويتر بكخاند_index_bointing_right_Octope هي شهر من الوقاية والصحة والأمل.",
+    "french_intermediate": "L'artiste Libanaise Elissa Lebanon Sur Le Twitter backhand_index_pointing_right Octobe est un mois de prévention, de santé et, surout, d'espoir. L...",
+    "cosine_similarity": 0.6672455072402954
+  },
+  {
+    "original": "يعني مع اخوها هه",
+    "paraphrase": "مع أخيه.",
+    "french_intermediate": "Avec son frère.",
+    "cosine_similarity": 0.6079081892967224
+  },
+  {
+    "original": "5e7b93b7580c202f20edcc88c1aa118bc2c65281a874e4faf2e30d826f68efbfda4a30399a74799edc5ed1d022d27033682f46d1c81ac4b28f9…",
+    "paraphrase": "5e797b93b93b93b93b77580c20202f20dcc88c1a118bc2c665218a874f4f4f2e30d826ffffffffffffd4303993a74799dc5d5d1d022d2d2d22227033682f46d1c1c81ac4b28f9",
+    "french_intermediate": "5e7b93b7580c202f20edcc88c1aa118bc2c65281a874f4f2e30d826f68efbffda4a30399a74799edc5ed1d022d27033682f46d1c81ac4b28f9....",
+    "cosine_similarity": 0.6896560192108154
+  },
+  {
+    "original": "تاج حيدر كاريس بشار ديمة قندلفت امل عرفة سلافة معمار و في مصر سمية الخشاب نور اللبنانية عبلة كامل حنان مطاوع ممثل_تحبه",
+    "paraphrase": "تاج حيدر كاريس، بشار ديما قندلفت، أمال عرافة، سلفة معمر، وفي مصر، علامة الورم؛ عشب نور، صورة لبنانية للدبوس؛ بعبالة كمال هنّا آندبوس؛ ممثل محب؛",
+    "french_intermediate": "Taj Haidar Karis, Bashar Dima Qandlft, Amal Arafa, Salifa Maamar, et en Égypte, la marque de l &apos; herbe Noor, le portrait libanais d &apos; Abala Kamel Hana &apos; a, un acteur qui l &apos; aime.",
+    "cosine_similarity": 0.6389829516410828
+  },
+  {
+    "original": "فنة HananeElKhader",
+    "paraphrase": "فنان فنان - حنان الخضر",
+    "french_intermediate": "Artiste de HananeElKhader",
+    "cosine_similarity": 0.5289402604103088
+  },
+  {
+    "original": "اللقطات الحائزة على أفضل صور في مسابقة التصوير البيئي لعام 2018.. winking_face smiling_face_with_heart-eyes .",
+    "paraphrase": "وقد أُخذت في الاعتبار أفضل صور مسابقة الصور البيئية لعام 2018.",
+    "french_intermediate": "Les images les plus belles du concours de photo de l'environnement de 2018 ont été prises en compte.",
+    "cosine_similarity": 0.665649950504303
+  },
+  {
+    "original": "Waiting for Kenza winking_face برنامج_سيدتي",
+    "paraphrase": "وايتينج من أجل كنزا وينكنغ_ وجها لوجه _ سيدتي.",
+    "french_intermediate": "Waiting for Kenza winking_face_madame.",
+    "cosine_similarity": 0.6165508031845093
+  },
+  {
+    "original": "Avec les man_swimming man_swimming à Bou Zedjar",
+    "paraphrase": "مع الـ_swyming ma_swyming ma_swiming في بو زيجار",
+    "french_intermediate": "Avec les man_swimming man_swimming à Bou Zedjar",
+    "cosine_similarity": 0.6296295523643494
+  },
+  {
+    "original": "لا موجودة .. بحثت الان و لقيت تيلتيل باتمان ، تيلتيل حراس المجرة و تيلتيل والكيتغ ديد (قصة ميشون) . مع العلم ان ستوري إماراتي",
+    "paraphrase": "لقد شاهدت (تيلتل باتمان) و(تيلتل) وحراس المجرة و(تيلتل) و(كيتج ديد)",
+    "french_intermediate": "J'ai regardé Tiltle Batman, Tiltle Gardes de la galaxie, Tiltle et Ketg Did, sachant que Story Emirate a été tuée.",
+    "cosine_similarity": 0.7541024088859558
+  },
+  {
+    "original": "احد مطورين اللعبة تكلم مع موقع Kotaku و قال انهم سحبوا الحلقة الثانية حنى يشتغلوا على الثالثة و الرابعة…",
+    "paraphrase": "أحد مطوري اللعبة تحدث مع (كوتاكو) وقال أنهم سحبوا الحلقة الثانية",
+    "french_intermediate": "Un des développeurs du jeu a parlé à Kotaku et a dit qu'ils avaient retiré la 2e épisode, et qu'ils travaillaient sur 3e et 4e...",
+    "cosine_similarity": 0.7533396482467651
+  },
+  {
+    "original": "ورينا_تصويرك_بالجوال من صحراء تيميمون ولاية أدرار ..",
+    "paraphrase": "و (رينا) أنتِ تصورين في صحراء (تيمون) في ولاية (أدرار)",
+    "french_intermediate": "Et Rayna, vous filmez dans le désert de Timmon, dans l'État d'Adrar.",
+    "cosine_similarity": 0.6231296062469482
+  },
+  {
+    "original": "لم أرى سنة ماتو",
+    "paraphrase": "لم أرَ عامًا من الموت من قبل.",
+    "french_intermediate": "Je n'ai jamais vu un an de mort.",
+    "cosine_similarity": 0.553313672542572
+  },
+  {
+    "original": "الأعراب هم العرب",
+    "paraphrase": "العرابون هم العرب.",
+    "french_intermediate": "Les Parrains sont les Arabes.",
+    "cosine_similarity": 0.6978809237480164
+  },
+  {
+    "original": "المتبادلة",
+    "paraphrase": "تبادل تبادل تبادل المعلومات",
+    "french_intermediate": "Échange",
+    "cosine_similarity": 0.5095245838165283
+  },
+  {
+    "original": "الموافق ل 1796 ميلادي",
+    "paraphrase": "إنّه عيد ميلادي 1796 1796.",
+    "french_intermediate": "C'est mon 1796e anniversaire.",
+    "cosine_similarity": 0.7797996401786804
+  },
+  {
+    "original": "عندك دليل بنوهم",
+    "paraphrase": "لديك دليل على أولادهم",
+    "french_intermediate": "Vous avez des preuves de leurs fils.",
+    "cosine_similarity": 0.7682816982269287
+  },
+  {
+    "original": "كنيسة المالح church ريو صالادو سابقا ولاية عين تموشنت الجزائر Église d'El Malah ( ex Rio Salado ) church Ain Temouchent…",
+    "paraphrase": "الكنيسة السابقة سلطة الشورش ريو سالادو، ولاية عين توتشنت الجزائر، المله (سابقاً ريو سالادو) church Ain Timosunt.",
+    "french_intermediate": "Ancien Église salade de la church Rio Salado, État d'Ein Toutchent Algérie, d'El Malah (ex Rio Salado) church Ain Temouchent...",
+    "cosine_similarity": 0.8377854824066162
+  },
+  {
+    "original": "Con el señor Ricardo Jiménez Sánchez. encuentrosconmexicanosenArgelia conferencia cuentos…",
+    "paraphrase": "con en con encentros con con con conmexicanosen Argelia conferencia conferncia cuentos ...",
+    "french_intermediate": "Con el señor Ricardo Jiménez Sánchez, encuentros Conmexicanosen Argelia conferencia cuentos...",
+    "cosine_similarity": 0.7702114582061768
+  },
+  {
+    "original": "D’Erevan Armenia jusqu’à Paris France , il a chanté dans toutes les villes du monde, pour l’amour et la liberté.…",
+    "paraphrase": "(يريفان أرمينيا) حتى الآن؛ وفي باريس فرانسس، تغير في جميع مدن العالم، من أجل الماء والحرية...",
+    "french_intermediate": "D&apos; Erevan Armenia jusqu &apos; à Paris France , il a changé dans toutes les villes du monde, pour l &apos; eau et la liberté...",
+    "cosine_similarity": 0.5431278944015503
+  },
+  {
+    "original": "bbe89699d4857d3720e6b66f180eea890bc9829e6ff44362f5b01d9f36f38ebf4e38c469c408958601a27fc63c049e7bcb2dc785bb29c562ecc…",
+    "paraphrase": "(ب) البـبـيـبـيـيـبـيـبـيـيـبـيـبـيـيـبـيـبـيـبـيـبـيـبـيـبـلـيـبـلـيـبـلـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـلـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـلـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـبـجـجـبـجـبـبــ",
+    "french_intermediate": "bbe89699d4857d3720e6b66f180eea 890bc9829e6ff44362f5b01d9f36f38ebf4e38c469c40895861a27fc63c049e7bbbbb2dc785bb29c562ecc...",
+    "cosine_similarity": 0.5578956007957458
+  },
+  {
+    "original": "A quelle prix est l'or en Algérie le 18 K ? \"titre 750\".",
+    "paraphrase": "ما هو سعر الذهب في الجزائر في 18 ك",
+    "french_intermediate": "A quelle prix est l'or en Algérie le 18 K ♪ \"Ttre 750.\"",
+    "cosine_similarity": 0.545594334602356
+  },
+  {
+    "original": "قصدك. وفاق سطيف ؟",
+    "paraphrase": "هل هذه صفقة جيدة؟",
+    "french_intermediate": "C'est un bon arrangement ?",
+    "cosine_similarity": 0.5306397080421448
+  },
+  {
+    "original": "هل اللعبة فيها photo mode او لا ؟",
+    "paraphrase": "هل هناك صورة أم لا؟",
+    "french_intermediate": "Est-ce qu'il y a une photo ou pas ?",
+    "cosine_similarity": 0.7043384313583374
+  },
+  {
+    "original": "السلام عليكم دكتور ممكن تساعدني في إيجاد وظيفة معلمة لغة عربية في تركيا؟",
+    "paraphrase": "مرحباً أيها الطبيب، هل يمكنك مساعدتي في العثور على وظيفة معلمة باللغة العربية في تركيا؟",
+    "french_intermediate": "Bonjour, docteur. Vous pouvez m'aider à trouver un emploi d'enseignante en langue arabe en Turquie ?",
+    "cosine_similarity": 0.8111417293548584
+  },
+  {
+    "original": "سلام عليكم..هل ندخل الى تلك الروابط اخي؟؟",
+    "paraphrase": "مرحباً، هل سندخل في هذه الروابط يا أخي؟",
+    "french_intermediate": "Bonjour, on entre dans ces liens, mon frère ?",
+    "cosine_similarity": 0.8159347772598267
+  },
+  {
+    "original": "مواد البناء",
+    "paraphrase": "معدات البناء",
+    "french_intermediate": "Matériaux de construction",
+    "cosine_similarity": 0.7936525344848633
+  },
+  {
+    "original": "حان الآن آذان صلاة الظهر سطيف",
+    "paraphrase": "حان وقت الصلاة، جميل",
+    "french_intermediate": "C'est l'heure de la prière. Sympa.",
+    "cosine_similarity": 0.5641613006591797
+  },
+  {
+    "original": "Crapustule",
+    "paraphrase": "الصنف الاستوطية",
+    "french_intermediate": "Crapustule",
+    "cosine_similarity": 0.5045381188392639
+  },
+  {
+    "original": "هل هنالك تفاصيل عن ذلك",
+    "paraphrase": "هل هناك أي تفاصيل عن هذا؟",
+    "french_intermediate": "Y a-t-il des détails à ce sujet ?",
+    "cosine_similarity": 0.8442326188087463
+  },
+  {
+    "original": "Bouzeguene (tizi_ouzou).",
+    "paraphrase": "بوزين (تيزي - أوزو).",
+    "french_intermediate": "Bouzeguene (tizi_ouzou).",
+    "cosine_similarity": 0.71053546667099
+  },
+  {
+    "original": "يــوم المبـاراة الاهلي المصري VS_button وفاق سطيف trophy نصف نهائي دوري ابطال افريقيا alarm_clock 20:00 بتوقيت الجزائر desktop_computer بي ان سبورت HD 2…",
+    "paraphrase": "يوم المباراه المصريه VS_botton و نصف النهائيه لبطولة افريقيه افريقيه الارم_clock 08: 00 مساء (بتوقيت الجزائر) Deskttop_ computer BN HD 2",
+    "french_intermediate": "Le jour du match égyptien VS_button et de la demi-finale du championnat africain alarm_clock 20 h 00 (heure d'Algérie) desktop_computer BN HD 2...",
+    "cosine_similarity": 0.8454916477203369
+  },
+  {
+    "original": "@ Râs El Oued, Bordj Bou Arreridj, Algeria",
+    "paraphrase": "@RUS الواد، برج بوعريدج، الجزائر العاصمة",
+    "french_intermediate": "@Râs El Oued, Bordj Bou Arreridj, Algeria",
+    "cosine_similarity": 0.6059946417808533
+  },
+  {
+    "original": "مصطلح الغرب اوسع واشمل.",
+    "paraphrase": "والمصطلح الغربي أوسع نطاقاً وأوسع نطاقاً.",
+    "french_intermediate": "Le terme occidental est plus large et plus large.",
+    "cosine_similarity": 0.6507564187049866
+  },
+  {
+    "original": "هذه جامعة باتنة؟",
+    "paraphrase": "هل هذه جامعة (باتنا)؟",
+    "french_intermediate": "C'est l'université de Batna ?",
+    "cosine_similarity": 0.7598795890808105
+  },
+  {
+    "original": "face_with_hand_over_mouth",
+    "paraphrase": "& with_with_ handd_ over_ mam",
+    "french_intermediate": "Face_with_hand_over_mouth",
+    "cosine_similarity": 0.786875307559967
+  },
+  {
+    "original": "Robert Redford et Brad Pitt dans \"Spy game\" -- .. Jeu d'espions - ou Jeux d'espionnage , 2001",
+    "paraphrase": "(روبرت ريدفورد) و(براد بيت) في \"مباراة الجواسيس\" أو ألعاب التجسس، 2001",
+    "french_intermediate": "Robert Redford et Brad Pitt dans \"Spy game\" -- Jeu d'espions - ou Jeux d'espionnage, 2001",
+    "cosine_similarity": 0.5285747051239014
+  },
+  {
+    "original": "Kimiş o rap şarkıcı üstü örtülü niye yazıyorsun",
+    "paraphrase": "(توقيع) توماس كيميش آب ar ar ar ar ark re justu örtürtolulu nieyeyyaz yyyororson",
+    "french_intermediate": "Kimiş o rap şark impérativement üstü örtülü niye yazпyorsun",
+    "cosine_similarity": 0.5490993857383728
+  },
+  {
+    "original": "b598ad91f2b0070720228ac2f90f812316aedff48825a7cedac465f4ea0b1b8710b6b1eea9ec0ed8a3078adbe03973e4c8e232e9237d4deac59…",
+    "paraphrase": "(ب) B598d9191ff2b00772720228ac2f90f8908811238231aedf4888225a7cidadc465f4e4abb1b1b1b1bb18710b6b6b1eeeea9ec10b1",
+    "french_intermediate": "b598ad91f2b0070720228ac2f90f812316aedff488225a7cedac465f4ea0b1b8710b6b1eea9ec0ed8a3078adbe03973e4c8e232e9237d4deac59...",
+    "cosine_similarity": 0.5578956007957458
+  },
+  {
+    "original": "Hugo Chavez, ancien Président de la République bolivarienne du Venezuela (craint et respecté par une grande partie…",
+    "paraphrase": "هوغو شافيز، الرئيس السابق لجمهورية فنزويلا البوليفارية (القانون والاحترام من جانب جزء كبير)",
+    "french_intermediate": "Hugo Chávez, ancien Président de la République bolivarienne du Venezuela (droit et respect par une grande partie...",
+    "cosine_similarity": 0.5316596031188965
+  },
+  {
+    "original": "Nicolas Sarkozy, ancien Président de la République Française (de 2007 à 2012) et actuel président du parti \"Les Rép…",
+    "paraphrase": "نيكولا ساركوزي، الرئيس السابق للجمهورية الفرنسية (من 2007 إلى 2012) والرئيس الحالي لحزب \"Les Rep.",
+    "french_intermediate": "Nicolas Sarkozy, ancien Président de la République française (de 2007 à 2012) et actuel président du parti \"Les Rép...",
+    "cosine_similarity": 0.667772114276886
+  },
+  {
+    "original": "VOTE make me cry cry TheMusicVideo IDOL BTS⁠ ⁠ PCAs",
+    "paraphrase": "@MosisicVideo IDOL BTS",
+    "french_intermediate": "VOTE make me cry cry TheMusicVideo IDOL BTS",
+    "cosine_similarity": 0.6564995050430298
+  },
+  {
+    "original": "of course i do",
+    "paraphrase": "في السباق i do",
+    "french_intermediate": "of course i do",
+    "cosine_similarity": 0.6678896546363831
+  },
+  {
+    "original": "Franklin Delano Roosevelt, ancien Président des Etats-Unis et figure politique centrale du XXème siècle (seul Prési…",
+    "paraphrase": "فرانكلين ديلانو روزفلت، رئيس الولايات المتحدة السابق والشخصية السياسية المركزية للمقعد الثاني والعشرين.",
+    "french_intermediate": "Franklin Delano Roosevelt, ancien Président des États-Unis et figure politique centrale du XXIIème siège (soul Presi...",
+    "cosine_similarity": 0.522290825843811
+  },
+  {
+    "original": "ولاية النعامة على موعد هام من أجل التحظير للوعدة التي يأتيها المواطنين من داخل و خارج الوطن الدعوة عامة شكراا",
+    "paraphrase": "إن ولاية النعمة مناسبة هامة للوفاء بالوعود التي قطعها المواطنون من داخل البلد وخارجه.",
+    "french_intermediate": "Le mandat d'Al-Naamah est un rendez-vous important pour tenir compte des promesses faites par les citoyens de l'intérieur et de l'extérieur du pays.",
+    "cosine_similarity": 0.6842771768569946
+  },
+  {
+    "original": "Le célèbre journaliste et éditorialiste saoudien, Jamal Khashoggi, a disparu depuis la mi-journée du mard…",
+    "paraphrase": "\"الوسط الصحفي والتربوي السعودي، جمال الخشقجي، مفقود منذ منتصف يوم البدر\"",
+    "french_intermediate": "Le milieu journaliste et éducatif saoudien, Jamal Khashoggi, a disparu depuis la mi-jour du mard...",
+    "cosine_similarity": 0.5433018803596497
+  },
+  {
+    "original": "headphone headphone O kiddan? YoYoPaagalSingh @ My Kitchen",
+    "paraphrase": "أوكيددان؟ Yoyo PapagagalSingh@my Kitchen",
+    "french_intermediate": "headphone headphone O kiddan? YoYoPaagalSingh @my Kitchen",
+    "cosine_similarity": 0.7465428709983826
+  },
+  {
+    "original": "اللهم آمين يارب العالمين أجمعين",
+    "paraphrase": "آمين يا رب، العالمين.",
+    "french_intermediate": "Amen, Seigneur, les deux mondes.",
+    "cosine_similarity": 0.792412519454956
+  },
+  {
+    "original": "انها الاستخبارات الامريكية",
+    "paraphrase": "إنّها وكالة المخابرات الإستخبارات.",
+    "french_intermediate": "C'est la CIA.",
+    "cosine_similarity": 0.7995260953903198
+  },
+  {
+    "original": "نصيحة اليوم و كُل يوم",
+    "paraphrase": "مجلس اليوم وكل يوم",
+    "french_intermediate": "Le conseil d'aujourd'hui et tous les jours.",
+    "cosine_similarity": 0.7476953864097595
+  },
+  {
+    "original": "راهي 09 صباحا .. ياجماعة صباح الخير ، النوم بعد منتصف الليل يضعف القلب بالتجربة . ثانيا مادام رانا مثقف…",
+    "paraphrase": "مرحباً، يا رفاق، النوم بعد منتصف الليل يُقلل من القلب إلى التجربة، ومن ثم، ما دامت (رانا) متعلمة،",
+    "french_intermediate": "Bonjour, les gars, le sommeil après minuit réduit le cœur à l'expérience, et ensuite, tant que Rana est éduqué,",
+    "cosine_similarity": 0.7408561110496521
+  },
+  {
+    "original": "Avec on va organiser un petit « meet-up » dans l’après midi à Alger oncoming_fist Si tu es dans le coin reste à l’af…",
+    "paraphrase": "سوف نقيم إفطاراً في مكان ما في (الجزائر العاصمة) في مكان ما في حال كنت في الزاوية في مكان ما في مكان ما في مكان ما في مكان ما في مكان ما في الماء",
+    "french_intermediate": "Avec on va organiser un petit-déjeuner dans l &apos; espace midi à Alger oncoming_fist Si tu es dans le coin reste à l &apos; eau...",
+    "cosine_similarity": 0.5261548161506653
+  },
+  {
+    "original": "لا يدخل الجنة قصير ..",
+    "paraphrase": "لن يدخل الجنة",
+    "french_intermediate": "Il n'entre pas dans le paradis.",
+    "cosine_similarity": 0.7103410959243774
+  },
+  {
+    "original": "waving_hand On a tous envie de passer des vacances de rêves : des vacances au bord de la mer person_swimming person_surfing , à la campagne ou à la montagn…",
+    "paraphrase": "نحن جميعاً نريد أن نعبر من وجوه الأحلام: من وجوه إلى البحر البيروسوني sowiming person soverfing، إلى الريف أو الجبل.",
+    "french_intermediate": "waving_hand On a tous envie de passer des faces de rêves: des faces au bord de la mer person_swimming person_surfing, à la campagne ou à la montagne...",
+    "cosine_similarity": 0.5481674075126648
+  },
+  {
+    "original": "ترامب للعاهل السعودي: لن تبقى في الحكم لأسبوعين دون حمايتنا",
+    "paraphrase": "لن تبقى في السلطة لأسبوعين بدون حمايتنا.",
+    "french_intermediate": "Tramp pour le Roi d'Arabie saoudite: Vous ne resterez pas au pouvoir pendant deux semaines sans notre protection.",
+    "cosine_similarity": 0.6950185894966125
+  },
+  {
+    "original": "إنه اليقين",
+    "paraphrase": "هذا هو اليقين.",
+    "french_intermediate": "C'est la certitude.",
+    "cosine_similarity": 0.7239041328430176
+  },
+  {
+    "original": "مرسي عليك",
+    "paraphrase": "(مورسيا) معكِ.",
+    "french_intermediate": "Murcie est sur toi.",
+    "cosine_similarity": 0.5806901454925537
+  },
+  {
+    "original": "scattered clouds -&gt; few clouds temperature up 20°C -&gt; 24°C humidity down 68% -&gt; 53% wind 5kmh -&gt; 6kmh",
+    "paraphrase": "scattered ammads - ggt; few amsuds temperative up 20o درجة مئوية - & gtt; 24o درجة مئوية rmmidity down 68.8 - & gtt; 53 في المائة Wind 5 كيلومترات في الساعة -- & ggt; 6 كيلومترات في الساعة",
+    "french_intermediate": "scattered clouds -&gt; few clouds temperature up 20°C -&gt; 24°C humidity down 68% -&gt; 53% wind 5kmh -&gt; 6kmh",
+    "cosine_similarity": 0.5373426675796509
+  },
+  {
+    "original": "A View Of Algiers From Up The Hills! Algeria - - - travelblogger wander wanderlust sunsetporn trip worldnomads…",
+    "paraphrase": "فيو أوف ألكسيرز من أوب أوب في هيلزات الجزائر العاصمة -- -- anvelblogger anderlusst unsetborn trip worldumads...",
+    "french_intermediate": "A View Of Algiers From Up The Hills! Algeria - - travelblogger wanderlust sonsetborn trip worldnomads...",
+    "cosine_similarity": 0.5969187617301941
+  },
+  {
+    "original": "و اكون لباسا يدثرك دفء و امان و حنان..",
+    "paraphrase": "و أن ألبس كي أجعلك دافئاً وآمناً و متعاطفاً",
+    "french_intermediate": "Et être habillé pour te mettre en chaleur, en sécurité et en compassion.",
+    "cosine_similarity": 0.7306976914405823
+  },
+  {
+    "original": "القناعة كنز لا يفنى",
+    "paraphrase": "الاقتناع هو كنز لا يتوقف",
+    "french_intermediate": "La conviction, c'est un trésor qui ne s'arrête pas.",
+    "cosine_similarity": 0.6041639447212219
+  },
+  {
+    "original": "يدكرني طلوع الفجرصخر وادكره لكل غرزب شمسي ولولا كثرت الباكين حولي علة اخوانهم لقتلت نفسي ومايبكين مثل اخي ولكن…",
+    "paraphrase": "شروق الشمس يطاردني، أكره كل غرزة غرزي، ولو لم أبكي، لكنت قتلت إخوتي وأنا، مثل أخي، لكن...",
+    "french_intermediate": "L'aube me hante, je déteste tous mes points de suture, et si je n'avais pas pleuré, j'aurais tué mes frères et moi-même, comme mon frère, mais...",
+    "cosine_similarity": 0.6050115823745728
+  },
+  {
+    "original": "استغفرالله العظيم لي ولكم ولوالداي وللمسلمين والمسلمات الأحياء منهم والأموات",
+    "paraphrase": "وغفر الله لي ولكم ولوالدي وللمسلمين الأحياء وللأموات.",
+    "french_intermediate": "Dieu a pardonné à moi, à vous, à mes parents, aux musulmans vivants et aux morts.",
+    "cosine_similarity": 0.8353160619735718
+  },
+  {
+    "original": "نحن في الجزائر اتهامات كثيرة للجزيرة نريد مزيدا من الاثبات شكرا",
+    "paraphrase": "نحن في الجزائر، لدينا الكثير من الإتهامات للجزيرة نريد المزيد من الأدلة، شكراً لك",
+    "french_intermediate": "Nous sommes en Algérie. Nous avons beaucoup d'accusations pour l'île. Nous voulons plus de preuves. Merci.",
+    "cosine_similarity": 0.7811170220375061
+  },
+  {
+    "original": "رائعة من قائلها نانسي",
+    "paraphrase": "(هذا رائع يا (نانسي نانسي",
+    "french_intermediate": "C'est génial, Nancy.",
+    "cosine_similarity": 0.6827963590621948
+  },
+  {
+    "original": "مدة التعليق على أوجاع و مئاسي شعوب العالم مما يحصدون مما يزرعون.كل شعب ينجب و يربي جلاده و معلق على أخط…",
+    "paraphrase": "طول الوقت الذي يستغرقه التعليق على معاناة ومحنة شعوب العالم التي تحصد ما تزرعه.",
+    "french_intermediate": "La durée des commentaires sur les souffrances et les malheurs des peuples du monde qui récoltent ce qu'ils cultivent.",
+    "cosine_similarity": 0.7418612837791443
+  },
+  {
+    "original": "i can't let people mess with ma brain what if i find myself loosing other memories than that tv shows…",
+    "paraphrase": "هذا هو كل ما لدي مع بلدي shan what with with eved imself myself ossing ousing ther memories than at tat tv العروض...",
+    "french_intermediate": "I can't let people mess with ma brain what if i find myself loosing other memories than that tv shows...",
+    "cosine_similarity": 0.6346158385276794
+  },
+  {
+    "original": "هذه مسابقة دكتورااه هه",
+    "paraphrase": "إنها مسابقة للحصول على درجة الدكتوراة.",
+    "french_intermediate": "C'est un concours de doctorat.",
+    "cosine_similarity": 0.6482188105583191
+  },
+  {
+    "original": "و بالمناسبة و بادن الله العام القادم سآتي اعتمر و ازور السعودية.",
+    "paraphrase": "بالمناسبة، في العام القادم، سآتي إلى المملكة العربية السعودية.",
+    "french_intermediate": "Au fait, l'année prochaine, je viendrai en Arabie saoudite.",
+    "cosine_similarity": 0.8027716875076294
+  }
+]

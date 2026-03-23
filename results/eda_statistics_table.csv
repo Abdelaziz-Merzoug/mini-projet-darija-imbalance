@@ -1,0 +1,5 @@
+Classe,Nb exemples,% du corpus,Moy. mots,Moy. caracteres
+Positive,2864,47.7,9.9,71.9
+Negative,1773,29.5,13.5,90.0
+Neutral,1363,22.7,5.7,56.3
+TOTAL,6000,100.0,10.0,73.7

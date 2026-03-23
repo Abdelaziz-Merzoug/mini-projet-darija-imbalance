@@ -1,0 +1,20 @@
+[
+  {
+    "original": "D’Erevan Armenia jusqu’à Paris France , il a chanté dans toutes les villes du monde, pour l’amour et la liberté.…",
+    "french_intermediate": "D&apos; Erevan Armenia jusqu &apos; à Paris France , il a changé dans toutes les villes du monde, pour l &apos; eau et la liberté...",
+    "paraphrase": "(يريفان أرمينيا) حتى الآن؛ وفي باريس فرانسس، تغير في جميع مدن العالم، من أجل الماء والحرية...",
+    "cosine_similarity": 0.5431
+  },
+  {
+    "original": "فعلا من احترم اوحترما",
+    "french_intermediate": "C'est ce que je respectais.",
+    "paraphrase": "هذا ما كنت أحترمه",
+    "cosine_similarity": 0.669
+  },
+  {
+    "original": "face_with_hand_over_mouth",
+    "french_intermediate": "Face_with_hand_over_mouth",
+    "paraphrase": "& with_with_ handd_ over_ mam",
+    "cosine_similarity": 0.7869
+  }
+]
