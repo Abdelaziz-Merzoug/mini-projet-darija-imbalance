@@ -215,7 +215,7 @@ mini_projet_darija/
 
 ### NB04 — Strategie 2 : Reequilibrage dans l'espace des embeddings
 
-- **Plateforme :** Kaggle P100 (extraction ~20 min pour 3 438 tweets train)
+- **Plateforme :** Google Colab T4 GPU
 - **Taches :**
   - Extraction des vecteurs [CLS] 768D sur le train uniquement
   - SMOTE equilibrage total (classes egales)
@@ -229,7 +229,7 @@ mini_projet_darija/
 
 ### NB05 — Strategie 3 : Augmentation par retro-traduction
 
-- **Plateforme :** Lightning AI A10G (Helsinki-NLP trop lent sur T4)
+- **Plateforme :** Google Colab T4 GPU
 - **Pipeline :**
   1. Darija → Francais via `Helsinki-NLP/opus-mt-ar-fr`
   2. Francais → Arabe via `Helsinki-NLP/opus-mt-fr-ar`
@@ -352,8 +352,8 @@ for d in ['data', 'models', 'results', 'figures', 'notebooks']:
 | 1     | `01_EDA.ipynb`                       | Colab CPU            | Aucun                      |
 | 2     | `02_Preprocessing_Baseline.ipynb`    | Colab T4             | Aucun                      |
 | 3     | `03_Strategie1_Loss_Functions.ipynb` | Colab T4             | `split_indices.json`       |
-| 4     | `04_Strategie2_SMOTE_ADASYN.ipynb`   | Kaggle P100          | `split_indices.json`       |
-| 5     | `05_Strategie3_BackTranslation.ipynb`| Lightning AI A10G    | `split_indices.json`       |
+| 4     | `04_Strategie2_SMOTE_ADASYN.ipynb`   | Colab T4             | `split_indices.json`       |
+| 5     | `05_Strategie3_BackTranslation.ipynb`| Colab T4             | `split_indices.json`       |
 | 6     | `06_Evaluation_Finale.ipynb`         | Tout GPU             | 11 fichiers metrics JSON   |
 
 ### Artefact critique
