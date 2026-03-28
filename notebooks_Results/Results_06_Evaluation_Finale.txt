@@ -1,0 +1,249 @@
+Imports et constantes OK.
+TEXT_COL='Post'  |  LABEL_COL='Polarity Class'  |  LANG_COL='lang'  |  SEED=42
+
+Mounted at /content/drive
+Copie des fichiers JSON de metriques...
+  results/ : 15/15 copies
+Copie des CSV comparatifs...
+  results/ : 3/3 copies
+Copie des figures existantes (NB01-NB05)...
+  figures/ : 33/33 copies
+
+
+Verification BT+50% == BT+100% : PASSE (F1-macro = 0.6715)
+
+11 configurations chargees avec succes.
+
+        Configuration  F1-macro  F1 Positive  F1 Negative  F1 Neutral  AUC-PR  G-mean  Accuracy
+             Baseline    0.6805       0.7806       0.7014      0.5596  0.7534  0.7558    0.7249
+      Class Weighting    0.6386       0.7141       0.6882      0.5134  0.7571  0.7510    0.6694
+ Focal Loss (gamma=1)    0.6784       0.7614       0.7213      0.5525  0.7687  0.7540    0.7209
+ Focal Loss (gamma=2)    0.6794       0.7605       0.7233      0.5543  0.7647  0.7564    0.7209
+      CW + Focal Loss    0.6683       0.7533       0.7068      0.5446  0.7460  0.7576    0.7060
+   SMOTE Full Balance    0.6355       0.7334       0.6730      0.5000  0.6888  0.7186    0.6829
+SMOTE Partial Balance    0.6470       0.7336       0.6801      0.5275  0.6943  0.7282    0.6883
+               ADASYN    0.6617       0.7599       0.6757      0.5495  0.7085  0.7367    0.7046
+              BT +20%    0.6909       0.7786       0.7108      0.5833  0.7652  0.7618    0.7304
+              BT +50%    0.6715       0.7752       0.7016      0.5376  0.7663  0.7484    0.7195
+             BT +100%    0.6715       0.7752       0.7016      0.5376  0.7663  0.7484    0.7195
+
+
+Meilleure configuration : BT +20% (F1-macro = 0.6909)
+Delta vs Baseline       : +0.0104
+
+Tableau comparatif complet — 11 configurations (metrique primaire : F1-macro)
+ 	Configuration	F1-macro	F1 Positive	F1 Negative	F1 Neutral	AUC-PR	G-mean	Accuracy
+0	Baseline	0.6805	0.7806	0.7014	0.5596	0.7534	0.7558	0.7249
+1	Class Weighting	0.6386	0.7141	0.6882	0.5134	0.7571	0.7510	0.6694
+2	Focal Loss (gamma=1)	0.6784	0.7614	0.7213	0.5525	0.7687	0.7540	0.7209
+3	Focal Loss (gamma=2)	0.6794	0.7605	0.7233	0.5543	0.7647	0.7564	0.7209
+4	CW + Focal Loss	0.6683	0.7533	0.7068	0.5446	0.7460	0.7576	0.7060
+5	SMOTE Full Balance	0.6355	0.7334	0.6730	0.5000	0.6888	0.7186	0.6829
+6	SMOTE Partial Balance	0.6470	0.7336	0.6801	0.5275	0.6943	0.7282	0.6883
+7	ADASYN	0.6617	0.7599	0.6757	0.5495	0.7085	0.7367	0.7046
+8	BT +20%	0.6909	0.7786	0.7108	0.5833	0.7652	0.7618	0.7304
+9	BT +50%	0.6715	0.7752	0.7016	0.5376	0.7663	0.7484	0.7195
+10	BT +100%	0.6715	0.7752	0.7016	0.5376	0.7663	0.7484	0.7195
+
+Tableau sauvegarde : results/evaluation_finale_comparatif.csv
+
+
+Imports bonus verifies : MLPClassifier, SMOTE, compute_class_weight
+LABEL_NAMES = ['Positive', 'Negative', 'Neutral']
+Fonctions bonus definies : evaluate_model, print_metrics, plot_confusion_matrix
+Embeddings copies depuis Drive.
+Embeddings train : (3440, 768)
+Embeddings test  : (738, 768)
+Labels copies depuis Drive.
+
+Distribution train (bonus) :
+  Positive   : 1778
+  Negative   : 1210
+  Neutral    : 452
+
+Distribution test (bonus) :
+  Positive   : 381
+  Negative   : 260
+  Neutral    : 97
+
+
+============================================================
+  BONUS OPTION A : SMOTE partial + MLP Classe-Pondere
+============================================================
+
+Avant SMOTE partial :
+  Positive : 1778
+  Negative : 1210
+  Neutral  : 452
+
+Cibles SMOTE partial :
+  Positive   -> 1778
+  Negative   -> 1778
+  Neutral    -> 678
+
+Apres SMOTE partial :
+  Positive   : 1778
+  Negative   : 1778
+  Neutral    : 678
+
+Poids de classe (calcules sur distribution originale) :
+  Positive   : 0.6449
+  Negative   : 0.9477
+  Neutral    : 2.5369
+
+Entrainement MLP PyTorch (100 epochs max, patience=15)...
+  Epoch  10 -- val_loss=0.6235
+  Epoch  20 -- val_loss=0.9130
+  Early stopping a l epoch 25 (val_loss=0.9761)
+Meilleur modele charge (val_loss=0.6235)
+
+============================================================
+  RESULTATS : BONUS A : SMOTE partial + MLP Classe-Pondere
+============================================================
+  F1-macro (PRINCIPAL) : 0.6289
+  Accuracy (ILLUSTR.)  : 0.6626
+  AUC-PR macro         : 0.7305
+  G-mean               : 0.7391
+
+  F1 par classe :
+    Positive   : F1=0.6942  Prec=0.7939  Rec=0.6168
+    Negative   : F1=0.6966  Prec=0.6532  Rec=0.7462
+    Neutral    : F1=0.4959  Prec=0.4138  Rec=0.6186
+
+              precision    recall  f1-score   support
+
+    Positive     0.7939    0.6168    0.6942       381
+    Negative     0.6532    0.7462    0.6966       260
+     Neutral     0.4138    0.6186    0.4959        97
+
+    accuracy                         0.6626       738
+   macro avg     0.6203    0.6605    0.6289       738
+weighted avg     0.6944    0.6626    0.6690       738
+
+
+Metriques sauvegardees : results/bonus_smote_cw_metrics.json
+Matrice de confusion sauvegardee : figures/bonus_smote_cw_confusion_matrix.png
+
+Comparaison avec SMOTE partial seul (NB04) :
+  SMOTE partial seul  : F1-macro = 0.6470
+  SMOTE partial + CW  : F1-macro = 0.6289
+  Delta               : -0.0181
+  Conclusion : double correction -- interference (-0.0181)
+
+
+============================================================
+  BONUS OPTION B : COURBE F1-MACRO = f(RATIO BT)
+============================================================
+Resultats charges depuis bt_5ratios_summary.json
+
+Synthese 5 ratios :
+   Ratio  F1-macro   Paraphrases        Pool
+  ------  --------  ------------  ----------
+  +   10%    0.6884            45          OK
+  +   20%    0.6909            90          OK
+  +   50%    0.6715           214      EPUISE
+  +   75%    0.6715           214      EPUISE
+  +  100%    0.6715           214      EPUISE
+
+Ratio optimal : +20% (F1-macro = 0.6909)
+Gain vs Baseline : +0.0104
+
+Figure bonus sauvegardee : figures/bonus_bt_analysis.png
+
+
+============================================================
+  TABLEAU COMPARATIF FINAL ENRICHI (BONUS)
+============================================================
+                        Configuration  F1-macro  F1 Positive  F1 Negative  F1 Neutral  AUC-PR  G-mean  Accuracy
+                             Baseline    0.6805       0.7806       0.7014      0.5596  0.7534  0.7558    0.7249
+                      Class Weighting    0.6386       0.7141       0.6882      0.5134  0.7571  0.7510    0.6694
+                 Focal Loss (gamma=1)    0.6784       0.7614       0.7213      0.5525  0.7687  0.7540    0.7209
+                 Focal Loss (gamma=2)    0.6794       0.7605       0.7233      0.5543  0.7647  0.7564    0.7209
+                      CW + Focal Loss    0.6683       0.7533       0.7068      0.5446  0.7460  0.7576    0.7060
+                   SMOTE Full Balance    0.6355       0.7334       0.6730      0.5000  0.6888  0.7186    0.6829
+                SMOTE Partial Balance    0.6470       0.7336       0.6801      0.5275  0.6943  0.7282    0.6883
+                               ADASYN    0.6617       0.7599       0.6757      0.5495  0.7085  0.7367    0.7046
+                              BT +20%    0.6909       0.7786       0.7108      0.5833  0.7652  0.7618    0.7304
+                              BT +50%    0.6715       0.7752       0.7016      0.5376  0.7663  0.7484    0.7195
+                             BT +100%    0.6715       0.7752       0.7016      0.5376  0.7663  0.7484    0.7195
+BONUS A : SMOTE partial + MLP Pondere    0.6289       0.6942       0.6966      0.4959  0.7305  0.7391    0.6626
+                    BONUS B : BT +10%    0.6884       0.7872       0.6965      0.5814  0.7597  0.7510    0.7331
+                    BONUS B : BT +75%    0.6715       0.7752       0.7016      0.5376  0.7663  0.7484    0.7195
+
+Tableau enrichi sauvegarde : results/evaluation_finale_avec_bonus.csv
+
+Meilleure configuration toutes strategies confondues :
+  BT +20%
+  F1-macro = 0.6909
+
+Figure finale sauvegardee : figures/bonus_final_comparison.png
+
+Figure sauvegardee : figures/finale_f1_macro_all.png
+
+Figure sauvegardee : figures/finale_f1_per_class_heatmap.png
+
+Figure sauvegardee : figures/finale_radar_top3.png
+
+Figure sauvegardee : figures/finale_strategy_comparison.png
+
+Figure sauvegardee : figures/finale_neutral_focus.png
+
+Figure sauvegardee : figures/finale_accuracy_vs_f1macro.png
+
+SAUVEGARDE VERS GOOGLE DRIVE
+=================================================================
+  results/ : 1/1 sauvegardes
+  figures/ : 6/6 sauvegardes
+
+=================================================================
+VERIFICATION FINALE — NB06
+=================================================================
+
+results/ :
+  [OK] baseline_metrics.json
+  [OK] cw_metrics.json
+  [OK] fl_g1_metrics.json
+  [OK] fl_g2_metrics.json
+  [OK] cw_fl_metrics.json
+  [OK] smote_full_metrics.json
+  [OK] smote_partial_metrics.json
+  [OK] adasyn_metrics.json
+  [OK] bt_20pct_metrics.json
+  [OK] bt_50pct_metrics.json
+  [OK] bt_100pct_metrics.json
+  [OK] evaluation_finale_comparatif.csv
+
+figures/ (synthese NB06) :
+  [OK] finale_f1_macro_all.png
+  [OK] finale_f1_per_class_heatmap.png
+  [OK] finale_radar_top3.png
+  [OK] finale_strategy_comparison.png
+  [OK] finale_neutral_focus.png
+  [OK] finale_accuracy_vs_f1macro.png
+
+=================================================================
+STATUT : TOUTES LES VERIFICATIONS PASSEES
+NB06 est complet. Le projet est pret pour la soumission finale.
+=================================================================
+
+TABLEAU COMPARATIF FINAL
+-----------------------------------------------------------------------------------------------
+Configuration             F1-macro   F1-Pos   F1-Neg   F1-Neu   AUC-PR   G-mean     Acc    Delta
+-----------------------------------------------------------------------------------------------
+Baseline                    0.6805   0.7806   0.7014   0.5596   0.7534   0.7558  0.7249  +0.0000
+Class Weighting             0.6386   0.7141   0.6882   0.5134   0.7571   0.7510  0.6694  -0.0419
+Focal Loss (gamma=1)        0.6784   0.7614   0.7213   0.5525   0.7687   0.7540  0.7209  -0.0021
+Focal Loss (gamma=2)        0.6794   0.7605   0.7233   0.5543   0.7647   0.7564  0.7209  -0.0011
+CW + Focal Loss             0.6683   0.7533   0.7068   0.5446   0.7460   0.7576  0.7060  -0.0122
+SMOTE Full Balance          0.6355   0.7334   0.6730   0.5000   0.6888   0.7186  0.6829  -0.0450
+SMOTE Partial Balance       0.6470   0.7336   0.6801   0.5275   0.6943   0.7282  0.6883  -0.0335
+ADASYN                      0.6617   0.7599   0.6757   0.5495   0.7085   0.7367  0.7046  -0.0188
+BT +20%                     0.6909   0.7786   0.7108   0.5833   0.7652   0.7618  0.7304  +0.0104  <-- BEST
+BT +50%                     0.6715   0.7752   0.7016   0.5376   0.7663   0.7484  0.7195  -0.0090
+BT +100%                    0.6715   0.7752   0.7016   0.5376   0.7663   0.7484  0.7195  -0.0090
+-----------------------------------------------------------------------------------------------
+
+Meilleure configuration : BT +20% | F1-macro = 0.6909
+Seule configuration a surpasser le Baseline parmi les 10 strategies testees.
+
+Projet termine.

@@ -1,0 +1,236 @@
+Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount("/content/drive", force_remount=True).
+Drive montee. Base = /content/drive/MyDrive/mini_projet_darija
+
+Repertoires crees : figures/ results/ data/
+
+Imports termines. Constantes definies.
+TEXT_COL='Post', LABEL_COL='Polarity Class', LANG_COL='lang', SEED=42
+
+Repo card metadata block was not found. Setting CardData to empty.
+WARNING:huggingface_hub.repocard:Repo card metadata block was not found. Setting CardData to empty.
+=== INFORMATIONS GENERALES ===
+Shape            : (6000, 16)
+Colonnes         : ['ID', 'Code', 'Post', 'lang', 'Created At', 'Followers Count', 'Profile Link Color', 'Geo Enabled', 'Screen Name', 'Name', 'Profile Lang', 'Polarity', 'Polarity Class', 'User Age', 'Emotion', 'Platform']
+Types            :
+ID                    object
+Code                  object
+Post                  object
+lang                  object
+Created At            object
+Followers Count       object
+Profile Link Color    object
+Geo Enabled           object
+Screen Name           object
+Name                  object
+Profile Lang          object
+Polarity              object
+Polarity Class        object
+User Age              object
+Emotion               object
+Platform              object
+dtype: object
+
+=== VALIDATION POLARITY CLASS ===
+Valeurs uniques      : {'Neutral', 'Positive', 'Negative'}
+Valeurs attendues    : {'Neutral', 'Positive', 'Negative'}
+Valeurs manquantes   : 0
+Validation OK : exactement 3 classes (Positive, Negative, Neutral), aucune valeur manquante.
+
+
+=== DISTRIBUTION DES CLASSES ===
+  Positive   :  2864 tweets ( 47.7%)
+  Negative   :  1773 tweets ( 29.5%)
+  Neutral    :  1363 tweets ( 22.7%)
+  TOTAL      :  6000 tweets (100.0%)
+
+Classe majoritaire : Positive (2864 tweets)
+Classe minoritaire : Neutral (1363 tweets)
+Ratio de desequilibre : Positive/Neutral = 2.10:1
+
+Conclusion : corpus FAIBLEMENT desequilibre (< 3:1)
+
+Figure sauvegardee : figures/class_distribution_bar.png
+
+Figure sauvegardee : figures/class_distribution_pie.png
+
+Figure sauvegardee : figures/tweet_length_words_boxplot.png
+
+=== STATISTIQUES : LONGUEUR EN MOTS ===
+  Positive   : moy=9.9, med=8, min=1, max=32
+  Negative   : moy=13.5, med=14, min=1, max=33
+  Neutral    : moy=5.7, med=2, min=1, max=30
+  
+  
+Figure sauvegardee : figures/tweet_length_chars_histogram.png
+
+=== STATISTIQUES : LONGUEUR EN CARACTERES ===
+  Positive   : moy=71.9, med=58, min=1, max=144
+  Negative   : moy=90.0, med=91, min=3, max=140
+  Neutral    : moy=56.3, med=34, min=3, max=151
+  
+  
+=== DISTRIBUTION DES LANGUES (31 codes distincts) ===
+  ar    :  2462 tweets ( 41.0%)
+  und   :  1244 tweets ( 20.7%)
+  fr    :  1110 tweets ( 18.5%)
+  en    :   733 tweets ( 12.2%)
+  es    :    94 tweets (  1.6%)
+  in    :    87 tweets (  1.5%)
+  tr    :    52 tweets (  0.9%)
+  ht    :    45 tweets (  0.8%)
+  pt    :    34 tweets (  0.6%)
+  tl    :    22 tweets (  0.4%)
+  ...   :   117 tweets (autres codes)
+
+Figure sauvegardee : figures/lang_distribution.png
+
+
+=== PROPORTION D'EMOJIS ===
+Tweets avec emoji(s) : 1299 / 6000 (21.6%)
+
+Proportion par classe :
+  Positive   :  871 / 2864 (30.4%)
+  Negative   :  335 / 1773 (18.9%)
+  Neutral    :   93 / 1363 (6.8%)
+
+Figure sauvegardee : figures/emoji_proportion.png
+
+
+=== CODE-SWITCHING ===
+Tweets avec code-switching : 2272 / 6000 (37.9%)
+
+Proportion par classe :
+  Positive   : 1217 / 2864 (42.5%)
+  Negative   :  838 / 1773 (47.3%)
+  Neutral    :  217 / 1363 (15.9%)
+
+--- Exemples de tweets avec code-switching ---
+  [Positive] @gamehacker080 @WaellAmeer @Kempa2010 @omeralbaze @ma7een تم
+  [Positive] @arar12332095361 صل الله عليه و سلم
+  [Negative] وقال: " ... وعليهم *أَنْ يكونوا على يقظةٍ* مِنْ مكر الحاقدين والمُغْرِضين والشانئين *والمُنْدَسِّين*، وتلاعُبِ المُ… htt
+  [Negative] 🌴🌴 *إحذر من المندسين*🌴
+
+⬅ قال الشيخ العلامة محمد علي فركوس حفظه الله : 
+
+".... فضاع إخلاصُ النيَّة لله تعالى في مقا… htt
+  [Negative] @Imad78317250 إيه يا أخي عماد صحيح من قال عند الفتن تطيش العقول.
+يعني الإمام ربيع والعلامة الكبير الجابري والعلامة… http
+
+
+=== DETECTION ARABIZI ===
+Tweets Arabizi detectes (heuristique) : 332 / 6000 (5.5%)
+
+Proportion par classe :
+  Positive   :   74 / 2864 (2.6%)
+  Negative   :   63 / 1773 (3.6%)
+  Neutral    :  195 / 1363 (14.3%)
+
+--- Exemples de tweets Arabizi detectes ---
+  [Positive] (lang=in ) @UjhfXBbdEjBFTTG ida thbih nb3tlk tfadliy hhhh https://t.co/WExW4CRBJR
+  [Neutral ] (lang=fr ) bec14c76ec06281720a04677acc70297f766d7dcad9d3809ac9253d7c139393fe5712ddacc7c6acfee1d8e4896b79c8041f3
+  [Negative] (lang=fr ) @MarcelinoF54 @antoine_nantes «#Bilan sévère 2007-2012 » #France était en panne à l’ère de #Sarkozy.
+  [Neutral ] (lang=ht ) ae32e80c5c4c80c42017ed9dfe6b8132dd5e214eba9c0dacd54015976f082738336eba6799b11cbc35a1585536852fb9efe7
+  [Positive] (lang=ht ) Souhila Ben Lachhab Lik Manwalich (Exclusive Musi… : https://t.co/T1EEf9zroM. Alfe mabrouk souhà 7mi
+  [Negative] (lang=es ) @EPL4ARABS @RamziBenlakehal ta3 arsenal t7a7na sa7
+  [Negative] (lang=fr ) #Wauquiez élu haut la main chef incontesté de ‘’#LR‘’ pourtant, le Lyonnais passait moins de 05 Mois
+  [Positive] (lang=fr ) @kRim0o Affaire de 3 millions
+
+=== RESUME : PROPORTIONS LINGUISTIQUES (Enonce par. 1.2) ===
+  Arabe (lang=ar)          :  2462 (41.0%)
+  Francais (lang=fr)       :  1110 (18.5%)
+  Arabizi (heuristique)    :   332 (5.5%)
+  Indetermine (lang=und)   :  1244 (20.7%)
+  Autres codes lang        :  1184 (19.7%)
+  
+  
+Generation du WordCloud pour la classe POSITIVE...
+
+Figure sauvegardee : figures/wordcloud_positive.png
+
+Generation du WordCloud pour la classe NEGATIVE...
+
+Figure sauvegardee : figures/wordcloud_negative.png
+
+Generation du WordCloud pour la classe NEUTRAL...
+
+Figure sauvegardee : figures/wordcloud_neutral.png
+
+=== TABLEAU DE STATISTIQUES OBLIGATOIRE (Enonce par. 1.3) ===
+  Classe  Nb exemples  % du corpus  Moy. mots  Moy. caracteres
+Positive         2864         47.7        9.9             71.9
+Negative         1773         29.5       13.5             90.0
+ Neutral         1363         22.7        5.7             56.3
+   TOTAL         6000        100.0       10.0             73.7
+
+Tableau sauvegarde : results/eda_statistics_table.csv
+
+
+=== ANALYSE DE LA QUALITE DES DONNEES ===
+
+1. DOUBLONS
+   Tweets en double (texte identique) : 37
+   Exemples de doublons :
+     [Positive] @9jllj تم
+     [Positive] @9jllj تم
+     [Positive] @9jllj تم
+     [Neutral ] @AmericanIndian8 @halimlounnas3
+   Decision : les doublons seront supprimes en Semaine 2 (preprocessing).
+   Justification : un doublon biaise l'apprentissage en surponderant
+   certains exemples, ce qui est particulierement problematique sur un
+   corpus deja desequilibre.
+
+2. TWEETS TRES COURTS (1-2 mots)
+   Nombre : 1151 (19.2%)
+   Distribution par classe :
+     Positive   :  326
+     Negative   :   73
+     Neutral    :  752
+   Exemples de tweets courts :
+     [Neutral ] "https://t.co/GvubnBx8ET"
+     [Negative] "🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍♀️🤦‍… https://t.co/HbmutLGs5c"
+     [Neutral ] "bec14c76ec06281720a04677acc70297f766d7dcad9d3809ac9253d7c139393fe5712ddacc7c6acfee1d8e4896b79c8041f38b2d05a4dca1622… https://t.co/8zHqgoaJ6f"
+     [Neutral ] "@jiji05659865  https://t.co/m6hYiEyh7G"
+     [Neutral ] "https://t.co/ILJUQmCWd8"
+     [Positive] "Bonsoir"
+     [Neutral ] "https://t.co/yes971yrFr"
+     [Neutral ] "https://t.co/3sEGaLjs4q"
+   Decision : sera prise en Semaine 2 apres analyse de l'impact sur
+   les metriques. L'Enonce (par. 2.3) demande de justifier le choix.
+
+3. TWEETS VIDES OU NaN
+   Nombre : 0
+
+=== RESUME QUALITE ===
+   Doublons         : 37
+   Tweets courts    : 1151 (1-2 mots)
+   Tweets vides     : 0
+   Tweets und       : 1244
+   Valeurs NaN cible: 0
+   
+   
+Figure copiee : tweet_length_words_boxplot.png
+  Figure copiee : wordcloud_neutral.png
+  Figure copiee : emoji_proportion.png
+  Figure copiee : lang_distribution.png
+  Figure copiee : wordcloud_positive.png
+  Figure copiee : tweet_length_chars_histogram.png
+  Figure copiee : wordcloud_negative.png
+  Figure copiee : class_distribution_bar.png
+  Figure copiee : class_distribution_pie.png
+  Tableau statistiques copie.
+
+=== SAUVEGARDE NB01 TERMINEE ===
+Verifier dans : /content/drive/MyDrive/mini_projet_darija/
+
+
+=== VERIFICATION NB01 ===
+  [OK] figures/class_distribution_bar.png
+  [OK] figures/class_distribution_pie.png
+  [OK] figures/tweet_length_words_boxplot.png
+  [OK] figures/tweet_length_chars_histogram.png
+  [OK] figures/lang_distribution.png
+  [OK] figures/emoji_proportion.png
+  [OK] figures/wordcloud_positive.png
+  [OK] figures/wordcloud_negative.png
+  [OK] figures/wordcloud_neutral.png
+  [OK] results/eda_statistics_table.csv

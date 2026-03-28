@@ -1,0 +1,347 @@
+Mounted at /content/drive
+Drive montee. Base = /content/drive/MyDrive/mini_projet_darija
+
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 608.4/608.4 kB 14.6 MB/s eta 0:00:00
+Device : cuda
+GPU    : Tesla T4
+VRAM   : 15.6 Go
+
+Environnement configure avec succes.
+
+
+/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_auth.py:94: UserWarning: 
+The secret `HF_TOKEN` does not exist in your Colab secrets.
+To authenticate with the Hugging Face Hub, create a token in your settings tab (https://huggingface.co/settings/tokens), set it as secret in your Google Colab and restart your session.
+You will be able to reuse this secret in all of your notebooks.
+Please note that authentication is recommended but still optional to access public models or datasets.
+  warnings.warn(
+README.md: 
+ 4.51k/? [00:00<00:00, 49.5kB/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Repo card metadata block was not found. Setting CardData to empty.
+WARNING:huggingface_hub.repocard:Repo card metadata block was not found. Setting CardData to empty.
+data/train-00000-of-00001-eef2e32ea1bb4a(…): 100%
+ 699k/699k [00:01<00:00, 3.48MB/s]
+Generating train split: 100%
+ 6000/6000 [00:00<00:00, 9106.14 examples/s]
+Shape initiale : (6000, 16)
+Colonnes : ['ID', 'Code', 'Post', 'lang', 'Created At', 'Followers Count', 'Profile Link Color', 'Geo Enabled', 'Screen Name', 'Name', 'Profile Lang', 'Polarity', 'Polarity Class', 'User Age', 'Emotion', 'Platform']
+
+Distribution initiale de 'Polarity Class' :
+Polarity Class
+Positive    2864
+Negative    1773
+Neutral     1363
+Name: count, dtype: int64
+
+Valeurs uniques de 'Polarity Class' : {'Negative', 'Neutral', 'Positive'}
+Valeurs manquantes dans 'Polarity Class' : 0
+
+Validation OK : exactement 3 classes (Positive, Negative, Neutral).
+
+
+Fonctions de nettoyage de base definies.
+
+=== Etape 1 : Suppression des URLs ===
+Tweets affectes : 3161
+  Avant : @SRKFC1 @iamsrk @gaurikhan 💖💖💖💖💖💖 https://t.co/0DwWeTr7ZK
+  Apres : @SRKFC1 @iamsrk @gaurikhan 💖💖💖💖💖💖 
+
+=== Etape 2 : Suppression des mentions ===
+Tweets affectes : 3178
+  Avant : @gamehacker080 @WaellAmeer @Kempa2010 @omeralbaze @ma7een تم
+  Apres :      تم
+
+=== Etape 3 : Conversion des emojis en texte ===
+Tweets avec emojis : 1299 (21.6%)
+  Avant :    💖💖💖💖💖💖 
+  Apres :     sparkling_heart  sparkling_heart  sparkling_heart  sparkling_heart  sparkling_heart  sparkling_h
+
+=== Etape 4 : Suppression du symbole # (contenu conserve) ===
+Tweets affectes : 877
+  Avant : almudancelaalmudema #almudancewinterfestival #almudance #almudema sonofiestasf …
+  Apres : almudancelaalmudema almudancewinterfestival almudance almudema sonofiestasf … 
+
+=== Etape 5 : Normalisation des espaces ===
+Espaces multiples reduits, espaces en debut/fin supprimes.
+
+Shape apres nettoyage de base : (6000, 3)
+
+/tmp/ipykernel_3999/2448960027.py:19: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  repeated_mask = df_clean[TEXT_COL].str.contains(r'(.)\1{2,}', regex=True)
+=== Normalisation des caracteres repetes ===
+Tweets affectes : 689
+  Avant : وقال: " ... وعليهم *أَنْ يكونوا على يقظةٍ* مِنْ مكر الحاقدين والمُغْرِضين والشان
+  Apres : وقال: " .. وعليهم *أَنْ يكونوا على يقظةٍ* مِنْ مكر الحاقدين والمُغْرِضين والشانئ
+
+=== Normalisation des chiffres arabes-indiens ===
+Chiffres arabes-indiens convertis en chiffres occidentaux.
+
+=== Tweets de langue "und" (indeterminee) ===
+Nombre : 1244 (20.7%)
+
+Distribution par classe :
+  Positive   :  418
+  Negative   :   74
+  Neutral    :  752
+
+Exemples de tweets "und" (souvent du darija non reconnu par Twitter) :
+  [Neutral ] confianza victoria campeonato trabajo quedararriba fútbol liga1 canciones bailar
+  [Neutral ] 
+  [Positive] raised_hand ☻
+  [Neutral ] 
+  [Neutral ] 
+  [Neutral ] 
+  [Neutral ] 
+  [Neutral ] 
+
+Decision : CONSERVES. Le darija n'est pas reconnu par Twitter,
+ces tweets sont du contenu authentique exploitable par DziriBERT.
+
+=== Tweets Arabizi (darija en caracteres latins) ===
+Nombre estime : 2103 (35.0%)
+
+Distribution par classe :
+  Positive   : 1064
+  Negative   :  729
+  Neutral    :  310
+
+Exemples :
+  [Negative] . YOU did this you started it! discustinggng behaviorui by you donald i am disgu
+  [Positive] soccer_ball soccer_ball soccer_ball soccer_ball India India India India India
+  [Positive] ida thbih nb3tlk tfadliy hh
+
+Decision : CONSERVES. Artefact linguistique authentique, pas du bruit.
+
+Shape avant traitement des cas speciaux : (6000, 3)
+
+=== Suppression des doublons ===
+Doublons detectes : 1075
+Shape apres suppression des doublons : (4925, 3)
+
+=== Suppression des tweets vides/quasi-vides ===
+Tweets avec moins de 2 caracteres : 9
+Exemples de tweets supprimes :
+     Post Polarity Class
+8                Neutral
+33      …        Neutral
+1164    ج       Positive
+2581    ☻       Positive
+3381    ⴽ        Neutral
+Shape apres suppression des vides : (4916, 3)
+
+=== Tweets courts (1-2 mots) ===
+Nombre : 612 (12.4%)
+Decision : CONSERVES (voir justification dans la cellule markdown).
+
+=== Distribution finale apres preprocessing ===
+Shape finale : (4916, 3)
+
+Distribution des classes :
+  Positive   : 2541 (51.7%)
+  Negative   : 1729 (35.2%)
+  Neutral    :  646 (13.1%)
+  TOTAL      : 4916
+
+======================================================================
+  ANALYSE D'IMPACT DU PREPROCESSING SUR LA DISTRIBUTION DES CLASSES
+======================================================================
+
+Classe       |    AVANT    (%%) |    APRES    (%%) |  Perdus (%% perte)
+----------------------------------------------------------------------
+Positive     |     2864   47.7% |     2541   51.7% |     323     11.3%
+Negative     |     1773   29.5% |     1729   35.2% |      44      2.5%
+Neutral      |     1363   22.7% |      646   13.1% |     717     52.6%
+----------------------------------------------------------------------
+TOTAL        |     6000  100.0% |     4916  100.0% |    1084
+
+Ratio de desequilibre AVANT : Positive/Neutral = 2.10:1
+Ratio de desequilibre APRES : Positive/Neutral = 3.93:1
+
+CONSTAT : le desequilibre s'est AGGRAVE (de 2.10:1 a 3.93:1).
+La classe Neutral a perdu 52.6% de ses exemples lors du nettoyage.
+Ceci renforce la necessite des strategies de reequilibrage (Semaines 3-5).
+
+
+Figure sauvegardee : figures/preprocessing_impact.png
+
+=== Verification des splits ===
+Train :  3440 (70.0%)
+Val   :   738 (15.0%)
+Test  :   738 (15.0%)
+Total :  4916
+
+=== Verification de la stratification ===
+Train :
+  Positive   : 1778 (51.7%)
+  Negative   : 1210 (35.2%)
+  Neutral    :  452 (13.1%)
+
+Val :
+  Positive   :  382 (51.8%)
+  Negative   :  259 (35.1%)
+  Neutral    :   97 (13.1%)
+
+Test :
+  Positive   :  381 (51.6%)
+  Negative   :  260 (35.2%)
+  Neutral    :   97 (13.1%)
+
+split_indices.json sauvegarde dans data/
+  Train : 3440 indices
+  Val   : 738 indices
+  Test  : 738 indices
+  
+  config.json: 100%
+ 620/620 [00:00<00:00, 29.3kB/s]
+tokenizer_config.json: 100%
+ 176/176 [00:00<00:00, 10.9kB/s]
+vocab.txt: 
+ 446k/? [00:00<00:00, 12.7MB/s]
+Tokenisation en cours...
+Train dataset : 3440 exemples
+Val dataset   : 738 exemples
+Test dataset  : 738 exemples
+
+Fonctions evaluate_model(), print_metrics(), plot_confusion_matrix() definies.
+Ces fonctions seront reutilisees dans tous les notebooks suivants.
+
+
+model.safetensors: 100%
+ 498M/498M [00:08<00:00, 82.7MB/s]
+Loading weights: 100%
+ 197/197 [00:00<00:00, 285.79it/s, Materializing param=bert.encoder.layer.11.output.dense.weight]
+BertForSequenceClassification LOAD REPORT from: alger-ia/dziribert
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+classifier.bias                            | MISSING    | 
+classifier.weight                          | MISSING    | 
+bert.pooler.dense.bias                     | MISSING    | 
+bert.pooler.dense.weight                   | MISSING    | 
+
+Notes:
+- UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Modele alger-ia/dziribert charge.
+Parametres : 124,443,651
+warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+`logging_dir` is deprecated and will be removed in v5.2. Please set `TENSORBOARD_LOGGING_DIR` instead.
+
+Lancement de l'entrainement baseline...
+  Epochs     : 5
+  LR         : 2e-05
+  Batch size : 16
+  Seed       : 42
+  FP16       : True
+  Optimizer  : AdamW (adamw_torch, declare explicitement)
+ [1075/1075 03:41, Epoch 5/5]
+Epoch	Training Loss	Validation Loss	F1 Macro	Accuracy
+1	0.804334	0.711637	0.635824	0.707317
+2	0.537041	0.664041	0.661968	0.716802
+3	0.321363	0.823017	0.671498	0.720867
+4	0.176205	1.023553	0.663775	0.711382
+5	0.107115	1.159459	0.677006	0.722222
+Writing model shards: 100%
+ 1/1 [00:10<00:00, 10.56s/it]
+Writing model shards: 100%
+ 1/1 [00:02<00:00,  2.63s/it]
+Writing model shards: 100%
+ 1/1 [00:12<00:00, 12.12s/it]
+Writing model shards: 100%
+ 1/1 [00:03<00:00,  3.64s/it]
+Writing model shards: 100%
+ 1/1 [00:02<00:00,  2.77s/it]
+There were missing keys in the checkpoint model loaded: ['bert.embeddings.LayerNorm.weight', 'bert.embeddings.LayerNorm.bias', 'bert.encoder.layer.0.attention.output.LayerNorm.weight', 'bert.encoder.layer.0.attention.output.LayerNorm.bias', 'bert.encoder.layer.0.output.LayerNorm.weight', 'bert.encoder.layer.0.output.LayerNorm.bias', 'bert.encoder.layer.1.attention.output.LayerNorm.weight', 'bert.encoder.layer.1.attention.output.LayerNorm.bias', 'bert.encoder.layer.1.output.LayerNorm.weight', 'bert.encoder.layer.1.output.LayerNorm.bias', 'bert.encoder.layer.2.attention.output.LayerNorm.weight', 'bert.encoder.layer.2.attention.output.LayerNorm.bias', 'bert.encoder.layer.2.output.LayerNorm.weight', 'bert.encoder.layer.2.output.LayerNorm.bias', 'bert.encoder.layer.3.attention.output.LayerNorm.weight', 'bert.encoder.layer.3.attention.output.LayerNorm.bias', 'bert.encoder.layer.3.output.LayerNorm.weight', 'bert.encoder.layer.3.output.LayerNorm.bias', 'bert.encoder.layer.4.attention.output.LayerNorm.weight', 'bert.encoder.layer.4.attention.output.LayerNorm.bias', 'bert.encoder.layer.4.output.LayerNorm.weight', 'bert.encoder.layer.4.output.LayerNorm.bias', 'bert.encoder.layer.5.attention.output.LayerNorm.weight', 'bert.encoder.layer.5.attention.output.LayerNorm.bias', 'bert.encoder.layer.5.output.LayerNorm.weight', 'bert.encoder.layer.5.output.LayerNorm.bias', 'bert.encoder.layer.6.attention.output.LayerNorm.weight', 'bert.encoder.layer.6.attention.output.LayerNorm.bias', 'bert.encoder.layer.6.output.LayerNorm.weight', 'bert.encoder.layer.6.output.LayerNorm.bias', 'bert.encoder.layer.7.attention.output.LayerNorm.weight', 'bert.encoder.layer.7.attention.output.LayerNorm.bias', 'bert.encoder.layer.7.output.LayerNorm.weight', 'bert.encoder.layer.7.output.LayerNorm.bias', 'bert.encoder.layer.8.attention.output.LayerNorm.weight', 'bert.encoder.layer.8.attention.output.LayerNorm.bias', 'bert.encoder.layer.8.output.LayerNorm.weight', 'bert.encoder.layer.8.output.LayerNorm.bias', 'bert.encoder.layer.9.attention.output.LayerNorm.weight', 'bert.encoder.layer.9.attention.output.LayerNorm.bias', 'bert.encoder.layer.9.output.LayerNorm.weight', 'bert.encoder.layer.9.output.LayerNorm.bias', 'bert.encoder.layer.10.attention.output.LayerNorm.weight', 'bert.encoder.layer.10.attention.output.LayerNorm.bias', 'bert.encoder.layer.10.output.LayerNorm.weight', 'bert.encoder.layer.10.output.LayerNorm.bias', 'bert.encoder.layer.11.attention.output.LayerNorm.weight', 'bert.encoder.layer.11.attention.output.LayerNorm.bias', 'bert.encoder.layer.11.output.LayerNorm.weight', 'bert.encoder.layer.11.output.LayerNorm.bias'].
+There were unexpected keys in the checkpoint model loaded: ['bert.embeddings.LayerNorm.beta', 'bert.embeddings.LayerNorm.gamma', 'bert.encoder.layer.0.attention.output.LayerNorm.beta', 'bert.encoder.layer.0.attention.output.LayerNorm.gamma', 'bert.encoder.layer.0.output.LayerNorm.beta', 'bert.encoder.layer.0.output.LayerNorm.gamma', 'bert.encoder.layer.1.attention.output.LayerNorm.beta', 'bert.encoder.layer.1.attention.output.LayerNorm.gamma', 'bert.encoder.layer.1.output.LayerNorm.beta', 'bert.encoder.layer.1.output.LayerNorm.gamma', 'bert.encoder.layer.2.attention.output.LayerNorm.beta', 'bert.encoder.layer.2.attention.output.LayerNorm.gamma', 'bert.encoder.layer.2.output.LayerNorm.beta', 'bert.encoder.layer.2.output.LayerNorm.gamma', 'bert.encoder.layer.3.attention.output.LayerNorm.beta', 'bert.encoder.layer.3.attention.output.LayerNorm.gamma', 'bert.encoder.layer.3.output.LayerNorm.beta', 'bert.encoder.layer.3.output.LayerNorm.gamma', 'bert.encoder.layer.4.attention.output.LayerNorm.beta', 'bert.encoder.layer.4.attention.output.LayerNorm.gamma', 'bert.encoder.layer.4.output.LayerNorm.beta', 'bert.encoder.layer.4.output.LayerNorm.gamma', 'bert.encoder.layer.5.attention.output.LayerNorm.beta', 'bert.encoder.layer.5.attention.output.LayerNorm.gamma', 'bert.encoder.layer.5.output.LayerNorm.beta', 'bert.encoder.layer.5.output.LayerNorm.gamma', 'bert.encoder.layer.6.attention.output.LayerNorm.beta', 'bert.encoder.layer.6.attention.output.LayerNorm.gamma', 'bert.encoder.layer.6.output.LayerNorm.beta', 'bert.encoder.layer.6.output.LayerNorm.gamma', 'bert.encoder.layer.7.attention.output.LayerNorm.beta', 'bert.encoder.layer.7.attention.output.LayerNorm.gamma', 'bert.encoder.layer.7.output.LayerNorm.beta', 'bert.encoder.layer.7.output.LayerNorm.gamma', 'bert.encoder.layer.8.attention.output.LayerNorm.beta', 'bert.encoder.layer.8.attention.output.LayerNorm.gamma', 'bert.encoder.layer.8.output.LayerNorm.beta', 'bert.encoder.layer.8.output.LayerNorm.gamma', 'bert.encoder.layer.9.attention.output.LayerNorm.beta', 'bert.encoder.layer.9.attention.output.LayerNorm.gamma', 'bert.encoder.layer.9.output.LayerNorm.beta', 'bert.encoder.layer.9.output.LayerNorm.gamma', 'bert.encoder.layer.10.attention.output.LayerNorm.beta', 'bert.encoder.layer.10.attention.output.LayerNorm.gamma', 'bert.encoder.layer.10.output.LayerNorm.beta', 'bert.encoder.layer.10.output.LayerNorm.gamma', 'bert.encoder.layer.11.attention.output.LayerNorm.beta', 'bert.encoder.layer.11.attention.output.LayerNorm.gamma', 'bert.encoder.layer.11.output.LayerNorm.beta', 'bert.encoder.layer.11.output.LayerNorm.gamma'].
+
+Entrainement termine.
+  Temps total : 224 secondes
+
+
+============================================================
+  RESULTATS : Baseline DziriBERT (donnees brutes)
+============================================================
+  F1-macro (PRINCIPAL) : 0.6805
+  Accuracy (ILLUSTR.)  : 0.7249
+  AUC-PR macro         : 0.7534
+  G-mean               : 0.7558
+
+  F1 par classe :
+    Positive   : F1=0.7806  Prec=0.7593  Rec=0.8031
+    Negative   : F1=0.7014  Prec=0.7322  Rec=0.6731
+    Neutral    : F1=0.5596  Prec=0.5625  Rec=0.5567
+
+              precision    recall  f1-score   support
+
+    Positive     0.7593    0.8031    0.7806       381
+    Negative     0.7322    0.6731    0.7014       260
+     Neutral     0.5625    0.5567    0.5596        97
+
+    accuracy                         0.7249       738
+   macro avg     0.6847    0.6776    0.6805       738
+weighted avg     0.7239    0.7249    0.7237       738
+
+Matrice de confusion sauvegardee : figures/baseline_confusion_matrix.png
+
+
+Metriques sauvegardees dans results/baseline_metrics.json
+{
+  "f1_macro": 0.6805335142457203,
+  "f1_positive": 0.7806122448979592,
+  "f1_negative": 0.7014028056112225,
+  "f1_neutral": 0.5595854922279793,
+  "precision_positive": 0.7593052109181141,
+  "recall_positive": 0.8031496062992126,
+  "precision_negative": 0.7322175732217573,
+  "recall_negative": 0.6730769230769231,
+  "precision_neutral": 0.5625,
+  "recall_neutral": 0.5567010309278351,
+  "auc_pr_positive": 0.8446065572827722,
+  "auc_pr_negative": 0.785306353391422,
+  "auc_pr_neutral": 0.6302117236319009,
+  "auc_pr_macro": 0.7533748781020316,
+  "g_mean": 0.7557942643532091,
+  "accuracy": 0.7249322493224932,
+  "confusion_matrix": [
+    [
+      306,
+      51,
+      24
+    ],
+    [
+      67,
+      175,
+      18
+    ],
+    [
+      30,
+      13,
+      54
+    ]
+  ]
+}
+
+
+Writing model shards: 100%
+ 1/1 [00:02<00:00,  2.22s/it]
+Modele sauvegarde localement dans models/baseline_dziribert/
+
+
+Courbes d'entrainement sauvegardees dans figures/baseline_training_curves.png
+
+[OK] split_indices.json copie sur Drive
+[OK] baseline_metrics.json copie sur Drive
+[OK] baseline_confusion_matrix.png copie sur Drive
+[OK] Modele baseline copie sur Drive (~500 MB, peut prendre 2-3 min)
+
+=== SAUVEGARDE NB02 TERMINEE ===
+
+
+

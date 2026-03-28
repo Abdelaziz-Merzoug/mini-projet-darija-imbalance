@@ -1,0 +1,32 @@
+{
+  "bt_10pct": {
+    "f1_macro": 0.6883802997078897,
+    "f1_neutral": 0.5813953488372093,
+    "paraphrases_used": 45,
+    "pool_exhausted": false
+  },
+  "bt_20pct": {
+    "f1_macro": 0.6909342203419274,
+    "f1_neutral": 0.5833333333333334,
+    "paraphrases_used": 90,
+    "pool_exhausted": false
+  },
+  "bt_50pct": {
+    "f1_macro": 0.6714595315495541,
+    "f1_neutral": 0.5376344086021505,
+    "paraphrases_used": 214,
+    "pool_exhausted": true
+  },
+  "bt_75pct": {
+    "f1_macro": 0.6714595315495541,
+    "f1_neutral": 0.5376344086021505,
+    "paraphrases_used": 214,
+    "pool_exhausted": true
+  },
+  "bt_100pct": {
+    "f1_macro": 0.6714595315495541,
+    "f1_neutral": 0.5376344086021505,
+    "paraphrases_used": 214,
+    "pool_exhausted": true
+  }
+}

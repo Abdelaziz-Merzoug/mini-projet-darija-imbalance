@@ -1,20 +1,20 @@
 [
   {
-    "original": "D’Erevan Armenia jusqu’à Paris France , il a chanté dans toutes les villes du monde, pour l’amour et la liberté.…",
-    "french_intermediate": "D&apos; Erevan Armenia jusqu &apos; à Paris France , il a changé dans toutes les villes du monde, pour l &apos; eau et la liberté...",
-    "paraphrase": "(يريفان أرمينيا) حتى الآن؛ وفي باريس فرانسس، تغير في جميع مدن العالم، من أجل الماء والحرية...",
-    "cosine_similarity": 0.5431
+    "original": "يا زبالة جاية تعلقي في منشني وتقلي ادب تفو عليكي يا منحطة يا قذرة يا نكرة تمام اوصلو لميت مليو…",
+    "french_intermediate": "Espèce de sale garce, accroche-toi à moi, et fais-toi plaisir, salope !",
+    "paraphrase": "أيّتها السافلة الحقيرة، تمسكي بي واعملي ما يحلو لكِ أيتها العاهرة!",
+    "cosine_similarity": 0.5243
   },
   {
-    "original": "فعلا من احترم اوحترما",
-    "french_intermediate": "C'est ce que je respectais.",
-    "paraphrase": "هذا ما كنت أحترمه",
-    "cosine_similarity": 0.669
+    "original": "العقل تأنيس بالوصل، وتأسيس بالفصل.",
+    "french_intermediate": "L'esprit a été créé par l'arrivée et la séparation.",
+    "paraphrase": "الروح خلقت عن طريق الوصول والانفصال.",
+    "cosine_similarity": 0.6708
   },
   {
-    "original": "face_with_hand_over_mouth",
-    "french_intermediate": "Face_with_hand_over_mouth",
-    "paraphrase": "& with_with_ handd_ over_ mam",
-    "cosine_similarity": 0.7869
+    "original": "اللهم آمين يارب العالمين أجمعين",
+    "french_intermediate": "Amen, Seigneur, les deux mondes.",
+    "paraphrase": "آمين يا رب، العالمين.",
+    "cosine_similarity": 0.7924
   }
 ]

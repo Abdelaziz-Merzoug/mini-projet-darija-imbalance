@@ -1,0 +1,862 @@
+Mounted at /content/drive
+GPU : Tesla T4
+VRAM : 15.6 Go
+Drive montee. BASE = /content/drive/MyDrive/mini_projet_darija
+
+
+ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 608.4/608.4 kB 12.0 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 897.5/897.5 kB 22.5 MB/s eta 0:00:00
+Device : cuda
+GPU    : Tesla T4
+VRAM   : 15.6 Go
+
+Environnement configure avec succes.
+
+
+split_indices.json copie depuis Drive.
+baseline_metrics.json copie depuis Drive.
+fl_g2_metrics.json copie depuis Drive.
+cw_metrics.json copie depuis Drive.
+fl_g1_metrics.json copie depuis Drive.
+cw_fl_metrics.json copie depuis Drive.
+smote_full_metrics.json copie depuis Drive.
+smote_partial_metrics.json copie depuis Drive.
+adasyn_metrics.json copie depuis Drive.
+
+=== Verification split_indices.json ===
+  Train : 3440 | Val : 738 | Test : 738 | Total : 4916
+  Baseline F1-macro = 0.6805
+  
+  
+/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_auth.py:94: UserWarning: 
+The secret `HF_TOKEN` does not exist in your Colab secrets.
+To authenticate with the Hugging Face Hub, create a token in your settings tab (https://huggingface.co/settings/tokens), set it as secret in your Google Colab and restart your session.
+You will be able to reuse this secret in all of your notebooks.
+Please note that authentication is recommended but still optional to access public models or datasets.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+README.md: 
+ 4.51k/? [00:00<00:00, 99.2kB/s]
+Repo card metadata block was not found. Setting CardData to empty.
+WARNING:huggingface_hub.repocard:Repo card metadata block was not found. Setting CardData to empty.
+data/train-00000-of-00001-eef2e32ea1bb4a(…): 100%
+ 699k/699k [00:01<00:00, 3.53MB/s]
+Generating train split: 100%
+ 6000/6000 [00:00<00:00, 8786.24 examples/s]
+Shape initiale : (6000, 16)
+Distribution initiale :
+Polarity Class
+Positive    2864
+Negative    1773
+Neutral     1363
+Name: count, dtype: int64
+Shape apres preprocessing : (4916, 3)
+
+Distribution des classes :
+  Positive   : 2541 (51.7%)
+  Negative   : 1729 (35.2%)
+  Neutral    :  646 (13.1%)
+  
+  
+  === Verification des splits (charges depuis split_indices.json) ===
+Train :  3440 (70.0%)
+Val   :   738 (15.0%)
+Test  :   738 (15.0%)
+Total :  4916
+
+=== Distribution du train set ===
+  Positive   : 1778 (51.7%)
+  Negative   : 1210 (35.2%)
+  Neutral    :  452 (13.1%)
+
+=== Tweets Neutral du train set (cible de l augmentation) ===
+  Nombre : 452
+  Taux +20%  : 90 paraphrases necessaires
+  Taux +50%  : 226 paraphrases necessaires
+  Taux +100% : 452 paraphrases necessaires
+  
+  
+  Chargement de Helsinki-NLP/opus-mt-ar-fr (arabe -> francais)...
+tokenizer_config.json: 100%
+ 42.0/42.0 [00:00<00:00, 4.05kB/s]
+source.spm: 100%
+ 918k/918k [00:00<00:00, 18.5MB/s]
+target.spm: 100%
+ 824k/824k [00:00<00:00, 62.7MB/s]
+vocab.json: 
+ 2.23M/? [00:00<00:00, 62.5MB/s]
+config.json: 
+ 1.38k/? [00:00<00:00, 156kB/s]
+pytorch_model.bin: 100%
+ 311M/311M [00:02<00:00, 260MB/s]
+Loading weights: 100%
+ 258/258 [00:00<00:00, 552.87it/s, Materializing param=model.shared.weight]
+model.safetensors: 100%
+ 311M/311M [00:03<00:00, 191MB/s]
+The tied weights mapping and config for this model specifies to tie model.shared.weight to model.decoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+The tied weights mapping and config for this model specifies to tie model.shared.weight to model.encoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+generation_config.json: 100%
+ 293/293 [00:00<00:00, 21.4kB/s]
+  Modele ar->fr charge sur cuda.
+
+Chargement de Helsinki-NLP/opus-mt-fr-ar (francais -> arabe)...
+tokenizer_config.json: 100%
+ 44.0/44.0 [00:00<00:00, 5.63kB/s]
+source.spm: 100%
+ 827k/827k [00:00<00:00, 17.0MB/s]
+target.spm: 100%
+ 925k/925k [00:00<00:00, 46.0MB/s]
+vocab.json: 
+ 2.19M/? [00:00<00:00, 54.2MB/s]
+config.json: 
+ 1.39k/? [00:00<00:00, 129kB/s]
+pytorch_model.bin: 100%
+ 307M/307M [00:02<00:00, 216MB/s]
+Loading weights: 100%
+ 258/258 [00:00<00:00, 359.44it/s, Materializing param=model.shared.weight]
+model.safetensors: 100%
+ 307M/307M [00:03<00:00, 224MB/s]
+The tied weights mapping and config for this model specifies to tie model.shared.weight to model.decoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+The tied weights mapping and config for this model specifies to tie model.shared.weight to model.encoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+generation_config.json: 100%
+ 293/293 [00:00<00:00, 9.77kB/s]
+  Modele fr->ar charge sur cuda.
+
+Modeles de traduction prets.
+
+
+Fonction back_translate_batch() definie.
+  try/except sur CHAQUE appel Helsinki-NLP.
+  Fallback : [TRADUCTION_ECHOUEE] pour les tweets Arabizi.
+  
+  
+============================================================
+  RETRO-TRADUCTION DES TWEETS NEUTRAL
+============================================================
+
+Nombre de tweets Neutral a retro-traduire : 452
+  Batch 10/57 -- Echecs cumules : 0/80
+  Batch 20/57 -- Echecs cumules : 0/160
+  Batch 30/57 -- Echecs cumules : 0/240
+  Batch 40/57 -- Echecs cumules : 0/320
+  Batch 50/57 -- Echecs cumules : 0/400
+  Batch 57/57 -- Echecs cumules : 0/452
+
+=== Resultats de la retro-traduction ===
+  Total traite     : 452
+  Succes           : 452 (100.0%)
+  Echecs (Arabizi) : 0 (0.0%)
+  
+  
+Modeles Helsinki-NLP liberes de la VRAM.
+
+Chargement de DziriBERT (mode extraction) pour similarite cosinus...
+config.json: 100%
+ 620/620 [00:00<00:00, 65.0kB/s]
+tokenizer_config.json: 100%
+ 176/176 [00:00<00:00, 19.4kB/s]
+vocab.txt: 
+ 446k/? [00:00<00:00, 16.7MB/s]
+model.safetensors: 100%
+ 498M/498M [00:05<00:00, 126MB/s]
+Loading weights: 100%
+ 197/197 [00:00<00:00, 557.64it/s, Materializing param=encoder.layer.11.output.dense.weight]
+BertModel LOAD REPORT from: alger-ia/dziribert
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+DziriBERT charge sur cuda.
+Fonctions extract_single_embedding() et cosine_similarity() definies.
+
+
+============================================================
+  FILTRAGE PAR SIMILARITE COSINUS [0.5, 0.85]
+============================================================
+  Traite 100/452 -- Valides : 48 | Rejetes (bas) : 44 | Rejetes (haut) : 8
+  Traite 200/452 -- Valides : 91 | Rejetes (bas) : 94 | Rejetes (haut) : 15
+  Traite 300/452 -- Valides : 144 | Rejetes (bas) : 137 | Rejetes (haut) : 19
+  Traite 400/452 -- Valides : 192 | Rejetes (bas) : 184 | Rejetes (haut) : 24
+  Traite 452/452 -- Valides : 214 | Rejetes (bas) : 211 | Rejetes (haut) : 27
+
+=== Resultats du filtrage cosinus ===
+  Total traite       : 452
+  Echecs traduction  : 0
+  Rejetes (< 0.5)   : 211
+  Rejetes (> 0.85)   : 27
+  VALIDES [0.5-0.85] : 214
+  Taux de retention  : 47.3%
+
+Paraphrases sauvegardees : data/bt_paraphrases_neutral.json (214 entrees)
+
+
+
+DziriBERT (extraction) libere de la VRAM.
+
+
+Figure sauvegardee : figures/bt_cosine_distribution.png
+
+
+Paraphrases propres : 71/214
+======================================================================
+  3 EXEMPLES ANNOTES DE RETRO-TRADUCTION
+======================================================================
+
+--- Exemple 1 (cosinus = 0.5243) ---
+  Original (darija)      : يا زبالة جاية تعلقي في منشني وتقلي ادب تفو عليكي يا منحطة يا قذرة يا نكرة تمام اوصلو لميت مليو…
+  Intermediaire (FR)     : Espèce de sale garce, accroche-toi à moi, et fais-toi plaisir, salope !
+  Paraphrase (MSA)       : أيّتها السافلة الحقيرة، تمسكي بي واعملي ما يحلو لكِ أيتها العاهرة!
+  Score cosinus          : 0.5243
+  Decision               : ACCEPTEE (dans [0.5, 0.85])
+  Derive MSA             : OUI -- la paraphrase est en arabe standard, pas en darija
+
+--- Exemple 2 (cosinus = 0.6708) ---
+  Original (darija)      : العقل تأنيس بالوصل، وتأسيس بالفصل.
+  Intermediaire (FR)     : L'esprit a été créé par l'arrivée et la séparation.
+  Paraphrase (MSA)       : الروح خلقت عن طريق الوصول والانفصال.
+  Score cosinus          : 0.6708
+  Decision               : ACCEPTEE (dans [0.5, 0.85])
+  Derive MSA             : OUI -- la paraphrase est en arabe standard, pas en darija
+
+--- Exemple 3 (cosinus = 0.7924) ---
+  Original (darija)      : اللهم آمين يارب العالمين أجمعين
+  Intermediaire (FR)     : Amen, Seigneur, les deux mondes.
+  Paraphrase (MSA)       : آمين يا رب، العالمين.
+  Score cosinus          : 0.7924
+  Decision               : ACCEPTEE (dans [0.5, 0.85])
+  Derive MSA             : OUI -- la paraphrase est en arabe standard, pas en darija
+
+Exemples annotes sauvegardes : results/bt_annotated_examples.json
+
+
+============================================================
+  CONSTRUCTION DES DATASETS AUGMENTES
+============================================================
+
+Pool de paraphrases valides : 214
+
+  --- Taux +20pct ---
+  Paraphrases ajoutees : 90
+  Train set final      : 3530 exemples
+    Positive   : 1778 (50.4%)
+    Negative   : 1210 (34.3%)
+    Neutral    :  542 (15.4%)
+
+  AVERTISSEMENT pour +50pct : besoin de 226 paraphrases mais seulement 214 disponibles. Utilisation de 214.
+
+  --- Taux +50pct ---
+  Paraphrases ajoutees : 214
+  Train set final      : 3654 exemples
+    Positive   : 1778 (48.7%)
+    Negative   : 1210 (33.1%)
+    Neutral    :  666 (18.2%)
+
+  AVERTISSEMENT pour +100pct : besoin de 452 paraphrases mais seulement 214 disponibles. Utilisation de 214.
+
+  --- Taux +100pct ---
+  Paraphrases ajoutees : 214
+  Train set final      : 3654 exemples
+    Positive   : 1778 (48.7%)
+    Negative   : 1210 (33.1%)
+    Neutral    :  666 (18.2%)
+
+3 datasets augmentes construits.
+
+Fonctions definies : evaluate_model, print_metrics, plot_confusion_matrix,
+                     compute_metrics, save_to_drive.
+					 
+					 
+Tokenisation du val set et test set (une seule fois)...
+Val dataset  : 738 exemples
+Test dataset : 738 exemples
+
+Pret pour les 3 fine-tunings.
+
+Fonction train_and_evaluate_bt() definie.
+
+
+============================================================
+  FINE-TUNING : Retro-traduction +20%
+============================================================
+Loading weights: 100%
+ 197/197 [00:00<00:00, 476.35it/s, Materializing param=bert.encoder.layer.11.output.dense.weight]
+BertForSequenceClassification LOAD REPORT from: alger-ia/dziribert
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+classifier.bias                            | MISSING    | 
+bert.pooler.dense.weight                   | MISSING    | 
+classifier.weight                          | MISSING    | 
+bert.pooler.dense.bias                     | MISSING    | 
+
+Notes:
+- UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  Modele alger-ia/dziribert recharge from scratch.
+  Tokenisation du train augmente (3530 exemples)...
+warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+`logging_dir` is deprecated and will be removed in v5.2. Please set `TENSORBOARD_LOGGING_DIR` instead.
+    Positive   : 1778
+    Negative   : 1210
+    Neutral    :  542
+  Lancement du fine-tuning (5 epochs, lr=2e-05, batch=16)...
+ [1105/1105 03:32, Epoch 5/5]
+Epoch	Training Loss	Validation Loss	F1 Macro	Accuracy
+1	0.822818	0.676038	0.665915	0.714092
+2	0.536647	0.672371	0.684942	0.735772
+3	0.327288	0.874438	0.662219	0.718157
+4	0.181888	1.070011	0.652924	0.701897
+5	0.105278	1.177772	0.655233	0.701897
+Writing model shards: 100%
+ 1/1 [00:01<00:00,  1.70s/it]
+Writing model shards: 100%
+ 1/1 [00:04<00:00,  4.22s/it]
+Writing model shards: 100%
+ 1/1 [00:16<00:00, 16.86s/it]
+Writing model shards: 100%
+ 1/1 [00:04<00:00,  4.89s/it]
+Writing model shards: 100%
+ 1/1 [00:05<00:00,  5.42s/it]
+There were missing keys in the checkpoint model loaded: ['bert.embeddings.LayerNorm.weight', 'bert.embeddings.LayerNorm.bias', 'bert.encoder.layer.0.attention.output.LayerNorm.weight', 'bert.encoder.layer.0.attention.output.LayerNorm.bias', 'bert.encoder.layer.0.output.LayerNorm.weight', 'bert.encoder.layer.0.output.LayerNorm.bias', 'bert.encoder.layer.1.attention.output.LayerNorm.weight', 'bert.encoder.layer.1.attention.output.LayerNorm.bias', 'bert.encoder.layer.1.output.LayerNorm.weight', 'bert.encoder.layer.1.output.LayerNorm.bias', 'bert.encoder.layer.2.attention.output.LayerNorm.weight', 'bert.encoder.layer.2.attention.output.LayerNorm.bias', 'bert.encoder.layer.2.output.LayerNorm.weight', 'bert.encoder.layer.2.output.LayerNorm.bias', 'bert.encoder.layer.3.attention.output.LayerNorm.weight', 'bert.encoder.layer.3.attention.output.LayerNorm.bias', 'bert.encoder.layer.3.output.LayerNorm.weight', 'bert.encoder.layer.3.output.LayerNorm.bias', 'bert.encoder.layer.4.attention.output.LayerNorm.weight', 'bert.encoder.layer.4.attention.output.LayerNorm.bias', 'bert.encoder.layer.4.output.LayerNorm.weight', 'bert.encoder.layer.4.output.LayerNorm.bias', 'bert.encoder.layer.5.attention.output.LayerNorm.weight', 'bert.encoder.layer.5.attention.output.LayerNorm.bias', 'bert.encoder.layer.5.output.LayerNorm.weight', 'bert.encoder.layer.5.output.LayerNorm.bias', 'bert.encoder.layer.6.attention.output.LayerNorm.weight', 'bert.encoder.layer.6.attention.output.LayerNorm.bias', 'bert.encoder.layer.6.output.LayerNorm.weight', 'bert.encoder.layer.6.output.LayerNorm.bias', 'bert.encoder.layer.7.attention.output.LayerNorm.weight', 'bert.encoder.layer.7.attention.output.LayerNorm.bias', 'bert.encoder.layer.7.output.LayerNorm.weight', 'bert.encoder.layer.7.output.LayerNorm.bias', 'bert.encoder.layer.8.attention.output.LayerNorm.weight', 'bert.encoder.layer.8.attention.output.LayerNorm.bias', 'bert.encoder.layer.8.output.LayerNorm.weight', 'bert.encoder.layer.8.output.LayerNorm.bias', 'bert.encoder.layer.9.attention.output.LayerNorm.weight', 'bert.encoder.layer.9.attention.output.LayerNorm.bias', 'bert.encoder.layer.9.output.LayerNorm.weight', 'bert.encoder.layer.9.output.LayerNorm.bias', 'bert.encoder.layer.10.attention.output.LayerNorm.weight', 'bert.encoder.layer.10.attention.output.LayerNorm.bias', 'bert.encoder.layer.10.output.LayerNorm.weight', 'bert.encoder.layer.10.output.LayerNorm.bias', 'bert.encoder.layer.11.attention.output.LayerNorm.weight', 'bert.encoder.layer.11.attention.output.LayerNorm.bias', 'bert.encoder.layer.11.output.LayerNorm.weight', 'bert.encoder.layer.11.output.LayerNorm.bias'].
+There were unexpected keys in the checkpoint model loaded: ['bert.embeddings.LayerNorm.beta', 'bert.embeddings.LayerNorm.gamma', 'bert.encoder.layer.0.attention.output.LayerNorm.beta', 'bert.encoder.layer.0.attention.output.LayerNorm.gamma', 'bert.encoder.layer.0.output.LayerNorm.beta', 'bert.encoder.layer.0.output.LayerNorm.gamma', 'bert.encoder.layer.1.attention.output.LayerNorm.beta', 'bert.encoder.layer.1.attention.output.LayerNorm.gamma', 'bert.encoder.layer.1.output.LayerNorm.beta', 'bert.encoder.layer.1.output.LayerNorm.gamma', 'bert.encoder.layer.2.attention.output.LayerNorm.beta', 'bert.encoder.layer.2.attention.output.LayerNorm.gamma', 'bert.encoder.layer.2.output.LayerNorm.beta', 'bert.encoder.layer.2.output.LayerNorm.gamma', 'bert.encoder.layer.3.attention.output.LayerNorm.beta', 'bert.encoder.layer.3.attention.output.LayerNorm.gamma', 'bert.encoder.layer.3.output.LayerNorm.beta', 'bert.encoder.layer.3.output.LayerNorm.gamma', 'bert.encoder.layer.4.attention.output.LayerNorm.beta', 'bert.encoder.layer.4.attention.output.LayerNorm.gamma', 'bert.encoder.layer.4.output.LayerNorm.beta', 'bert.encoder.layer.4.output.LayerNorm.gamma', 'bert.encoder.layer.5.attention.output.LayerNorm.beta', 'bert.encoder.layer.5.attention.output.LayerNorm.gamma', 'bert.encoder.layer.5.output.LayerNorm.beta', 'bert.encoder.layer.5.output.LayerNorm.gamma', 'bert.encoder.layer.6.attention.output.LayerNorm.beta', 'bert.encoder.layer.6.attention.output.LayerNorm.gamma', 'bert.encoder.layer.6.output.LayerNorm.beta', 'bert.encoder.layer.6.output.LayerNorm.gamma', 'bert.encoder.layer.7.attention.output.LayerNorm.beta', 'bert.encoder.layer.7.attention.output.LayerNorm.gamma', 'bert.encoder.layer.7.output.LayerNorm.beta', 'bert.encoder.layer.7.output.LayerNorm.gamma', 'bert.encoder.layer.8.attention.output.LayerNorm.beta', 'bert.encoder.layer.8.attention.output.LayerNorm.gamma', 'bert.encoder.layer.8.output.LayerNorm.beta', 'bert.encoder.layer.8.output.LayerNorm.gamma', 'bert.encoder.layer.9.attention.output.LayerNorm.beta', 'bert.encoder.layer.9.attention.output.LayerNorm.gamma', 'bert.encoder.layer.9.output.LayerNorm.beta', 'bert.encoder.layer.9.output.LayerNorm.gamma', 'bert.encoder.layer.10.attention.output.LayerNorm.beta', 'bert.encoder.layer.10.attention.output.LayerNorm.gamma', 'bert.encoder.layer.10.output.LayerNorm.beta', 'bert.encoder.layer.10.output.LayerNorm.gamma', 'bert.encoder.layer.11.attention.output.LayerNorm.beta', 'bert.encoder.layer.11.attention.output.LayerNorm.gamma', 'bert.encoder.layer.11.output.LayerNorm.beta', 'bert.encoder.layer.11.output.LayerNorm.gamma'].
+  Entrainement termine en 213s.
+
+============================================================
+  RESULTATS : Retro-traduction +20%
+============================================================
+  F1-macro (PRINCIPAL) : 0.6909
+  Accuracy (ILLUSTR.)  : 0.7304
+  AUC-PR macro         : 0.7652
+  G-mean               : 0.7618
+
+  F1 par classe :
+    Positive   : F1=0.7786  Prec=0.7556  Rec=0.8031
+    Negative   : F1=0.7108  Prec=0.7437  Rec=0.6808
+    Neutral    : F1=0.5833  Prec=0.5895  Rec=0.5773
+
+              precision    recall  f1-score   support
+
+    Positive     0.7556    0.8031    0.7786       381
+    Negative     0.7437    0.6808    0.7108       260
+     Neutral     0.5895    0.5773    0.5833        97
+
+    accuracy                         0.7304       738
+   macro avg     0.6962    0.6871    0.6909       738
+weighted avg     0.7295    0.7304    0.7291       738
+
+
+  Metriques sauvegardees : results/bt_20pct_metrics.json
+
+Matrice de confusion sauvegardee : figures/bt_20pct_confusion_matrix.png
+Sauvegarde intermediaire sur Drive effectuee.
+
+
+============================================================
+  FINE-TUNING : Retro-traduction +50%
+============================================================
+Loading weights: 100%
+ 197/197 [00:00<00:00, 650.30it/s, Materializing param=bert.encoder.layer.11.output.dense.weight]
+BertForSequenceClassification LOAD REPORT from: alger-ia/dziribert
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+classifier.bias                            | MISSING    | 
+bert.pooler.dense.weight                   | MISSING    | 
+classifier.weight                          | MISSING    | 
+bert.pooler.dense.bias                     | MISSING    | 
+
+Notes:
+- UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  Modele alger-ia/dziribert recharge from scratch.
+  Tokenisation du train augmente (3654 exemples)...
+warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+`logging_dir` is deprecated and will be removed in v5.2. Please set `TENSORBOARD_LOGGING_DIR` instead.
+    Positive   : 1778
+    Negative   : 1210
+    Neutral    :  666
+  Lancement du fine-tuning (5 epochs, lr=2e-05, batch=16)...
+ [1145/1145 04:09, Epoch 5/5]
+Epoch	Training Loss	Validation Loss	F1 Macro	Accuracy
+1	0.825129	0.698003	0.647849	0.704607
+2	0.523866	0.679971	0.679143	0.727642
+3	0.297451	0.860838	0.661694	0.718157
+4	0.165380	1.073612	0.664871	0.719512
+5	0.098295	1.190938	0.660518	0.714092
+Writing model shards: 100%
+ 1/1 [00:08<00:00,  8.25s/it]
+Writing model shards: 100%
+ 1/1 [00:11<00:00, 11.46s/it]
+Writing model shards: 100%
+ 1/1 [00:02<00:00,  2.18s/it]
+Writing model shards: 100%
+ 1/1 [00:16<00:00, 16.33s/it]
+Writing model shards: 100%
+ 1/1 [00:12<00:00, 12.01s/it]
+There were missing keys in the checkpoint model loaded: ['bert.embeddings.LayerNorm.weight', 'bert.embeddings.LayerNorm.bias', 'bert.encoder.layer.0.attention.output.LayerNorm.weight', 'bert.encoder.layer.0.attention.output.LayerNorm.bias', 'bert.encoder.layer.0.output.LayerNorm.weight', 'bert.encoder.layer.0.output.LayerNorm.bias', 'bert.encoder.layer.1.attention.output.LayerNorm.weight', 'bert.encoder.layer.1.attention.output.LayerNorm.bias', 'bert.encoder.layer.1.output.LayerNorm.weight', 'bert.encoder.layer.1.output.LayerNorm.bias', 'bert.encoder.layer.2.attention.output.LayerNorm.weight', 'bert.encoder.layer.2.attention.output.LayerNorm.bias', 'bert.encoder.layer.2.output.LayerNorm.weight', 'bert.encoder.layer.2.output.LayerNorm.bias', 'bert.encoder.layer.3.attention.output.LayerNorm.weight', 'bert.encoder.layer.3.attention.output.LayerNorm.bias', 'bert.encoder.layer.3.output.LayerNorm.weight', 'bert.encoder.layer.3.output.LayerNorm.bias', 'bert.encoder.layer.4.attention.output.LayerNorm.weight', 'bert.encoder.layer.4.attention.output.LayerNorm.bias', 'bert.encoder.layer.4.output.LayerNorm.weight', 'bert.encoder.layer.4.output.LayerNorm.bias', 'bert.encoder.layer.5.attention.output.LayerNorm.weight', 'bert.encoder.layer.5.attention.output.LayerNorm.bias', 'bert.encoder.layer.5.output.LayerNorm.weight', 'bert.encoder.layer.5.output.LayerNorm.bias', 'bert.encoder.layer.6.attention.output.LayerNorm.weight', 'bert.encoder.layer.6.attention.output.LayerNorm.bias', 'bert.encoder.layer.6.output.LayerNorm.weight', 'bert.encoder.layer.6.output.LayerNorm.bias', 'bert.encoder.layer.7.attention.output.LayerNorm.weight', 'bert.encoder.layer.7.attention.output.LayerNorm.bias', 'bert.encoder.layer.7.output.LayerNorm.weight', 'bert.encoder.layer.7.output.LayerNorm.bias', 'bert.encoder.layer.8.attention.output.LayerNorm.weight', 'bert.encoder.layer.8.attention.output.LayerNorm.bias', 'bert.encoder.layer.8.output.LayerNorm.weight', 'bert.encoder.layer.8.output.LayerNorm.bias', 'bert.encoder.layer.9.attention.output.LayerNorm.weight', 'bert.encoder.layer.9.attention.output.LayerNorm.bias', 'bert.encoder.layer.9.output.LayerNorm.weight', 'bert.encoder.layer.9.output.LayerNorm.bias', 'bert.encoder.layer.10.attention.output.LayerNorm.weight', 'bert.encoder.layer.10.attention.output.LayerNorm.bias', 'bert.encoder.layer.10.output.LayerNorm.weight', 'bert.encoder.layer.10.output.LayerNorm.bias', 'bert.encoder.layer.11.attention.output.LayerNorm.weight', 'bert.encoder.layer.11.attention.output.LayerNorm.bias', 'bert.encoder.layer.11.output.LayerNorm.weight', 'bert.encoder.layer.11.output.LayerNorm.bias'].
+There were unexpected keys in the checkpoint model loaded: ['bert.embeddings.LayerNorm.beta', 'bert.embeddings.LayerNorm.gamma', 'bert.encoder.layer.0.attention.output.LayerNorm.beta', 'bert.encoder.layer.0.attention.output.LayerNorm.gamma', 'bert.encoder.layer.0.output.LayerNorm.beta', 'bert.encoder.layer.0.output.LayerNorm.gamma', 'bert.encoder.layer.1.attention.output.LayerNorm.beta', 'bert.encoder.layer.1.attention.output.LayerNorm.gamma', 'bert.encoder.layer.1.output.LayerNorm.beta', 'bert.encoder.layer.1.output.LayerNorm.gamma', 'bert.encoder.layer.2.attention.output.LayerNorm.beta', 'bert.encoder.layer.2.attention.output.LayerNorm.gamma', 'bert.encoder.layer.2.output.LayerNorm.beta', 'bert.encoder.layer.2.output.LayerNorm.gamma', 'bert.encoder.layer.3.attention.output.LayerNorm.beta', 'bert.encoder.layer.3.attention.output.LayerNorm.gamma', 'bert.encoder.layer.3.output.LayerNorm.beta', 'bert.encoder.layer.3.output.LayerNorm.gamma', 'bert.encoder.layer.4.attention.output.LayerNorm.beta', 'bert.encoder.layer.4.attention.output.LayerNorm.gamma', 'bert.encoder.layer.4.output.LayerNorm.beta', 'bert.encoder.layer.4.output.LayerNorm.gamma', 'bert.encoder.layer.5.attention.output.LayerNorm.beta', 'bert.encoder.layer.5.attention.output.LayerNorm.gamma', 'bert.encoder.layer.5.output.LayerNorm.beta', 'bert.encoder.layer.5.output.LayerNorm.gamma', 'bert.encoder.layer.6.attention.output.LayerNorm.beta', 'bert.encoder.layer.6.attention.output.LayerNorm.gamma', 'bert.encoder.layer.6.output.LayerNorm.beta', 'bert.encoder.layer.6.output.LayerNorm.gamma', 'bert.encoder.layer.7.attention.output.LayerNorm.beta', 'bert.encoder.layer.7.attention.output.LayerNorm.gamma', 'bert.encoder.layer.7.output.LayerNorm.beta', 'bert.encoder.layer.7.output.LayerNorm.gamma', 'bert.encoder.layer.8.attention.output.LayerNorm.beta', 'bert.encoder.layer.8.attention.output.LayerNorm.gamma', 'bert.encoder.layer.8.output.LayerNorm.beta', 'bert.encoder.layer.8.output.LayerNorm.gamma', 'bert.encoder.layer.9.attention.output.LayerNorm.beta', 'bert.encoder.layer.9.attention.output.LayerNorm.gamma', 'bert.encoder.layer.9.output.LayerNorm.beta', 'bert.encoder.layer.9.output.LayerNorm.gamma', 'bert.encoder.layer.10.attention.output.LayerNorm.beta', 'bert.encoder.layer.10.attention.output.LayerNorm.gamma', 'bert.encoder.layer.10.output.LayerNorm.beta', 'bert.encoder.layer.10.output.LayerNorm.gamma', 'bert.encoder.layer.11.attention.output.LayerNorm.beta', 'bert.encoder.layer.11.attention.output.LayerNorm.gamma', 'bert.encoder.layer.11.output.LayerNorm.beta', 'bert.encoder.layer.11.output.LayerNorm.gamma'].
+  Entrainement termine en 250s.
+
+============================================================
+  RESULTATS : Retro-traduction +50%
+============================================================
+  F1-macro (PRINCIPAL) : 0.6715
+  Accuracy (ILLUSTR.)  : 0.7195
+  AUC-PR macro         : 0.7663
+  G-mean               : 0.7484
+
+  F1 par classe :
+    Positive   : F1=0.7752  Prec=0.7634  Rec=0.7874
+    Negative   : F1=0.7016  Prec=0.7070  Rec=0.6962
+    Neutral    : F1=0.5376  Prec=0.5618  Rec=0.5155
+
+              precision    recall  f1-score   support
+
+    Positive     0.7634    0.7874    0.7752       381
+    Negative     0.7070    0.6962    0.7016       260
+     Neutral     0.5618    0.5155    0.5376        97
+
+    accuracy                         0.7195       738
+   macro avg     0.6774    0.6663    0.6715       738
+weighted avg     0.7170    0.7195    0.7180       738
+
+
+  Metriques sauvegardees : results/bt_50pct_metrics.json
+
+Matrice de confusion sauvegardee : figures/bt_50pct_confusion_matrix.png
+Sauvegarde intermediaire sur Drive effectuee.
+
+
+
+============================================================
+  FINE-TUNING : Retro-traduction +100%
+============================================================
+Loading weights: 100%
+ 197/197 [00:00<00:00, 722.05it/s, Materializing param=bert.encoder.layer.11.output.dense.weight]
+BertForSequenceClassification LOAD REPORT from: alger-ia/dziribert
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+classifier.bias                            | MISSING    | 
+bert.pooler.dense.weight                   | MISSING    | 
+classifier.weight                          | MISSING    | 
+bert.pooler.dense.bias                     | MISSING    | 
+
+Notes:
+- UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  Modele alger-ia/dziribert recharge from scratch.
+  Tokenisation du train augmente (3654 exemples)...
+warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+`logging_dir` is deprecated and will be removed in v5.2. Please set `TENSORBOARD_LOGGING_DIR` instead.
+    Positive   : 1778
+    Negative   : 1210
+    Neutral    :  666
+  Lancement du fine-tuning (5 epochs, lr=2e-05, batch=16)...
+ [1145/1145 03:46, Epoch 5/5]
+Epoch	Training Loss	Validation Loss	F1 Macro	Accuracy
+1	0.825129	0.698003	0.647849	0.704607
+2	0.523866	0.679971	0.679143	0.727642
+3	0.297451	0.860838	0.661694	0.718157
+4	0.165380	1.073612	0.664871	0.719512
+5	0.098295	1.190938	0.660518	0.714092
+Writing model shards: 100%
+ 1/1 [00:15<00:00, 15.10s/it]
+Writing model shards: 100%
+ 1/1 [00:03<00:00,  3.33s/it]
+Writing model shards: 100%
+ 1/1 [00:07<00:00,  7.65s/it]
+Writing model shards: 100%
+ 1/1 [00:15<00:00, 15.66s/it]
+Writing model shards: 100%
+ 1/1 [00:03<00:00,  3.95s/it]
+There were missing keys in the checkpoint model loaded: ['bert.embeddings.LayerNorm.weight', 'bert.embeddings.LayerNorm.bias', 'bert.encoder.layer.0.attention.output.LayerNorm.weight', 'bert.encoder.layer.0.attention.output.LayerNorm.bias', 'bert.encoder.layer.0.output.LayerNorm.weight', 'bert.encoder.layer.0.output.LayerNorm.bias', 'bert.encoder.layer.1.attention.output.LayerNorm.weight', 'bert.encoder.layer.1.attention.output.LayerNorm.bias', 'bert.encoder.layer.1.output.LayerNorm.weight', 'bert.encoder.layer.1.output.LayerNorm.bias', 'bert.encoder.layer.2.attention.output.LayerNorm.weight', 'bert.encoder.layer.2.attention.output.LayerNorm.bias', 'bert.encoder.layer.2.output.LayerNorm.weight', 'bert.encoder.layer.2.output.LayerNorm.bias', 'bert.encoder.layer.3.attention.output.LayerNorm.weight', 'bert.encoder.layer.3.attention.output.LayerNorm.bias', 'bert.encoder.layer.3.output.LayerNorm.weight', 'bert.encoder.layer.3.output.LayerNorm.bias', 'bert.encoder.layer.4.attention.output.LayerNorm.weight', 'bert.encoder.layer.4.attention.output.LayerNorm.bias', 'bert.encoder.layer.4.output.LayerNorm.weight', 'bert.encoder.layer.4.output.LayerNorm.bias', 'bert.encoder.layer.5.attention.output.LayerNorm.weight', 'bert.encoder.layer.5.attention.output.LayerNorm.bias', 'bert.encoder.layer.5.output.LayerNorm.weight', 'bert.encoder.layer.5.output.LayerNorm.bias', 'bert.encoder.layer.6.attention.output.LayerNorm.weight', 'bert.encoder.layer.6.attention.output.LayerNorm.bias', 'bert.encoder.layer.6.output.LayerNorm.weight', 'bert.encoder.layer.6.output.LayerNorm.bias', 'bert.encoder.layer.7.attention.output.LayerNorm.weight', 'bert.encoder.layer.7.attention.output.LayerNorm.bias', 'bert.encoder.layer.7.output.LayerNorm.weight', 'bert.encoder.layer.7.output.LayerNorm.bias', 'bert.encoder.layer.8.attention.output.LayerNorm.weight', 'bert.encoder.layer.8.attention.output.LayerNorm.bias', 'bert.encoder.layer.8.output.LayerNorm.weight', 'bert.encoder.layer.8.output.LayerNorm.bias', 'bert.encoder.layer.9.attention.output.LayerNorm.weight', 'bert.encoder.layer.9.attention.output.LayerNorm.bias', 'bert.encoder.layer.9.output.LayerNorm.weight', 'bert.encoder.layer.9.output.LayerNorm.bias', 'bert.encoder.layer.10.attention.output.LayerNorm.weight', 'bert.encoder.layer.10.attention.output.LayerNorm.bias', 'bert.encoder.layer.10.output.LayerNorm.weight', 'bert.encoder.layer.10.output.LayerNorm.bias', 'bert.encoder.layer.11.attention.output.LayerNorm.weight', 'bert.encoder.layer.11.attention.output.LayerNorm.bias', 'bert.encoder.layer.11.output.LayerNorm.weight', 'bert.encoder.layer.11.output.LayerNorm.bias'].
+There were unexpected keys in the checkpoint model loaded: ['bert.embeddings.LayerNorm.beta', 'bert.embeddings.LayerNorm.gamma', 'bert.encoder.layer.0.attention.output.LayerNorm.beta', 'bert.encoder.layer.0.attention.output.LayerNorm.gamma', 'bert.encoder.layer.0.output.LayerNorm.beta', 'bert.encoder.layer.0.output.LayerNorm.gamma', 'bert.encoder.layer.1.attention.output.LayerNorm.beta', 'bert.encoder.layer.1.attention.output.LayerNorm.gamma', 'bert.encoder.layer.1.output.LayerNorm.beta', 'bert.encoder.layer.1.output.LayerNorm.gamma', 'bert.encoder.layer.2.attention.output.LayerNorm.beta', 'bert.encoder.layer.2.attention.output.LayerNorm.gamma', 'bert.encoder.layer.2.output.LayerNorm.beta', 'bert.encoder.layer.2.output.LayerNorm.gamma', 'bert.encoder.layer.3.attention.output.LayerNorm.beta', 'bert.encoder.layer.3.attention.output.LayerNorm.gamma', 'bert.encoder.layer.3.output.LayerNorm.beta', 'bert.encoder.layer.3.output.LayerNorm.gamma', 'bert.encoder.layer.4.attention.output.LayerNorm.beta', 'bert.encoder.layer.4.attention.output.LayerNorm.gamma', 'bert.encoder.layer.4.output.LayerNorm.beta', 'bert.encoder.layer.4.output.LayerNorm.gamma', 'bert.encoder.layer.5.attention.output.LayerNorm.beta', 'bert.encoder.layer.5.attention.output.LayerNorm.gamma', 'bert.encoder.layer.5.output.LayerNorm.beta', 'bert.encoder.layer.5.output.LayerNorm.gamma', 'bert.encoder.layer.6.attention.output.LayerNorm.beta', 'bert.encoder.layer.6.attention.output.LayerNorm.gamma', 'bert.encoder.layer.6.output.LayerNorm.beta', 'bert.encoder.layer.6.output.LayerNorm.gamma', 'bert.encoder.layer.7.attention.output.LayerNorm.beta', 'bert.encoder.layer.7.attention.output.LayerNorm.gamma', 'bert.encoder.layer.7.output.LayerNorm.beta', 'bert.encoder.layer.7.output.LayerNorm.gamma', 'bert.encoder.layer.8.attention.output.LayerNorm.beta', 'bert.encoder.layer.8.attention.output.LayerNorm.gamma', 'bert.encoder.layer.8.output.LayerNorm.beta', 'bert.encoder.layer.8.output.LayerNorm.gamma', 'bert.encoder.layer.9.attention.output.LayerNorm.beta', 'bert.encoder.layer.9.attention.output.LayerNorm.gamma', 'bert.encoder.layer.9.output.LayerNorm.beta', 'bert.encoder.layer.9.output.LayerNorm.gamma', 'bert.encoder.layer.10.attention.output.LayerNorm.beta', 'bert.encoder.layer.10.attention.output.LayerNorm.gamma', 'bert.encoder.layer.10.output.LayerNorm.beta', 'bert.encoder.layer.10.output.LayerNorm.gamma', 'bert.encoder.layer.11.attention.output.LayerNorm.beta', 'bert.encoder.layer.11.attention.output.LayerNorm.gamma', 'bert.encoder.layer.11.output.LayerNorm.beta', 'bert.encoder.layer.11.output.LayerNorm.gamma'].
+  Entrainement termine en 226s.
+
+============================================================
+  RESULTATS : Retro-traduction +100%
+============================================================
+  F1-macro (PRINCIPAL) : 0.6715
+  Accuracy (ILLUSTR.)  : 0.7195
+  AUC-PR macro         : 0.7663
+  G-mean               : 0.7484
+
+  F1 par classe :
+    Positive   : F1=0.7752  Prec=0.7634  Rec=0.7874
+    Negative   : F1=0.7016  Prec=0.7070  Rec=0.6962
+    Neutral    : F1=0.5376  Prec=0.5618  Rec=0.5155
+
+              precision    recall  f1-score   support
+
+    Positive     0.7634    0.7874    0.7752       381
+    Negative     0.7070    0.6962    0.7016       260
+     Neutral     0.5618    0.5155    0.5376        97
+
+    accuracy                         0.7195       738
+   macro avg     0.6774    0.6663    0.6715       738
+weighted avg     0.7170    0.7195    0.7180       738
+
+
+  Metriques sauvegardees : results/bt_100pct_metrics.json
+
+Matrice de confusion sauvegardee : figures/bt_100pct_confusion_matrix.png
+Sauvegarde intermediaire sur Drive effectuee.
+
+
+============================================================
+  BONUS : CONSTRUCTION DES DATASETS +10% ET +75%
+============================================================
+
+Pool de paraphrases valides : 214
+Neutral dans le train set   : 452
+
+  Taux +10pct : 45 paraphrases (45 disponibles).
+  Train set final : 3485 exemples
+    Positive   : 1778 (51.0%)
+    Negative   : 1210 (34.7%)
+    Neutral    :  497 (14.3%)
+
+  AVERTISSEMENT +75pct : besoin de 339 mais seulement 214 disponibles. Utilisation de 214 (pool epuise).
+  Train set final : 3654 exemples
+    Positive   : 1778 (48.7%)
+    Negative   : 1210 (33.1%)
+    Neutral    :  666 (18.2%)
+
+2 datasets bonus construits.
+
+
+============================================================
+  FINE-TUNING : Retro-traduction +10% (BONUS)
+============================================================
+Loading weights: 100%
+ 197/197 [00:00<00:00, 683.33it/s, Materializing param=bert.encoder.layer.11.output.dense.weight]
+BertForSequenceClassification LOAD REPORT from: alger-ia/dziribert
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+classifier.bias                            | MISSING    | 
+bert.pooler.dense.weight                   | MISSING    | 
+classifier.weight                          | MISSING    | 
+bert.pooler.dense.bias                     | MISSING    | 
+
+Notes:
+- UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  Modele alger-ia/dziribert recharge from scratch.
+  Tokenisation du train augmente (3485 exemples)...
+warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+`logging_dir` is deprecated and will be removed in v5.2. Please set `TENSORBOARD_LOGGING_DIR` instead.
+    Positive   : 1778
+    Negative   : 1210
+    Neutral    :  497
+  Lancement du fine-tuning (5 epochs, lr=2e-05, batch=16)...
+ [1090/1090 03:06, Epoch 5/5]
+Epoch	Training Loss	Validation Loss	F1 Macro	Accuracy
+1	0.827511	0.674761	0.651443	0.710027
+2	0.536660	0.710515	0.649915	0.714092
+3	0.314449	0.827493	0.676843	0.726287
+4	0.178873	1.075416	0.653912	0.703252
+5	0.105786	1.145146	0.667357	0.712737
+Writing model shards: 100%
+ 1/1 [00:16<00:00, 16.76s/it]
+Writing model shards: 100%
+ 1/1 [00:03<00:00,  3.77s/it]
+Writing model shards: 100%
+ 1/1 [00:05<00:00,  5.04s/it]
+Writing model shards: 100%
+ 1/1 [00:06<00:00,  6.49s/it]
+Writing model shards: 100%
+ 1/1 [00:02<00:00,  2.07s/it]
+There were missing keys in the checkpoint model loaded: ['bert.embeddings.LayerNorm.weight', 'bert.embeddings.LayerNorm.bias', 'bert.encoder.layer.0.attention.output.LayerNorm.weight', 'bert.encoder.layer.0.attention.output.LayerNorm.bias', 'bert.encoder.layer.0.output.LayerNorm.weight', 'bert.encoder.layer.0.output.LayerNorm.bias', 'bert.encoder.layer.1.attention.output.LayerNorm.weight', 'bert.encoder.layer.1.attention.output.LayerNorm.bias', 'bert.encoder.layer.1.output.LayerNorm.weight', 'bert.encoder.layer.1.output.LayerNorm.bias', 'bert.encoder.layer.2.attention.output.LayerNorm.weight', 'bert.encoder.layer.2.attention.output.LayerNorm.bias', 'bert.encoder.layer.2.output.LayerNorm.weight', 'bert.encoder.layer.2.output.LayerNorm.bias', 'bert.encoder.layer.3.attention.output.LayerNorm.weight', 'bert.encoder.layer.3.attention.output.LayerNorm.bias', 'bert.encoder.layer.3.output.LayerNorm.weight', 'bert.encoder.layer.3.output.LayerNorm.bias', 'bert.encoder.layer.4.attention.output.LayerNorm.weight', 'bert.encoder.layer.4.attention.output.LayerNorm.bias', 'bert.encoder.layer.4.output.LayerNorm.weight', 'bert.encoder.layer.4.output.LayerNorm.bias', 'bert.encoder.layer.5.attention.output.LayerNorm.weight', 'bert.encoder.layer.5.attention.output.LayerNorm.bias', 'bert.encoder.layer.5.output.LayerNorm.weight', 'bert.encoder.layer.5.output.LayerNorm.bias', 'bert.encoder.layer.6.attention.output.LayerNorm.weight', 'bert.encoder.layer.6.attention.output.LayerNorm.bias', 'bert.encoder.layer.6.output.LayerNorm.weight', 'bert.encoder.layer.6.output.LayerNorm.bias', 'bert.encoder.layer.7.attention.output.LayerNorm.weight', 'bert.encoder.layer.7.attention.output.LayerNorm.bias', 'bert.encoder.layer.7.output.LayerNorm.weight', 'bert.encoder.layer.7.output.LayerNorm.bias', 'bert.encoder.layer.8.attention.output.LayerNorm.weight', 'bert.encoder.layer.8.attention.output.LayerNorm.bias', 'bert.encoder.layer.8.output.LayerNorm.weight', 'bert.encoder.layer.8.output.LayerNorm.bias', 'bert.encoder.layer.9.attention.output.LayerNorm.weight', 'bert.encoder.layer.9.attention.output.LayerNorm.bias', 'bert.encoder.layer.9.output.LayerNorm.weight', 'bert.encoder.layer.9.output.LayerNorm.bias', 'bert.encoder.layer.10.attention.output.LayerNorm.weight', 'bert.encoder.layer.10.attention.output.LayerNorm.bias', 'bert.encoder.layer.10.output.LayerNorm.weight', 'bert.encoder.layer.10.output.LayerNorm.bias', 'bert.encoder.layer.11.attention.output.LayerNorm.weight', 'bert.encoder.layer.11.attention.output.LayerNorm.bias', 'bert.encoder.layer.11.output.LayerNorm.weight', 'bert.encoder.layer.11.output.LayerNorm.bias'].
+There were unexpected keys in the checkpoint model loaded: ['bert.embeddings.LayerNorm.beta', 'bert.embeddings.LayerNorm.gamma', 'bert.encoder.layer.0.attention.output.LayerNorm.beta', 'bert.encoder.layer.0.attention.output.LayerNorm.gamma', 'bert.encoder.layer.0.output.LayerNorm.beta', 'bert.encoder.layer.0.output.LayerNorm.gamma', 'bert.encoder.layer.1.attention.output.LayerNorm.beta', 'bert.encoder.layer.1.attention.output.LayerNorm.gamma', 'bert.encoder.layer.1.output.LayerNorm.beta', 'bert.encoder.layer.1.output.LayerNorm.gamma', 'bert.encoder.layer.2.attention.output.LayerNorm.beta', 'bert.encoder.layer.2.attention.output.LayerNorm.gamma', 'bert.encoder.layer.2.output.LayerNorm.beta', 'bert.encoder.layer.2.output.LayerNorm.gamma', 'bert.encoder.layer.3.attention.output.LayerNorm.beta', 'bert.encoder.layer.3.attention.output.LayerNorm.gamma', 'bert.encoder.layer.3.output.LayerNorm.beta', 'bert.encoder.layer.3.output.LayerNorm.gamma', 'bert.encoder.layer.4.attention.output.LayerNorm.beta', 'bert.encoder.layer.4.attention.output.LayerNorm.gamma', 'bert.encoder.layer.4.output.LayerNorm.beta', 'bert.encoder.layer.4.output.LayerNorm.gamma', 'bert.encoder.layer.5.attention.output.LayerNorm.beta', 'bert.encoder.layer.5.attention.output.LayerNorm.gamma', 'bert.encoder.layer.5.output.LayerNorm.beta', 'bert.encoder.layer.5.output.LayerNorm.gamma', 'bert.encoder.layer.6.attention.output.LayerNorm.beta', 'bert.encoder.layer.6.attention.output.LayerNorm.gamma', 'bert.encoder.layer.6.output.LayerNorm.beta', 'bert.encoder.layer.6.output.LayerNorm.gamma', 'bert.encoder.layer.7.attention.output.LayerNorm.beta', 'bert.encoder.layer.7.attention.output.LayerNorm.gamma', 'bert.encoder.layer.7.output.LayerNorm.beta', 'bert.encoder.layer.7.output.LayerNorm.gamma', 'bert.encoder.layer.8.attention.output.LayerNorm.beta', 'bert.encoder.layer.8.attention.output.LayerNorm.gamma', 'bert.encoder.layer.8.output.LayerNorm.beta', 'bert.encoder.layer.8.output.LayerNorm.gamma', 'bert.encoder.layer.9.attention.output.LayerNorm.beta', 'bert.encoder.layer.9.attention.output.LayerNorm.gamma', 'bert.encoder.layer.9.output.LayerNorm.beta', 'bert.encoder.layer.9.output.LayerNorm.gamma', 'bert.encoder.layer.10.attention.output.LayerNorm.beta', 'bert.encoder.layer.10.attention.output.LayerNorm.gamma', 'bert.encoder.layer.10.output.LayerNorm.beta', 'bert.encoder.layer.10.output.LayerNorm.gamma', 'bert.encoder.layer.11.attention.output.LayerNorm.beta', 'bert.encoder.layer.11.attention.output.LayerNorm.gamma', 'bert.encoder.layer.11.output.LayerNorm.beta', 'bert.encoder.layer.11.output.LayerNorm.gamma'].
+  Entrainement termine en 186s.
+
+============================================================
+  RESULTATS : Retro-traduction +10% (BONUS)
+============================================================
+  F1-macro (PRINCIPAL) : 0.6884
+  Accuracy (ILLUSTR.)  : 0.7331
+  AUC-PR macro         : 0.7597
+  G-mean               : 0.7510
+
+  F1 par classe :
+    Positive   : F1=0.7872  Prec=0.7407  Rec=0.8399
+    Negative   : F1=0.6965  Prec=0.7403  Rec=0.6577
+    Neutral    : F1=0.5814  Prec=0.6667  Rec=0.5155
+
+              precision    recall  f1-score   support
+
+    Positive     0.7407    0.8399    0.7872       381
+    Negative     0.7403    0.6577    0.6965       260
+     Neutral     0.6667    0.5155    0.5814        97
+
+    accuracy                         0.7331       738
+   macro avg     0.7159    0.6710    0.6884       738
+weighted avg     0.7308    0.7331    0.7282       738
+
+
+  Metriques sauvegardees : results/bt_10pct_metrics.json
+
+Matrice de confusion sauvegardee : figures/bt_10pct_confusion_matrix.png
+Sauvegarde intermediaire sur Drive effectuee.
+Sauvegarde intermediaire sur Drive effectuee.
+
+BT +10% -- F1-macro = 0.6884
+BT +20% -- F1-macro = 0.6909  (reference)
+
+
+============================================================
+  FINE-TUNING : Retro-traduction +75% (BONUS)
+============================================================
+Loading weights: 100%
+ 197/197 [00:00<00:00, 596.72it/s, Materializing param=bert.encoder.layer.11.output.dense.weight]
+BertForSequenceClassification LOAD REPORT from: alger-ia/dziribert
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+classifier.bias                            | MISSING    | 
+bert.pooler.dense.weight                   | MISSING    | 
+classifier.weight                          | MISSING    | 
+bert.pooler.dense.bias                     | MISSING    | 
+
+Notes:
+- UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  Modele alger-ia/dziribert recharge from scratch.
+  Tokenisation du train augmente (3654 exemples)...
+warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+`logging_dir` is deprecated and will be removed in v5.2. Please set `TENSORBOARD_LOGGING_DIR` instead.
+    Positive   : 1778
+    Negative   : 1210
+    Neutral    :  666
+  Lancement du fine-tuning (5 epochs, lr=2e-05, batch=16)...
+ [1145/1145 03:46, Epoch 5/5]
+Epoch	Training Loss	Validation Loss	F1 Macro	Accuracy
+1	0.825129	0.698003	0.647849	0.704607
+2	0.523866	0.679971	0.679143	0.727642
+3	0.297451	0.860838	0.661694	0.718157
+4	0.165380	1.073612	0.664871	0.719512
+5	0.098295	1.190938	0.660518	0.714092
+Writing model shards: 100%
+ 1/1 [00:05<00:00,  5.16s/it]
+Writing model shards: 100%
+ 1/1 [00:07<00:00,  7.74s/it]
+Writing model shards: 100%
+ 1/1 [00:02<00:00,  2.04s/it]
+Writing model shards: 100%
+ 1/1 [00:09<00:00,  9.65s/it]
+Writing model shards: 100%
+ 1/1 [00:10<00:00, 11.00s/it]
+There were missing keys in the checkpoint model loaded: ['bert.embeddings.LayerNorm.weight', 'bert.embeddings.LayerNorm.bias', 'bert.encoder.layer.0.attention.output.LayerNorm.weight', 'bert.encoder.layer.0.attention.output.LayerNorm.bias', 'bert.encoder.layer.0.output.LayerNorm.weight', 'bert.encoder.layer.0.output.LayerNorm.bias', 'bert.encoder.layer.1.attention.output.LayerNorm.weight', 'bert.encoder.layer.1.attention.output.LayerNorm.bias', 'bert.encoder.layer.1.output.LayerNorm.weight', 'bert.encoder.layer.1.output.LayerNorm.bias', 'bert.encoder.layer.2.attention.output.LayerNorm.weight', 'bert.encoder.layer.2.attention.output.LayerNorm.bias', 'bert.encoder.layer.2.output.LayerNorm.weight', 'bert.encoder.layer.2.output.LayerNorm.bias', 'bert.encoder.layer.3.attention.output.LayerNorm.weight', 'bert.encoder.layer.3.attention.output.LayerNorm.bias', 'bert.encoder.layer.3.output.LayerNorm.weight', 'bert.encoder.layer.3.output.LayerNorm.bias', 'bert.encoder.layer.4.attention.output.LayerNorm.weight', 'bert.encoder.layer.4.attention.output.LayerNorm.bias', 'bert.encoder.layer.4.output.LayerNorm.weight', 'bert.encoder.layer.4.output.LayerNorm.bias', 'bert.encoder.layer.5.attention.output.LayerNorm.weight', 'bert.encoder.layer.5.attention.output.LayerNorm.bias', 'bert.encoder.layer.5.output.LayerNorm.weight', 'bert.encoder.layer.5.output.LayerNorm.bias', 'bert.encoder.layer.6.attention.output.LayerNorm.weight', 'bert.encoder.layer.6.attention.output.LayerNorm.bias', 'bert.encoder.layer.6.output.LayerNorm.weight', 'bert.encoder.layer.6.output.LayerNorm.bias', 'bert.encoder.layer.7.attention.output.LayerNorm.weight', 'bert.encoder.layer.7.attention.output.LayerNorm.bias', 'bert.encoder.layer.7.output.LayerNorm.weight', 'bert.encoder.layer.7.output.LayerNorm.bias', 'bert.encoder.layer.8.attention.output.LayerNorm.weight', 'bert.encoder.layer.8.attention.output.LayerNorm.bias', 'bert.encoder.layer.8.output.LayerNorm.weight', 'bert.encoder.layer.8.output.LayerNorm.bias', 'bert.encoder.layer.9.attention.output.LayerNorm.weight', 'bert.encoder.layer.9.attention.output.LayerNorm.bias', 'bert.encoder.layer.9.output.LayerNorm.weight', 'bert.encoder.layer.9.output.LayerNorm.bias', 'bert.encoder.layer.10.attention.output.LayerNorm.weight', 'bert.encoder.layer.10.attention.output.LayerNorm.bias', 'bert.encoder.layer.10.output.LayerNorm.weight', 'bert.encoder.layer.10.output.LayerNorm.bias', 'bert.encoder.layer.11.attention.output.LayerNorm.weight', 'bert.encoder.layer.11.attention.output.LayerNorm.bias', 'bert.encoder.layer.11.output.LayerNorm.weight', 'bert.encoder.layer.11.output.LayerNorm.bias'].
+There were unexpected keys in the checkpoint model loaded: ['bert.embeddings.LayerNorm.beta', 'bert.embeddings.LayerNorm.gamma', 'bert.encoder.layer.0.attention.output.LayerNorm.beta', 'bert.encoder.layer.0.attention.output.LayerNorm.gamma', 'bert.encoder.layer.0.output.LayerNorm.beta', 'bert.encoder.layer.0.output.LayerNorm.gamma', 'bert.encoder.layer.1.attention.output.LayerNorm.beta', 'bert.encoder.layer.1.attention.output.LayerNorm.gamma', 'bert.encoder.layer.1.output.LayerNorm.beta', 'bert.encoder.layer.1.output.LayerNorm.gamma', 'bert.encoder.layer.2.attention.output.LayerNorm.beta', 'bert.encoder.layer.2.attention.output.LayerNorm.gamma', 'bert.encoder.layer.2.output.LayerNorm.beta', 'bert.encoder.layer.2.output.LayerNorm.gamma', 'bert.encoder.layer.3.attention.output.LayerNorm.beta', 'bert.encoder.layer.3.attention.output.LayerNorm.gamma', 'bert.encoder.layer.3.output.LayerNorm.beta', 'bert.encoder.layer.3.output.LayerNorm.gamma', 'bert.encoder.layer.4.attention.output.LayerNorm.beta', 'bert.encoder.layer.4.attention.output.LayerNorm.gamma', 'bert.encoder.layer.4.output.LayerNorm.beta', 'bert.encoder.layer.4.output.LayerNorm.gamma', 'bert.encoder.layer.5.attention.output.LayerNorm.beta', 'bert.encoder.layer.5.attention.output.LayerNorm.gamma', 'bert.encoder.layer.5.output.LayerNorm.beta', 'bert.encoder.layer.5.output.LayerNorm.gamma', 'bert.encoder.layer.6.attention.output.LayerNorm.beta', 'bert.encoder.layer.6.attention.output.LayerNorm.gamma', 'bert.encoder.layer.6.output.LayerNorm.beta', 'bert.encoder.layer.6.output.LayerNorm.gamma', 'bert.encoder.layer.7.attention.output.LayerNorm.beta', 'bert.encoder.layer.7.attention.output.LayerNorm.gamma', 'bert.encoder.layer.7.output.LayerNorm.beta', 'bert.encoder.layer.7.output.LayerNorm.gamma', 'bert.encoder.layer.8.attention.output.LayerNorm.beta', 'bert.encoder.layer.8.attention.output.LayerNorm.gamma', 'bert.encoder.layer.8.output.LayerNorm.beta', 'bert.encoder.layer.8.output.LayerNorm.gamma', 'bert.encoder.layer.9.attention.output.LayerNorm.beta', 'bert.encoder.layer.9.attention.output.LayerNorm.gamma', 'bert.encoder.layer.9.output.LayerNorm.beta', 'bert.encoder.layer.9.output.LayerNorm.gamma', 'bert.encoder.layer.10.attention.output.LayerNorm.beta', 'bert.encoder.layer.10.attention.output.LayerNorm.gamma', 'bert.encoder.layer.10.output.LayerNorm.beta', 'bert.encoder.layer.10.output.LayerNorm.gamma', 'bert.encoder.layer.11.attention.output.LayerNorm.beta', 'bert.encoder.layer.11.attention.output.LayerNorm.gamma', 'bert.encoder.layer.11.output.LayerNorm.beta', 'bert.encoder.layer.11.output.LayerNorm.gamma'].
+  Entrainement termine en 227s.
+
+============================================================
+  RESULTATS : Retro-traduction +75% (BONUS)
+============================================================
+  F1-macro (PRINCIPAL) : 0.6715
+  Accuracy (ILLUSTR.)  : 0.7195
+  AUC-PR macro         : 0.7663
+  G-mean               : 0.7484
+
+  F1 par classe :
+    Positive   : F1=0.7752  Prec=0.7634  Rec=0.7874
+    Negative   : F1=0.7016  Prec=0.7070  Rec=0.6962
+    Neutral    : F1=0.5376  Prec=0.5618  Rec=0.5155
+
+              precision    recall  f1-score   support
+
+    Positive     0.7634    0.7874    0.7752       381
+    Negative     0.7070    0.6962    0.7016       260
+     Neutral     0.5618    0.5155    0.5376        97
+
+    accuracy                         0.7195       738
+   macro avg     0.6774    0.6663    0.6715       738
+weighted avg     0.7170    0.7195    0.7180       738
+
+
+  Metriques sauvegardees : results/bt_75pct_metrics.json
+
+Matrice de confusion sauvegardee : figures/bt_75pct_confusion_matrix.png
+Sauvegarde intermediaire sur Drive effectuee.
+Sauvegarde intermediaire sur Drive effectuee.
+
+BT +75% -- F1-macro = 0.6715
+
+
+Synthese 5 ratios sauvegardee : results/bt_5ratios_summary.json
+
+
+Generation de la courbe F1-macro = f(ratio)...
+
+Courbe sauvegardee : figures/bonus_bt_ratio_curve.png
+
+============================================================
+  SYNTHESE BONUS OPTION B -- 5 RATIOS
+============================================================
+  BT + 10% : F1-macro = 0.6884
+  BT + 20% : F1-macro = 0.6909  <-- OPTIMAL
+  BT + 50% : F1-macro = 0.6715  [pool epuise]
+  BT + 75% : F1-macro = 0.6715  [pool epuise]
+  BT +100% : F1-macro = 0.6715  [pool epuise]
+
+  Baseline : F1-macro = 0.6805
+  Gain optimal : ++0.0104 vs Baseline
+  
+  
+  ==========================================================================================
+  TABLEAU COMPARATIF -- STRATEGIE 3 vs PRECEDENTES
+==========================================================================================
+       Configuration  F1-macro  F1 Positive  F1 Negative  F1 Neutral  AUC-PR  G-mean  Accuracy
+     Baseline (NB02)    0.6805       0.7806       0.7014      0.5596  0.7534  0.7558    0.7249
+Best S1 (FL gamma=2)    0.6794       0.7605       0.7233      0.5543  0.7647  0.7564    0.7209
+    Best S2 (ADASYN)    0.6617       0.7599       0.6757      0.5495  0.7085  0.7367    0.7046
+             BT +20%    0.6909       0.7786       0.7108      0.5833  0.7652  0.7618    0.7304
+             BT +50%    0.6715       0.7752       0.7016      0.5376  0.7663  0.7484    0.7195
+            BT +100%    0.6715       0.7752       0.7016      0.5376  0.7663  0.7484    0.7195
+
+Tableau sauvegarde : results/strategie3_comparatif.csv
+
+Meilleure configuration S3 : BT +20% (F1-macro = 0.6909)
+Delta vs Baseline : +0.0104
+
+Figure sauvegardee : figures/strategie3_f1_macro_comparison.png
+
+Figure sauvegardee : figures/strategie3_f1_per_class.png
+
+============================================================
+  ACCURACY vs F1-MACRO -- POURQUOI F1-MACRO ?
+============================================================
+  Baseline (NB02)           : F1-macro=0.6805  Accuracy=0.7249  Ecart=+0.0444
+  Best S1 (FL gamma=2)      : F1-macro=0.6794  Accuracy=0.7209  Ecart=+0.0415
+  Best S2 (ADASYN)          : F1-macro=0.6617  Accuracy=0.7046  Ecart=+0.0429
+  BT +20%                   : F1-macro=0.6909  Accuracy=0.7304  Ecart=+0.0394
+  BT +50%                   : F1-macro=0.6715  Accuracy=0.7195  Ecart=+0.0481
+  BT +100%                  : F1-macro=0.6715  Accuracy=0.7195  Ecart=+0.0481
+
+L Accuracy surestime systematiquement les performances car elle est
+dominee par la classe majoritaire (Positive = 51.7% du test set).
+F1-macro penalise equitablement les erreurs sur toutes les classes.
+
+
+
+======================================================================
+  REPONSES AUX 4 QUESTIONS OBLIGATOIRES
+======================================================================
+
+--- Q1 : Le F1 de la classe Neutral a-t-il augmente ? ---
+  Baseline F1-Neutral           : 0.5596
+  BT +20%  F1-Neutral           : 0.5833  (delta = +0.0237)
+  BT +50%  F1-Neutral           : 0.5376  (delta = -0.0220)
+  BT +100% F1-Neutral           : 0.5376  (delta = -0.0220)
+
+--- Q2 : Quel taux d augmentation est le plus efficace ? ---
+  BT +20%  F1-macro : 0.6909
+  BT +50%  F1-macro : 0.6715
+  BT +100% F1-macro : 0.6715
+  Meilleur : BT +20% avec F1-macro = 0.6909
+
+--- Q3 : L amelioration est-elle au detriment des autres classes ? ---
+  BT +20%    : Pos=-0.0020  Neg=+0.0094  Neu=+0.0237
+  BT +50%    : Pos=-0.0054  Neg=+0.0001  Neu=-0.0220
+  BT +100%   : Pos=-0.0054  Neg=+0.0001  Neu=-0.0220
+
+--- Q4 : Comparaison globale des 3 strategies ---
+  Baseline             : F1-macro = 0.6805
+  Best S1 (FL gamma=2) : F1-macro = 0.6794  (delta = -0.0011)
+  Best S2 (ADASYN)     : F1-macro = 0.6617  (delta = -0.0188)
+  Best S3 (BT +20%   ): F1-macro = 0.6909  (delta = +0.0104)
+
+  >>> Meilleure configuration globale : BT +20% (F1-macro = 0.6909)
+  
+  
+============================================================
+  SAUVEGARDE FINALE SUR DRIVE
+============================================================
+  [OK] results/cw_fl_metrics.json
+  [OK] results/bt_annotated_examples.json
+  [OK] results/bt_10pct_metrics.json
+  [OK] results/cw_metrics.json
+  [OK] results/bt_100pct_metrics.json
+  [OK] results/bt_75pct_metrics.json
+  [OK] results/strategie3_comparatif.csv
+  [OK] results/baseline_metrics.json
+  [OK] results/smote_partial_metrics.json
+  [OK] results/bt_50pct_metrics.json
+  [OK] results/smote_full_metrics.json
+  [OK] results/adasyn_metrics.json
+  [OK] results/bt_5ratios_summary.json
+  [OK] results/fl_g2_metrics.json
+  [OK] results/fl_g1_metrics.json
+  [OK] results/bt_20pct_metrics.json
+  [OK] figures/strategie3_f1_macro_comparison.png
+  [OK] figures/bt_50pct_confusion_matrix.png
+  [OK] figures/bt_20pct_confusion_matrix.png
+  [OK] figures/bt_75pct_confusion_matrix.png
+  [OK] figures/bt_cosine_distribution.png
+  [OK] figures/bt_10pct_confusion_matrix.png
+  [OK] figures/bonus_bt_ratio_curve.png
+  [OK] figures/strategie3_f1_per_class.png
+  [OK] figures/bt_100pct_confusion_matrix.png
+  [OK] data/bt_paraphrases_neutral.json
+
+=== SAUVEGARDE NB05 TERMINEE ===
+
+
+============================================================
+  VERIFICATION FINALE NB05
+============================================================
+  [OK] results/bt_20pct_metrics.json
+           F1-macro = 0.6909
+  [OK] results/bt_50pct_metrics.json
+           F1-macro = 0.6715
+  [OK] results/bt_100pct_metrics.json
+           F1-macro = 0.6715
+  [OK] results/strategie3_comparatif.csv
+  [OK] results/bt_annotated_examples.json
+  [OK] figures/bt_cosine_distribution.png
+  [OK] figures/bt_20pct_confusion_matrix.png
+  [OK] figures/bt_50pct_confusion_matrix.png
+  [OK] figures/bt_100pct_confusion_matrix.png
+  [OK] figures/strategie3_f1_macro_comparison.png
+  [OK] figures/strategie3_f1_per_class.png
+  [OK] data/bt_paraphrases_neutral.json
+
+>>> TOUS LES FICHIERS PRESENTS. NB05 COMPLET. <<<

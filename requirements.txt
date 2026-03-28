@@ -1,62 +1,250 @@
 # =============================================================================
 # requirements.txt
-# Projet : Gestion du desequilibre de classes — Analyse de sentiments
-#          en dialecte algerien (Darija) sur le corpus TWIFL
-# Etudiant : Abdelaziz Merzoug
-# Encadrante : Dr. Soraya Cheriguene
-# Universite : USDB Blida 1 — Master 1 DS & NLP — Semestre 2
-# Periode : 08 mars – 26 avril 2026
+#
+# Project : Class Imbalance Management for Sentiment Analysis in Algerian
+#           Dialect (Darija) on the TWIFL corpus using DziriBERT
+#
+# Student : Abdelaziz Merzoug
+# Supervisor : Dr. Soraya Cheriguene
+# University : USDB Blida 1 -- Master 1 Data Science & NLP -- Semestre 2
+# Period : 08 March -- 26 April 2026
 # =============================================================================
 #
-# INSTALLATION (environnement local) :
-#   pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────────────────────
+# QUICK INSTALL
+# ─────────────────────────────────────────────────────────────────────────────
 #
-# INSTALLATION (Google Colab / Kaggle) :
-#   !pip install -r requirements.txt
+#   Local (CPU only):
+#       pip install -r requirements.txt
 #
-# NOTE GPU :
-#   PyTorch est installe ici en version CPU.
-#   Sur Colab T4 / Kaggle P100 / Lightning AI A10G, remplacer par :
-#   pip install torch>=2.1.0 --index-url https://download.pytorch.org/whl/cu118
-#   (ou cu121 selon la version CUDA disponible sur la plateforme)
+#   Google Colab / Kaggle (inside notebook cell):
+#       !pip install -r requirements.txt
+#
+# ─────────────────────────────────────────────────────────────────────────────
+# GPU SETUP (required for NB02 to NB06 — fine-tuning DziriBERT)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+#   On Google Colab or Kaggle, PyTorch with GPU support is pre-installed.
+#   No manual step needed — just run the notebook on a GPU runtime.
+#
+#   For a LOCAL GPU machine, replace the torch line below with:
+#
+#     CUDA 11.8:
+#       pip install torch>=2.1.0 --index-url https://download.pytorch.org/whl/cu118
+#
+#     CUDA 12.1:
+#       pip install torch>=2.1.0 --index-url https://download.pytorch.org/whl/cu121
+#
+#     CUDA 12.4+ (newer machines, 2025+):
+#       pip install torch>=2.5.0 --index-url https://download.pytorch.org/whl/cu124
+#
+#   Check your CUDA version with: nvidia-smi
+#
+# ─────────────────────────────────────────────────────────────────────────────
+# PYTHON VERSION
+# ─────────────────────────────────────────────────────────────────────────────
+#
+#   Tested on: Python 3.10, Python 3.11, Python 3.12 (Google Colab, March 2026)
+#   Minimum required: Python >= 3.10
+#
+# ─────────────────────────────────────────────────────────────────────────────
+# NOTEBOOK-BY-NOTEBOOK DEPENDENCY MAP
+# ─────────────────────────────────────────────────────────────────────────────
+#
+#   NB01 (EDA)             : numpy, pandas, matplotlib, seaborn, arabic-reshaper,
+#                            python-bidi, wordcloud, emoji, datasets
+#
+#   NB02 (Baseline)        : torch, transformers, accelerate, huggingface_hub,
+#                            datasets, scikit-learn, imbalanced-learn,
+#                            numpy, pandas, matplotlib, seaborn, emoji
+#
+#   NB03 (Loss Functions)  : same as NB02
+#
+#   NB04 (SMOTE/ADASYN)    : same as NB02 + scipy (for ADASYN internals)
+#
+#   NB05 (Back-Translation): same as NB02 + sentencepiece + sacremoses +
+#                            protobuf (for Helsinki-NLP OPUS-MT models)
+#
+#   NB06 (Final Eval)      : same as NB02 + scipy + imbalanced-learn
 #
 # =============================================================================
 
 
-# --- Deep Learning & Transformers ----------------------------------------
+# -----------------------------------------------------------------------------
+# 1. DEEP LEARNING — PyTorch and HuggingFace ecosystem
+# -----------------------------------------------------------------------------
+
+# PyTorch: the core deep learning framework used to fine-tune DziriBERT
+# NOTE: This installs the CPU version. See GPU instructions above.
 torch>=2.1.0
+
+# HuggingFace Transformers: provides DziriBERT, AutoTokenizer, Trainer, etc.
+# Used in NB02-NB06 for fine-tuning and feature extraction
 transformers>=4.36.0
+
+# Accelerate: makes HuggingFace Trainer work efficiently on GPU/CPU
+# Required by TrainingArguments (optim='adamw_torch')
 accelerate>=0.24.0
+
+# HuggingFace Hub: used in NB02 for model.push_to_hub()
+# Also handles authentication (HF_TOKEN via Colab Secrets)
 huggingface_hub>=0.20.0
-sentencepiece>=0.1.99
-sacremoses>=0.0.53
+
+# Tokenizers: fast Rust-based tokenizer backend used by DziriBERT
+# Indirect dependency of transformers — included for explicit version control
 tokenizers>=0.15.0
 
-# --- Datasets HuggingFace ------------------------------------------------
+# Safetensors: efficient model weight format used by modern HuggingFace models
+# Needed to load/save DziriBERT checkpoints reliably
+safetensors>=0.4.0
+
+
+# -----------------------------------------------------------------------------
+# 2. TRANSLATION MODELS — Required for Back-Translation (NB05 only)
+# -----------------------------------------------------------------------------
+
+# SentencePiece: tokenizer used by Helsinki-NLP OPUS-MT translation models
+# Required for: Helsinki-NLP/opus-mt-ar-fr and Helsinki-NLP/opus-mt-fr-ar
+sentencepiece>=0.1.99
+
+# SacreMoses: Moses tokenizer/detokenizer for OPUS-MT post-processing
+sacremoses>=0.0.53
+
+# Protobuf: underlying serialization library required by sentencepiece
+# Without this, sentencepiece model loading fails on some platforms
+protobuf>=3.20.0
+
+
+# -----------------------------------------------------------------------------
+# 3. DATASETS — HuggingFace dataset loading
+# -----------------------------------------------------------------------------
+
+# Datasets: loads the TWIFL corpus directly from HuggingFace Hub
+# Usage: load_dataset("arbml/Twifil")
 datasets>=2.16.0
 
-# --- Calcul scientifique -------------------------------------------------
+
+# -----------------------------------------------------------------------------
+# 4. SCIENTIFIC COMPUTING
+# -----------------------------------------------------------------------------
+
+# NumPy: array operations, embedding matrices, index manipulation
+# Used across all notebooks for matrix operations and random seeding
 numpy>=1.24.0
+
+# SciPy: used internally by ADASYN (nearest-neighbor distance computations)
+# Also provides statistical utilities for analysis cells
 scipy>=1.11.0
 
-# --- Apprentissage automatique -------------------------------------------
+
+# -----------------------------------------------------------------------------
+# 5. MACHINE LEARNING
+# -----------------------------------------------------------------------------
+
+# Scikit-learn: provides train_test_split, F1/precision/recall metrics,
+# average_precision_score (AUC-PR), label_binarize, MLPClassifier
+# Used in NB02-NB06 for all metric computation
 scikit-learn>=1.3.0
+
+# Imbalanced-learn: provides SMOTE, ADASYN, and geometric_mean_score
+# Used in NB04 (SMOTE/ADASYN rebalancing) and all notebooks (G-mean metric)
+# Install: pip install imbalanced-learn
 imbalanced-learn>=0.11.0
 
-# --- Manipulation des donnees --------------------------------------------
+
+# -----------------------------------------------------------------------------
+# 6. DATA MANIPULATION
+# -----------------------------------------------------------------------------
+
+# Pandas: DataFrame operations, CSV loading/saving, value_counts()
+# Core data manipulation tool across all 6 notebooks
 pandas>=2.1.0
 
-# --- Visualisation -------------------------------------------------------
+
+# -----------------------------------------------------------------------------
+# 7. VISUALIZATION
+# -----------------------------------------------------------------------------
+
+# Matplotlib: base plotting library for all charts and figures
+# Used with plt.savefig() before plt.show() in all notebooks
 matplotlib>=3.8.0
+
+# Seaborn: enhanced statistical visualizations
+# Used for confusion matrix heatmaps (sns.heatmap) in all notebooks
 seaborn>=0.13.0
 
-# --- NLP & Traitement du texte arabe -------------------------------------
+
+# -----------------------------------------------------------------------------
+# 8. ARABIC TEXT PROCESSING
+# -----------------------------------------------------------------------------
+# These three libraries are MANDATORY for correct Arabic word cloud rendering.
+# Arabic text requires right-to-left (RTL) reshaping before display.
+# Without them, Arabic characters appear disconnected or in wrong direction.
+
+# Arabic Reshaper: connects Arabic letters correctly for display
+# Usage: arabic_reshaper.reshape(arabic_text)
 arabic-reshaper>=3.0.0
+
+# Python BiDi (Bidirectional algorithm): handles RTL text direction
+# Usage: get_display(reshaped_text) — makes Arabic render correctly in plots
 python-bidi>=0.4.2
+
+# WordCloud: generates word frequency clouds
+# Used in NB01 for per-class Arabic word clouds
 wordcloud>=1.9.0
+
+
+# -----------------------------------------------------------------------------
+# 9. TEXT UTILITIES
+# -----------------------------------------------------------------------------
+
+# Emoji: converts emoji characters to text descriptions
+# Example: 💖 → "sparkling_heart"
+# Used in NB02 preprocessing step (emoji → text for DziriBERT compatibility)
 emoji>=2.8.0
+
+# Regex: enhanced regular expressions with Unicode support
+# Used for Arabic text normalization (repeated characters, diacritics)
 regex>=2023.10.3
 
-# --- Utilitaires ---------------------------------------------------------
+
+# -----------------------------------------------------------------------------
+# 10. UTILITIES
+# -----------------------------------------------------------------------------
+
+# TQDM: progress bars for loops (embedding extraction, translation batches)
+# Makes long-running cells (20+ minutes) show estimated time remaining
 tqdm>=4.66.0
+
+# Joblib: parallel processing and model persistence utilities
+# Used internally by scikit-learn (SMOTE, MLPClassifier)
 joblib>=1.3.0
+
+
+# =============================================================================
+# PACKAGES NOT LISTED HERE (already available in the environment)
+# =============================================================================
+#
+# The following are Python standard library modules — they come built into
+# Python itself and do NOT need to be pip-installed:
+#
+#   os       — file system operations (os.makedirs, os.path.exists)
+#   sys      — Python interpreter interaction
+#   re       — basic regular expressions
+#   json     — reading and writing JSON metric files
+#   random   — Python random number generator (random.seed)
+#   math     — mathematical functions
+#   glob     — file pattern matching (glob.glob)
+#   shutil   — file copy operations (shutil.copy)
+#   time     — timing training duration
+#   warnings — suppressing deprecation warnings
+#   csv      — reading CSV comparison tables
+#   collections — Counter for class distribution analysis
+#
+# The following are Google Colab built-ins — pre-installed in the Colab
+# environment and NOT available via pip:
+#
+#   google.colab.drive   — Google Drive mounting
+#   google.colab.userdata — Colab Secrets access (for HF_TOKEN)
+#
+# =============================================================================
